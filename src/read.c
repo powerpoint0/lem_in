@@ -20,7 +20,7 @@ int		ft_atoi_check(const char *str)
 	}
 	if (i == 0 || rez > INT32_MAX)
 		put_err("Not valid int");
-	return (sig * rez);
+	return (sig * (int)rez);
 }
 
 int		ft_find_count(const char *s, int c)
@@ -132,6 +132,67 @@ int		parsing_line(char *str, t_data *map, int mod_command)
 	return (1);
 }
 
+int 	check_line(t_data *map)
+{
+	t_point	*point_header;
+	t_line	*line_header;
+	int		ok;
+
+	line_header = map->lines;
+	while(map->lines)
+	{
+		ok = 0;
+		point_header = map->points;
+		while(map->points)
+		{
+			if (ft_strequ(map->lines->p_first, map->points->name))
+				ok++;
+			if (ft_strequ(map->lines->p_next, map->points->name))
+				ok++;
+			map->points = map->points->next;
+		}
+		map->points = point_header;
+		if (ok == 2)
+			map->lines = map->lines->next;
+		else
+			put_err("Not valid point in the line");
+	}
+	map->lines = line_header;
+	return (1);
+}
+
+int 	check_duplicate_point(t_data *map)
+{
+	int		count;
+	t_point	*header;
+	t_point	*tmp;
+
+	header = map->points;
+	tmp = map->points;
+	while (tmp)
+	{
+		count = 0;
+		while(map->points)
+		{
+			if (ft_strequ(tmp->name, map->points->name))
+				count++;
+			map->points = map->points->next;
+		}
+		if (count > 1)
+			put_err("Duplicate error");
+		map->points = header;
+		tmp = tmp->next;
+	}
+	return (1);
+}
+
+int 	check_point(t_data *map)
+{
+	check_duplicate_point(map);
+	check_line(map);
+	return (0);
+}
+
 t_data	*read_map(int fd)
 {
 	int 	rd;
@@ -145,6 +206,7 @@ t_data	*read_map(int fd)
 	{
 		if (rd == -1)
 			put_err("Not read file");
+		ft_putendl(line);
 		if (ft_strequ(line, "##start") || ft_strequ(line, "##end"))
 			mod_command = (ft_strequ(line, "##start")) ? START : END;
 		else if (line[0] != '#')
@@ -153,6 +215,7 @@ t_data	*read_map(int fd)
 			mod_command = 0;
 		}
 	}
+	check_point(map);
 	if (line)
 		free(line);
 	return (map);

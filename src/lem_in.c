@@ -35,14 +35,13 @@ int 	main(int argc, char **argv)
 	t_data	*map;
 
 	map = NULL;
-	if (argc == 2 || (argc == 3 && ft_strequ(argv[1], "<")))
-	{
-		fd = (argc == 2) ? open(argv[1], O_RDONLY) : open(argv[2], O_RDONLY);
-		if (fd < 0)
-			put_err("Not open file");
-		map = read_map(fd);
-		alg(map);
-	}
+	if (argc < 2)
+		put_err("Error");
+	fd = (ft_strequ(argv[1], "<")) ? open(argv[2], O_RDONLY) : open(argv[1], O_RDONLY);
+	if (fd < 0)
+		put_err("Not open file");
+	map = read_map(fd);
+	alg(map);
 	free_all(map);
 	return 0;
 }

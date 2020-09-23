@@ -16,20 +16,6 @@ t_point	*find_first(t_data *map)
 	map->points = header;
 	return (first);
 }
-/*
-t_point	*find_next(t_data *map)
-{
-	t_point	*point_header;
-	t_line	*line_header;
-
-	point_header = map->points;
-	line_header = map->lines;
-	while(map->lines)
-	{
-		if ()
-	}
-}
-*/
 
 int	alg(t_data *map)
 {
