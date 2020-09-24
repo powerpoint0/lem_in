@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lem_in.h
+libft.h
+../libft.h
+
+../libft/includes/libft.h
+strings.h
+-
+stdlib.h
+-
+sys/types.h
+-
+unistd.h
+-
+
+/Users/cjoaquin/CLionProjects/lem_in2/src/alg.c
+lem_in.h
+/Users/cjoaquin/CLionProjects/lem_in2/src/lem_in.h
+
+/Users/cjoaquin/CLionProjects/lem_in2/src/read.c
+lem_in.h
+/Users/cjoaquin/CLionProjects/lem_in2/src/lem_in.h
+

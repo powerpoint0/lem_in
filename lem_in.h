@@ -8,11 +8,14 @@ typedef struct		s_line
 {
 	char			*p_first;
 	char			*p_next;
+	int				num_first;
+	int				num_next;
 	struct s_line	*next;
 }				t_line;
 
 typedef struct		s_point
 {
+	int				num;
 	char			*name;
 	int				x;
 	int 			y;
@@ -24,12 +27,15 @@ typedef struct		s_point
 typedef struct		s_data
 {
 	int				num_ants;
+	t_point			*header_points;
+	t_line			*header_lines;
 	t_point			*points;
 	t_line			*lines;
 }					t_data;
 
 typedef struct		s_path
 {
+	int len;
 	t_point			*point;
 }					t_path;
 

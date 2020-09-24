@@ -45,6 +45,7 @@ t_point	*new_point(char **str, int mod_command)
 
 	if (!(new = (t_point*)ft_memalloc(sizeof(t_point))))
 		put_err("Init.Not creat point");
+	//new->num = num;
 	new->name = str[0];
 	new->x = ft_atoi_check(str[1]);
 	new->y = ft_atoi_check(str[2]);
@@ -57,18 +58,20 @@ t_point	*new_point(char **str, int mod_command)
 int		add_point(char **str, t_data *map, int mod_command)
 {
 	int	i;
+	//int num;
 
+	//num = 0;
 	i = 0;
 	while (str[i] != NULL)
 		i++;
 	if (i != 3)
 		return (0);
 	t_point	*header;
-
 	header = map->points;
 	if (!map->points)
 	{
 		map->points = new_point(str, mod_command);
+		//map->points->num = num++;
 	}
 	else
 	{
@@ -76,6 +79,7 @@ int		add_point(char **str, t_data *map, int mod_command)
 			map->points = map->points->next;
 		map->points->next = new_point(str, mod_command);
 		map->points = header;
+		//map->points->num = num++;
 	}
 	return (1);
 }
