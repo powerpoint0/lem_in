@@ -58,9 +58,7 @@ t_point	*new_point(char **str, int mod_command)
 int		add_point(char **str, t_data *map, int mod_command)
 {
 	int	i;
-	//int num;
 
-	//num = 0;
 	i = 0;
 	while (str[i] != NULL)
 		i++;
@@ -71,7 +69,6 @@ int		add_point(char **str, t_data *map, int mod_command)
 	if (!map->points)
 	{
 		map->points = new_point(str, mod_command);
-		//map->points->num = num++;
 	}
 	else
 	{
@@ -79,7 +76,6 @@ int		add_point(char **str, t_data *map, int mod_command)
 			map->points = map->points->next;
 		map->points->next = new_point(str, mod_command);
 		map->points = header;
-		//map->points->num = num++;
 	}
 	return (1);
 }
@@ -197,6 +193,20 @@ int 	check_point(t_data *map)
 	return (0);
 }
 
+void	ft_put_num_rooms(t_data *map)
+{
+	int num;
+	num = 0;
+	t_point *header;
+	header = map->points;
+	while(map->points)
+	{
+		map->points->num = num++;
+		map->points = map->points->next;
+	}
+	map->points = header;
+}
+
 t_data	*read_map(int fd)
 {
 	int 	rd;
@@ -222,5 +232,6 @@ t_data	*read_map(int fd)
 	check_point(map);
 	if (line)
 		free(line);
+	ft_put_num_rooms(map); /////////////////
 	return (map);
 }

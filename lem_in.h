@@ -21,23 +21,45 @@ typedef struct		s_point
 	int 			y;
 	int				st_end;
 	int 			in_path;
+	struct s_point **arr_lines;
+	int				busy;
+	struct s_point	*prev_room;
 	struct s_point	*next;
 }					t_point;
 
 typedef struct		s_data
 {
 	int				num_ants;
-	t_point			*header_points;
-	t_line			*header_lines;
 	t_point			*points;
 	t_line			*lines;
+	t_point			*last_points;
+	t_line			*last_lines;
+	t_point			*start;
+	t_point			*end;
 }					t_data;
 
 typedef struct		s_path
 {
 	int len;
-	t_point			*point;
+	t_point			*points;
+	t_point			*last_points;
+	t_point			*next;
 }					t_path;
+
+
+//typedef struct		s_arr
+//{
+//	int size;
+//	int used;
+//	void			**arr;
+//}					t_arr;
+//
+//typedef struct		s_list2
+//{
+//	t_node			*start;
+//	t_node			*end;
+//}					t_list2;
+
 
 int					put_err(char *str);
 t_data				*int_map(void);
