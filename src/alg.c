@@ -1,37 +1,5 @@
 #include "lem_in.h"
 
-int		ft_find_first(t_data *map)
-{
-	t_point	*header;
-
-	map->start = NULL;
-	header =  map->points;
-	while (map->points && !map->start)
-	{
-		if (map->points->st_end == START)
-			map->start = map->points;
-		map->points = map->points->next;
-	}
-	map->points = header;
-	return (0);
-}
-
-int		ft_find_end(t_data *map)
-{
-	t_point	*header;
-
-	header =  map->points;
-	map->end = NULL;
-	while (map->points && !map->end)
-	{
-		if (map->points->st_end == END)
-			map->end = map->points;
-		map->points = map->points->next;
-	}
-	map->points = header;
-	return (0);
-}
-
 //t_point	*ft_find_next(t_data *map, t_path *path)
 //{
 //	t_point *next;
@@ -59,8 +27,9 @@ int		ft_find_end(t_data *map)
 
 int		ft_letGoAnts(int **paths)
 {
-
+	return(0);
 }
+
 int ft_find_way(t_data *map)
 {
 	int len;
@@ -130,8 +99,6 @@ int	alg(t_data *map)
 
 	if (!(paths = (int **)ft_memalloc(sizeof(int *) * 20)))
 		put_err("Init.there is no memory for paths");
-	ft_find_first(map);
-	ft_find_end(map);
 	while (ft_find_smallest_way(map))
 	{
 		//if(!paths[i])

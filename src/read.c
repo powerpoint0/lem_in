@@ -39,17 +39,16 @@ int		ft_find_count(const char *s, int c)
 	return (-1);
 }
 
-t_point	*new_point(char **str, int mod_command)
+t_point	*new_point(char **str, int mod_command, int num)
 {
 	t_point	*new;
 
 	if (!(new = (t_point*)ft_memalloc(sizeof(t_point))))
-		put_err("Init.Not creat point");
-	//new->num = num;
+		put_err("Init.Not create point");
+	new->num = num;
 	new->name = str[0];
 	new->x = ft_atoi_check(str[1]);
 	new->y = ft_atoi_check(str[2]);
-	new->st_end = mod_command;
 	new->in_path = 0;
 	new->next = NULL;
 	return (new);
@@ -64,19 +63,21 @@ int		add_point(char **str, t_data *map, int mod_command)
 		i++;
 	if (i != 3)
 		return (0);
-	t_point	*header;
-	header = map->points;
 	if (!map->points)
 	{
-		map->points = new_point(str, mod_command);
+		map->points = new_point(str, mod_command, 0);
+		map->last_points = map->points;
 	}
 	else
 	{
-		while (map->points->next != NULL)
-			map->points = map->points->next;
-		map->points->next = new_point(str, mod_command);
-		map->points = header;
+		map->last_points->next = new_point(str, mod_command,
+										   (map->last_points->num + 1));
+		map->last_points =  map->last_points->next;
 	}
+	if (mod_command == START)
+		map->start = map->last_points;
+	if (mod_command == END)
+		map->end = map->last_points;
 	return (1);
 }
 
@@ -92,6 +93,49 @@ t_line	*new_line(char **str)
 	return (new);
 }
 
+void	chek_point_in_line(t_data *map)
+{
+	int		count;
+	t_point	*header;
+
+	count = 0;
+	header = map->points;
+	while(map->points)
+	{
+		if (ft_strequ(map->points->name, map->last_lines->p_first))
+		{
+			map->last_lines->num_first = map->points->num;
+			count++;
+		}
+		if (ft_strequ(map->points->name, map->last_lines->p_next))
+		{
+			map->last_lines->num_next = map->points->num;
+			count++;
+		}
+		map->points = map->points->next;
+	}
+	map->points = header;
+	if (count != 2)
+		put_err("invalid line");
+}
+
+void	check_line(t_data *map)
+{
+	t_line	*header;
+
+	chek_point_in_line(map);
+	header = map->lines;
+	while (map->lines)
+	{
+		if(map->lines != map->last_lines &&
+		   map->lines->num_first == map->last_lines->num_first &&
+		   map->lines->num_next == map->last_lines->num_next)
+			put_err("Line. Duplicate error");
+		map->lines = map->lines->next;
+	}
+	map->lines = header;
+}
+
 int		add_line(char **str, t_data *map)
 {
 	int	i;
@@ -101,19 +145,17 @@ int		add_line(char **str, t_data *map)
 		i++;
 	if (i != 2)
 		return (0);
-	t_line	*header;
-
-	header = map->lines;
 	if (!map->lines)
 	{
 		map->lines = new_line(str);
+		map->last_lines = map->lines;
+		check_line(map);
 	}
 	else
 	{
-		while (map->lines->next != NULL)
-			map->lines = map->lines->next;
-		map->lines->next = new_line(str);
-		map->lines = header;
+		map->last_lines->next = new_line(str);
+		map->last_lines = map->last_lines->next;
+		check_line(map);
 	}
 	return (1);
 }
@@ -130,81 +172,6 @@ int		parsing_line(char *str, t_data *map, int mod_command)
 			add_line(ft_strsplit(str, '-'), map);
 	}
 	return (1);
-}
-
-int 	check_line(t_data *map)
-{
-	t_point	*point_header;
-	t_line	*line_header;
-	int		ok;
-
-	line_header = map->lines;
-	while(map->lines)
-	{
-		ok = 0;
-		point_header = map->points;
-		while(map->points)
-		{
-			if (ft_strequ(map->lines->p_first, map->points->name))
-				ok++;
-			if (ft_strequ(map->lines->p_next, map->points->name))
-				ok++;
-			map->points = map->points->next;
-		}
-		map->points = point_header;
-		if (ok == 2)
-			map->lines = map->lines->next;
-		else
-			put_err("Not valid point in the line");
-	}
-	map->lines = line_header;
-	return (1);
-}
-
-int 	check_duplicate_point(t_data *map)
-{
-	int		count;
-	t_point	*header;
-	t_point	*tmp;
-
-	header = map->points;
-	tmp = map->points;
-	while (tmp)
-	{
-		count = 0;
-		while(map->points)
-		{
-			if (ft_strequ(tmp->name, map->points->name))
-				count++;
-			map->points = map->points->next;
-		}
-		if (count > 1)
-			put_err("Duplicate error");
-		map->points = header;
-		tmp = tmp->next;
-	}
-	return (1);
-}
-
-int 	check_point(t_data *map)
-{
-	check_duplicate_point(map);
-	check_line(map);
-	return (0);
-}
-
-void	ft_put_num_rooms(t_data *map)
-{
-	int num;
-	num = 0;
-	t_point *header;
-	header = map->points;
-	while(map->points)
-	{
-		map->points->num = num++;
-		map->points = map->points->next;
-	}
-	map->points = header;
 }
 
 t_data	*read_map(int fd)
@@ -229,9 +196,7 @@ t_data	*read_map(int fd)
 			mod_command = 0;
 		}
 	}
-	check_point(map);
 	if (line)
 		free(line);
-	ft_put_num_rooms(map); /////////////////
 	return (map);
 }
