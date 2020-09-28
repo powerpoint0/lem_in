@@ -22,8 +22,9 @@ typedef struct		s_point
 	int				st_end;
 	int 			in_path;
 	struct s_point **arr_lines;
-	int				busy;
-	struct s_point	*prev_room;
+	int				close;
+	struct s_point	*prev_room_path;
+	struct s_point	*next_room_path;
 	struct s_point	*next;
 }					t_point;
 

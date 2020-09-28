@@ -57,77 +57,92 @@ int		ft_find_end(t_data *map)
 //	return(next);
 //}
 
-int		ft_letGoAnts(t_path **paths)
+int		ft_letGoAnts(int **paths)
 {
 
+}
+int ft_find_way(t_data *map)
+{
+	int len;
+	len = 0;
+
+	return(len);
 }
 
 int		ft_find_smallest_way(t_data *map)   //poisk kratchaishego puti bez malloca c сохранием обратных указателей
 {
+	int len1;
+	int len2;
 
-	return(1);
+	len1 = 0;
+	len2 = 0;
+	while((len2 = ft_find_way(map)) > 1)
+	{
+		if(len1 < len2)
+		{
+			//zatiraem prev put'
+			len1 = len2;
+		}
+	}
+	return(len1);
 }
 
-t_path	*ft_new_path(t_data *map)				//vosstanovlenie puti po ukazatelyam
+int		*ft_new_path(t_data *map)				//vosstanovlenie puti po ukazatelyam
 {
-	t_path *path;
-	t_point *room;
+	int *path;
+	int len;
+	t_point *header;
+	t_point *next;
+	len = 2;
 
-	while(map->end->prev_room != map->start)
+	next = NULL;
+	header = map->points;
+	map->points = map->end;
+	while (map->points->prev_room_path != map->start)
 	{
-		if(!path)
-		{
-			if (!(path = (t_path*)ft_memalloc(sizeof(t_path))))
-				put_err("Init.path hasn't created .path not found");
-			path->last_points = map->end;
-			path->points = map->end;
-			path->points->next = NULL;
- 		}
-	 	else
-		{
-
-			//malloc point
-			//path->points
-			//dobavlyaem komnaty v spisok ot enda k startu
-			//otkluchaem komnayy
-		}
-	 }
-	 return(path);
+		len++;
+		map->points = map->points->prev_room_path;
+	}
+	if (!(path = (int*)ft_memalloc(sizeof(int)* (len+1))))
+		put_err("Init.path hasn't created .path not found");
+	map->points = map->end;
+	path[0] = len;
+	path[len] = map->end->num;
+	while(len)
+	{
+		path[len] = map->points->prev_room_path->num;
+		next = map->points->prev_room_path;
+		map->points->prev_room_path = NULL;   //zatiraem put'
+		if(!map->points->st_end)
+			map->points->close = 1;       //otkluchaem komnayy
+		map->points = next;
+		len--;
+	}
+	map->points = header;
+	return(path);
 }
 
 int	alg(t_data *map)
 {
-	t_path **paths;
+	int **paths;
 	int i;
 	i = 0;
 
-	if (!(paths = (t_path **) ft_memalloc(sizeof(t_path *) * 2)))
+	if (!(paths = (int **)ft_memalloc(sizeof(int *) * 20)))
 		put_err("Init.there is no memory for paths");
 	ft_find_first(map);
 	ft_find_end(map);
 	while (ft_find_smallest_way(map))
 	{
+		//if(!paths[i])
+			//perekopirovat massiv i dobavit strok
+			//free proshlyi massiv
 		paths[i] = ft_new_path(map);
 		i++;
 	}
 	ft_letGoAnts(paths);
 	return (0);
 }
-//	t_point	*header;
-//	header = map->points;
-//	if (!map->points)
-//	{
-//		map->points = new_point(str, mod_command);
-//	}
-//	else
-//	{
-//		while (map->points->next != NULL)
-//			map->points = map->points->next;
-//		map->points->next = new_point(str, mod_command);
-//		map->points = header;
-//	}
-
-
 
 //macсив указателей на пути
 //цикл:пока не енд
