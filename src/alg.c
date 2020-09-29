@@ -30,32 +30,6 @@ int		ft_letGoAnts(int **paths)
 	return(0);
 }
 
-int ft_find_way(t_data *map)
-{
-	int len;
-	len = 0;
-
-	return(len);
-}
-
-int		ft_find_smallest_way(t_data *map)   //poisk kratchaishego puti bez malloca c сохранием обратных указателей
-{
-	int len1;
-	int len2;
-
-	len1 = 0;
-	len2 = 0;
-	while((len2 = ft_find_way(map)) > 1)
-	{
-		if(len1 < len2)
-		{
-			//zatiraem prev put'
-			len1 = len2;
-		}
-	}
-	return(len1);
-}
-
 int		*ft_new_path(t_data *map)				//vosstanovlenie puti po ukazatelyam
 {
 	int *path;
@@ -91,20 +65,115 @@ int		*ft_new_path(t_data *map)				//vosstanovlenie puti po ukazatelyam
 	return(path);
 }
 
+int ft_find_way(t_data *map)
+{
+	int len;
+	len = 0;
+
+	return(len);
+}
+
+void	ft_delete_way(t_data *map)
+{
+	t_point *next;
+	t_point *header;
+
+	header = map->points;
+	next = NULL;
+	map->points = map->end;
+	while(map->points->prev_room_path != map->start)
+	{
+		next = map->points->prev_room_path;
+		map->points->prev_room_path = NULL;   //zatiraem put'
+		if(!map->points->st_end)
+			map->points->close = 0;       //vkluchaem komnayy
+		map->points = next;
+	}
+	map->points = header;
+}
+
+int		ft_find_smallest_way(t_data *map)   //poisk kratchaishego puti bez malloca c сохранием обратных указателей
+{
+	int len1;
+	int len2;
+	int	*path;
+
+	len1 = 0;
+	len2 = 0;
+	len1 = ft_find_way(map);
+	if (len1 == 0)
+		return(0);
+	path = ft_new_path(map);
+	while((len2 = ft_find_way(map)) > 1)
+	{
+		if(len1 > len2)
+		{
+			free(path);
+			path = ft_new_path(map);
+			len1 = len2;
+		}
+		else
+			ft_delete_way(map);		//zatiraem prev put'
+	}
+	return(len1);
+}
+
+
+void	ft_free_int(int **copy)
+{
+	int j;
+	int str;
+
+	if(!copy)
+		return;
+	str = copy[0][1];
+	j = 0;
+	while(j <= str)
+	{
+		free(copy[j]);
+		j++;
+	}
+	free(copy);
+}
+
+int		**ft_realloc(int **paths, int str)
+{
+	int	**copy;
+	int j;
+
+	j = 0;
+	copy = paths;
+	if (!(paths = (int **)ft_memalloc(sizeof(int *) * str)))
+		put_err("Init.there is no memory for paths");
+	while(j <= copy[0][1])
+	{
+		ft_memcpy(paths[j], copy[j], sizeof(int)* (copy[j][0]+1));
+		j++;
+	}
+	ft_free_int(copy);
+	return(paths);
+}
+
 int	alg(t_data *map)
 {
 	int **paths;
 	int i;
-	i = 0;
+	int strings;
 
-	if (!(paths = (int **)ft_memalloc(sizeof(int *) * 20)))
+	strings = 21;
+	i = 1;
+	if (!(paths = (int **)ft_memalloc(sizeof(int *) * strings)))
 		put_err("Init.there is no memory for paths");
 	while (ft_find_smallest_way(map))
 	{
-		//if(!paths[i])
-			//perekopirovat massiv i dobavit strok
-			//free proshlyi massiv
+		if(i >= strings)
+		{
+			strings += 10;
+			paths = ft_realloc(paths, strings);
+		}
 		paths[i] = ft_new_path(map);
+		paths[0][0] = 1;
+		paths[0][1] = i;
 		i++;
 	}
 	ft_letGoAnts(paths);
