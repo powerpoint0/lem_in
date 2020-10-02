@@ -39,7 +39,7 @@ int		ft_find_count(const char *s, int c)
 	return (-1);
 }
 
-t_point	*new_point(char **str, int mod_command, int num)
+t_point	*new_point(char **str, int num)
 {
 	t_point	*new;
 
@@ -65,13 +65,12 @@ int		add_point(char **str, t_data *map, int mod_command)
 		return (0);
 	if (!map->points)
 	{
-		map->points = new_point(str, mod_command, 0);
+		map->points = new_point(str, 0);
 		map->last_points = map->points;
 	}
 	else
 	{
-		map->last_points->next = new_point(str, mod_command,
-										   (map->last_points->num + 1));
+		map->last_points->next = new_point(str, (map->last_points->num + 1));
 		map->last_points =  map->last_points->next;
 	}
 	if (mod_command == START)
@@ -174,6 +173,91 @@ int		parsing_line(char *str, t_data *map, int mod_command)
 	return (1);
 }
 
+int	get_arr_size(t_line *line, int	num_point)
+{
+	t_line	*cline;
+	int		size;
+
+	size = 0;
+	cline = line;
+	while(cline)
+	{
+		if (cline->num_first == num_point || cline->num_next == num_point)
+			size++;
+		cline = cline->next;
+	}
+	return (size);
+}
+
+t_point	*get_point(t_data *map, int num)
+{
+	t_point	*cpoint;
+
+	cpoint = map->points;
+	while (cpoint->num != num)
+		cpoint = cpoint->next;
+	return (cpoint);
+}
+
+void	delete_point(t_data *map, int num_point)
+{
+	t_point	*delete;
+	t_point	*prev;
+
+	prev = map->points;
+	while (prev->next->num != num_point)
+	{
+		prev = prev->next;
+	}
+	delete = prev->next;
+	if (delete->next)
+		prev->next = delete->next;
+	else
+		prev->next = NULL;
+	free(delete);
+	delete = NULL;
+}
+
+t_point	**set_arr_lines(t_data *map, int num_point, int size)
+{
+	t_point	**arr_lines;
+	t_line	*cline;
+	int		i;
+
+	cline = map->lines;
+	i = 0;
+	if (!(arr_lines = (t_point **)ft_memalloc(sizeof(t_point) * size)
+			))
+		put_err("Something went wrong");
+	while (cline)
+	{
+		if (cline->num_next == num_point)
+			arr_lines[i++] = get_point(map, cline->num_first);
+		if (cline->num_first == num_point)
+			arr_lines[i++] = get_point(map, cline->num_next);
+		cline = cline->next;
+	}
+	return (arr_lines);
+}
+
+int		connected_points(t_data *map)
+{
+	t_point	*cpoint;
+	int 	arr_size;
+
+	cpoint = map->points;
+	while (cpoint)
+	{
+		arr_size = get_arr_size(map->lines, cpoint->num);
+		if (!arr_size)
+			delete_point(map, cpoint->num);
+		else
+			cpoint->arr_lines = set_arr_lines(map, cpoint->num, arr_size);
+		cpoint = cpoint->next;
+	}
+	return (1);
+}
+
 t_data	*read_map(int fd)
 {
 	int 	rd;
@@ -196,6 +280,7 @@ t_data	*read_map(int fd)
 			mod_command = 0;
 		}
 	}
+	connected_points(map);
 	if (line)
 		free(line);
 	return (map);
