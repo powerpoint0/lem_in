@@ -54,11 +54,20 @@ t_point	*new_point(char **str, int num)
 	return (new);
 }
 
+void	check_st_end(t_data *map, int mod_command)
+{
+	if (mod_command == START && map->start)
+		put_err("ERROR. 2-nd start");
+	else if (mod_command == END && map->end)
+		put_err("ERROR. 2-nd end");
+}
+
 int		add_point(char **str, t_data *map, int mod_command)
 {
 	int	i;
 
 	i = 0;
+	check_st_end(map, mod_command);
 	while (str[i] != NULL)
 		i++;
 	if (i != 3)
@@ -127,8 +136,8 @@ void	check_line(t_data *map)
 	while (map->lines)
 	{
 		if(map->lines != map->last_lines &&
-		   map->lines->num_first == map->last_lines->num_first &&
-		   map->lines->num_next == map->last_lines->num_next)
+		map->lines->num_first == map->last_lines->num_first &&
+		map->lines->num_next == map->last_lines->num_next)
 			put_err("Line. Duplicate error");
 		map->lines = map->lines->next;
 	}
@@ -280,6 +289,8 @@ t_data	*read_map(int fd)
 			mod_command = 0;
 		}
 	}
+	if (!map->start || !map->end)
+		put_err("ERROR.Not start or end");
 	connected_points(map);
 	if (line)
 		free(line);
