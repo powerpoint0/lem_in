@@ -65,11 +65,18 @@ int		*ft_new_path(t_data *map)				//vosstanovlenie puti po ukazatelyam
 	return(path);
 }
 
-int ft_find_way(t_data *map)
+
+int ft_find_way(t_data *map)     // BFS
 {
 	int len;
-	len = 0;
-
+	t_point *current;
+	len = 1;
+	//ft_bfs(map);
+//	current = map->start;
+//	while(current != map->end)
+//	{
+//		if()
+//	}
 	return(len);
 }
 
@@ -164,19 +171,23 @@ int	alg(t_data *map)
 	i = 1;
 	if (!(paths = (int **)ft_memalloc(sizeof(int *) * strings)))
 		put_err("Init.there is no memory for paths");
-	while (ft_find_smallest_way(map))
-	{
-		if(i >= strings)
-		{
-			strings += 10;
-			paths = ft_realloc(paths, strings);
-		}
-		paths[i] = ft_new_path(map);
-		paths[0][0] = 1;
-		paths[0][1] = i;
-		i++;
-	}
-	ft_letGoAnts(paths);
+	ft_bfs(map);
+	printf("end %d\n",map->end->bfs_level);
+	if(!map->end->bfs_level)
+		put_err("There is no path between START and END");
+//	while (ft_find_smallest_way(map))
+//	{
+//		if(i >= strings)
+//		{
+//			strings += 10;
+//			paths = ft_realloc(paths, strings);
+//		}
+//		paths[i] = ft_new_path(map);
+//		paths[0][0] = 1;
+//		paths[0][1] = i;
+//		i++;
+//	}
+//	ft_letGoAnts(paths);
 	return (0);
 }
 

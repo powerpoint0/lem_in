@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/cjoaquin/CLionProjects/lem_in2
+CMAKE_SOURCE_DIR = /Users/cjoaquin/CLionProjects/lem_in3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/cjoaquin/CLionProjects/lem_in2/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/cjoaquin/CLionProjects/lem_in3/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cjoaquin/CLionProjects/lem_in2/cmake-build-debug/CMakeFiles /Users/cjoaquin/CLionProjects/lem_in2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cjoaquin/CLionProjects/lem_in3/cmake-build-debug/CMakeFiles /Users/cjoaquin/CLionProjects/lem_in3/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cjoaquin/CLionProjects/lem_in2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cjoaquin/CLionProjects/lem_in3/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1871,6 +1871,33 @@ src/alg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/alg.c.s
 .PHONY : src/alg.c.s
 
+src/bfs.o: src/bfs.c.o
+
+.PHONY : src/bfs.o
+
+# target to build an object file
+src/bfs.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/bfs.c.o
+.PHONY : src/bfs.c.o
+
+src/bfs.i: src/bfs.c.i
+
+.PHONY : src/bfs.i
+
+# target to preprocess a source file
+src/bfs.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/bfs.c.i
+.PHONY : src/bfs.c.i
+
+src/bfs.s: src/bfs.c.s
+
+.PHONY : src/bfs.s
+
+# target to generate assembly for a file
+src/bfs.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/bfs.c.s
+.PHONY : src/bfs.c.s
+
 src/init.o: src/init.c.o
 
 .PHONY : src/init.o
@@ -2153,6 +2180,9 @@ help:
 	@echo "... src/alg.o"
 	@echo "... src/alg.i"
 	@echo "... src/alg.s"
+	@echo "... src/bfs.o"
+	@echo "... src/bfs.i"
+	@echo "... src/bfs.s"
 	@echo "... src/init.o"
 	@echo "... src/init.i"
 	@echo "... src/init.s"

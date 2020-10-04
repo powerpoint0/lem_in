@@ -63,6 +63,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in.dir/libft/src/ft_toupper.c.o"
   "CMakeFiles/lem_in.dir/libft/src/get_next_line.c.o"
   "CMakeFiles/lem_in.dir/src/alg.c.o"
+  "CMakeFiles/lem_in.dir/src/bfs.c.o"
   "CMakeFiles/lem_in.dir/src/init.c.o"
   "CMakeFiles/lem_in.dir/src/lem_in.c.o"
   "CMakeFiles/lem_in.dir/src/read.c.o"

@@ -1,6 +1,7 @@
 #ifndef LEM_IN_H
 # define LEM_IN_H
 # include "libft.h"
+# include <stdio.h>
 # define START 1
 # define END 2
 
@@ -21,6 +22,7 @@ typedef struct		s_point
 	int 			y;
 	int				st_end;
 	int 			in_path;
+	int 			bfs_level;
 	struct s_point **arr_lines;
 	int				close;
 	struct s_point	*prev_room_path;
@@ -66,5 +68,5 @@ t_data				*int_map(void);
 t_data				*read_map(int fd);
 
 int					alg(t_data *map);
-
+void				ft_bfs(t_data *map);
 #endif

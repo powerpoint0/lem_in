@@ -193,6 +193,10 @@ CMakeFiles/lem_in.dir/src/alg.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/src/alg.c.o: ../libft/includes/libft.h
 CMakeFiles/lem_in.dir/src/alg.c.o: ../src/alg.c
 
+CMakeFiles/lem_in.dir/src/bfs.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/src/bfs.c.o: ../libft/includes/libft.h
+CMakeFiles/lem_in.dir/src/bfs.c.o: ../src/bfs.c
+
 CMakeFiles/lem_in.dir/src/init.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/src/init.c.o: ../libft/includes/libft.h
 CMakeFiles/lem_in.dir/src/init.c.o: ../src/init.c

@@ -9,6 +9,8 @@
 ../lem_in.h
 libft.h
 ../libft.h
+stdio.h
+-
 
 ../libft/includes/libft.h
 strings.h
@@ -20,25 +22,7 @@ sys/types.h
 unistd.h
 -
 
-/Users/cjoaquin/CLionProjects/lem_in2/src/alg.c
+/Users/cjoaquin/CLionProjects/lem_in3/src/alg.c
 lem_in.h
-/Users/cjoaquin/CLionProjects/lem_in2/src/lem_in.h
-
-/Users/cjoaquin/CLionProjects/lem_in2/src/init.c
-lem_in.h
-/Users/cjoaquin/CLionProjects/lem_in2/src/lem_in.h
-
-/Users/cjoaquin/CLionProjects/lem_in2/src/lem_in.c
-stdio.h
--
-lem_in.h
-/Users/cjoaquin/CLionProjects/lem_in2/src/lem_in.h
-fcntl.h
--
-stdlib.h
--
-
-/Users/cjoaquin/CLionProjects/lem_in2/src/read.c
-lem_in.h
-/Users/cjoaquin/CLionProjects/lem_in2/src/lem_in.h
+/Users/cjoaquin/CLionProjects/lem_in3/src/lem_in.h
 
