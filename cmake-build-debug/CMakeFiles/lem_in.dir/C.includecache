@@ -22,7 +22,7 @@ sys/types.h
 unistd.h
 -
 
-/Users/cjoaquin/CLionProjects/lem_in3/src/alg.c
+/Users/cjoaquin/CLionProjects/lem_in3/src/read.c
 lem_in.h
 /Users/cjoaquin/CLionProjects/lem_in3/src/lem_in.h
 

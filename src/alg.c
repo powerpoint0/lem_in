@@ -25,7 +25,7 @@
 //	return(next);
 //}
 
-int		ft_letGoAnts(int **paths)
+int		ft_letGoAnts(t_path **paths)
 {
 	return(0);
 }
@@ -161,15 +161,49 @@ int		**ft_realloc(int **paths, int str)
 	return(paths);
 }
 
+//t_path *		ft_create_path(t_path *path, t_data *map)
+//{
+//	int	i;
+//	t_path *p;
+//	t_point *point;
+//	t_point *header;
+
+//	i = 0;
+//	header = map->points;
+//	point = map->end;
+//	while(point != map->start)
+//	{
+//		if (!path)
+//		{
+//			if (!(path = (t_path *) ft_memalloc(sizeof(t_path))))
+//				put_err("Init.there is no memory for path");
+//			path->points = point;
+//			path->last_points = point;
+//			path->len = map->end->bfs_level;
+//		}
+//		else
+//			{
+//			if (!(path->last_points->next = (t_path *) ft_memalloc(sizeof(t_path))))
+//				put_err("Init.there is no memory for path");
+//			path->last_points = path->last_points->next;
+//			path->points = point->prev_room_path;
+//			point = point->prev_room_path;
+//		}
+//	}
+//	path->points = header;
+//	return (path);
+//}
+
 int	alg(t_data *map)
 {
-	int **paths;
+	t_path **paths;
+	t_path *path;
 	int i;
 	int strings;
 
 	strings = 21;
 	i = 1;
-	if (!(paths = (int **)ft_memalloc(sizeof(int *) * strings)))
+	if (!(paths = (t_path **)ft_memalloc(sizeof(t_path *) * strings)))
 		put_err("Init.there is no memory for paths");
 	ft_bfs(map);
 	printf("end %d\n",map->end->bfs_level);
@@ -183,12 +217,10 @@ int	alg(t_data *map)
 //			strings += 10;
 //			paths = ft_realloc(paths, strings);
 //		}
-		//paths[i] = ft_new_path(map);
-//		paths[0][0] = 1;
-//		paths[0][1] = i;
+		//paths[i] = ft_create_path(paths[i], map);
 		//i++;
 //	}
-	//ft_letGoAnts(paths);
+	ft_letGoAnts(paths);
 	return (0);
 }
 

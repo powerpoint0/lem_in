@@ -45,7 +45,7 @@ typedef struct		s_path
 	int len;
 	t_point			*points;
 	t_point			*last_points;
-	t_point			*next;
+	struct s_path	*next;
 }					t_path;
 
 

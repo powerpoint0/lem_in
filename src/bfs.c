@@ -1,5 +1,7 @@
 #include "lem_in.h"
 
+
+
 int		ft_bfs(t_data *map)
 {
 	t_point **queue;
@@ -9,7 +11,7 @@ int		ft_bfs(t_data *map)
 	int qp2;
 	qp2 = 1;
 
-	if(!(queue = (t_point **)ft_memalloc(sizeof(t_point*)* (map->last_points->num + 1) )))
+	if(!(queue = (t_point **)ft_memalloc(sizeof(t_point*)* (map->last_points->num + 1))))
 		put_err("Init.there is no memory for queue");
 	queue[0] = map->start;
 	map->start->bfs_level = 0;

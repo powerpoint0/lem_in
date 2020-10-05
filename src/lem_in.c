@@ -25,7 +25,7 @@ void	free_all(t_data	*map)
 }
 int		put_err(char *str)
 {
-	ft_putendl(str);
+	ft_putendl_fd(str, 2);
 	exit(1);
 }
 
