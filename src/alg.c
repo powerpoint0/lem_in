@@ -174,20 +174,21 @@ int	alg(t_data *map)
 	ft_bfs(map);
 	printf("end %d\n",map->end->bfs_level);
 	if(!map->end->bfs_level)
-		put_err("There is no path between START and END");
-//	while (ft_find_smallest_way(map))
+			put_err("There is no path between START and END");
+
+	//	while (ft_bfs(map))
 //	{
 //		if(i >= strings)
 //		{
 //			strings += 10;
 //			paths = ft_realloc(paths, strings);
 //		}
-//		paths[i] = ft_new_path(map);
+		//paths[i] = ft_new_path(map);
 //		paths[0][0] = 1;
 //		paths[0][1] = i;
-//		i++;
+		//i++;
 //	}
-//	ft_letGoAnts(paths);
+	//ft_letGoAnts(paths);
 	return (0);
 }
 

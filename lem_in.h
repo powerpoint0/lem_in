@@ -68,5 +68,5 @@ t_data				*int_map(void);
 t_data				*read_map(int fd);
 
 int					alg(t_data *map);
-void				ft_bfs(t_data *map);
+int				ft_bfs(t_data *map);
 #endif
