@@ -18,7 +18,7 @@ int		ft_atoi_check(const char *str)
 		rez = rez * 10 + (str[i] - '0');
 		i++;
 	}
-	if (i == 0 || rez > INT32_MAX)
+	if (i == 0 || rez > INT_MAX)
 		put_err("Not valid int");
 	return (sig * (int)rez);
 }
@@ -267,6 +267,27 @@ int		connected_points(t_data *map)
 	return (1);
 }
 
+void	check_start_end_connected(t_data *map)
+{
+	t_line	*cline;
+	int		st;
+	int		end;
+
+	st = 0;
+	end = 0;
+	cline = map->lines;
+	while (cline)
+	{
+		if (cline->num_first == map->start->num || cline->num_next == map->start->num)
+			st++;
+		if (cline->num_first == map->end->num || cline->num_next == map->end->num)
+			end++;
+		cline = cline->next;
+	}
+	if (st == 0 || end == 0)
+		put_err("ERROR. No valid paths");
+}
+
 t_data	*read_map(int fd)
 {
 	int 	rd;
@@ -281,6 +302,8 @@ t_data	*read_map(int fd)
 		if (rd == -1)
 			put_err("Not read file");
 		ft_putendl(line);
+		if (mod_command == 1 && (ft_strequ(line, "##start") || ft_strequ(line, "##end")))
+			put_err("ERROR. more than one command line ##start or ##end in a row");
 		if (ft_strequ(line, "##start") || ft_strequ(line, "##end"))
 			mod_command = (ft_strequ(line, "##start")) ? START : END;
 		else if (line[0] != '#')
@@ -289,6 +312,7 @@ t_data	*read_map(int fd)
 			mod_command = 0;
 		}
 	}
+	check_start_end_connected(map);
 	if (!map->start || !map->end)
 		put_err("ERROR.Not start or end");
 	connected_points(map);
