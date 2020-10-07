@@ -22,6 +22,10 @@ sys/types.h
 unistd.h
 -
 
+/Users/cjoaquin/CLionProjects/lem_in4/src/alg.c
+lem_in.h
+/Users/cjoaquin/CLionProjects/lem_in4/src/lem_in.h
+
 /Users/cjoaquin/CLionProjects/lem_in4/src/bfs.c
 lem_in.h
 /Users/cjoaquin/CLionProjects/lem_in4/src/lem_in.h

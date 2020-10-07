@@ -9,11 +9,13 @@ void ft_clean_close(t_data *map)
 	{
 		if(map->points->close == 1)
 			map->points->close = 0;
+		map->points->prev_room_path = NULL;
 		map->points = map->points->next;
 	}
 	map->points->close = 0;
 	map->points = header;
 }
+
 int		ft_bfs(t_data *map)
 {
 	t_point **queue;
