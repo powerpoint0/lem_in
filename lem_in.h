@@ -17,6 +17,8 @@ typedef struct		s_line
 typedef struct		s_point
 {
 	int				num;
+	int				snum;
+	int				p;
 	char			*name;
 	int				x;
 	int 			y;

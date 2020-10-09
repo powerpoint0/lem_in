@@ -46,6 +46,8 @@ t_point	*new_point(char **str, int num)
 	if (!(new = (t_point*)ft_memalloc(sizeof(t_point))))
 		put_err("Init.Not create point");
 	new->num = num;
+	new->snum = -1;
+	new->p = 1;
 	new->name = str[0];
 	new->x = ft_atoi_check(str[1]);
 	new->y = ft_atoi_check(str[2]);
@@ -181,7 +183,7 @@ int		parsing_line(char *str, t_data *map, int mod_command)
 	}
 	return (1);
 }
-
+/*
 int	get_arr_size(t_line *line, int	num_point)
 {
 	t_line	*cline;
@@ -207,7 +209,7 @@ t_point	*get_point(t_data *map, int num)
 		cpoint = cpoint->next;
 	return (cpoint);
 }
-
+*/
 void	delete_point(t_data *map, int num_point)
 {
 	t_point	*delete;
@@ -226,7 +228,7 @@ void	delete_point(t_data *map, int num_point)
 	free(delete);
 	delete = NULL;
 }
-
+/*
 t_point	**set_arr_lines(t_data *map, int num_point, int size)
 {
 	t_point	**arr_lines;
@@ -266,7 +268,7 @@ int		connected_points(t_data *map)
 	}
 	return (1);
 }
-
+*/
 void	check_start_end_connected(t_data *map)
 {
 	t_line	*cline;
@@ -286,6 +288,169 @@ void	check_start_end_connected(t_data *map)
 	}
 	if (st == 0 || end == 0)
 		put_err("ERROR. No valid paths");
+}
+
+void	copy_one_point(t_point *point, int snum)
+{
+	t_point	*new;
+	if (!(new = (t_point*) ft_memalloc(sizeof(t_point))))
+		put_err("ERROR. Copy point");
+
+	ft_memcpy(new, point, sizeof(t_point));
+	new->snum = snum;
+	new->p = 2;
+	new->next = point->next;
+	point->next = new;
+}
+
+void	copy_points(t_data *map)
+{
+	t_point	*point;
+	int		snum;
+
+	snum = 0;
+	point = map->points;
+	while (point)
+	{
+		if (point->num != map->start->num &&
+			point->num != map->end->num)
+		{
+			point->snum = snum++;
+			copy_one_point(point, snum);
+			point = point->next;
+		}
+		snum++;
+		point = point->next;
+	}
+}
+
+void	del_free_point(t_data *map)
+{
+	t_point	*cpoint;
+	t_line	*cline;
+	int		num;
+	int		ok;
+
+	cpoint = map->points;
+	while (cpoint)
+	{
+		ok = 0;
+		cline = map->lines;
+		while (cline)
+		{
+			if (cline->num_first == cpoint->num ||
+					cline->num_next == cpoint->num)
+				ok++;
+			cline = cline->next;
+		}
+		num = cpoint->num;
+		cpoint = cpoint->next;
+		if (!ok)
+			delete_point(map, num);
+	}
+}
+
+int	size_in(t_data *map, int num)
+{
+	t_line	*cline;
+	int		size;
+
+	size = 0;
+	cline = map->lines;
+	while(cline)
+	{
+		if (cline->num_next == num)
+			size++;
+		if (cline->num_first == num)
+			size++;
+		cline = cline->next;
+	}
+	return (size);
+}
+
+t_point	*get_point2(t_data *map, int num, int	p)
+{
+	t_point	*cpoint;
+
+	cpoint = map->points;
+	if (num == map->start->num)
+		return (map->start);
+	if (num == map->end->num)
+		return (map->end);
+	while (cpoint->num != num || cpoint->p != p)
+		cpoint = cpoint->next;
+	return (cpoint);
+}
+
+t_point	**set_arr_lines_in(t_data *map, t_point *point, int size, int p)
+{
+	t_point **arr_lines;
+	t_line *cline;
+	int i;
+
+	cline = map->lines;
+	i = 0;
+	if (!(arr_lines = (t_point **) ft_memalloc(sizeof(t_point) * size)
+	))
+		put_err("Something went wrong");
+	while (cline)
+	{
+		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
+			arr_lines[i++] = get_point2(map, cline->num_next, p);
+		if (cline->num_next == point->num && point->p == 2)
+			arr_lines[i++] = get_point2(map, cline->num_next, p);
+		if (cline->num_next == point->num && (point->p == 1 || point->p == 0))
+			arr_lines[i++] = get_point2(map, cline->num_first, p);
+		if (cline->num_first == point->num && point->p == 1)
+			arr_lines[i++] = get_point2(map, cline->num_first, p);
+		cline = cline->next;
+	}
+	return (arr_lines);
+}
+
+void	connected_points2(t_data *map)
+{
+	t_line	*cline;
+	t_point	*tpoint;
+	int		size;
+
+	cline = map->lines;
+	map->start->p = 0;
+	map->end->p = 0;
+		while (cline)
+		{
+			size = size_in(map, cline->num_first);
+			tpoint = get_point2(map, cline->num_first, 2);
+			tpoint->arr_lines = set_arr_lines_in(map, tpoint, size, 1); // добавляем превые точки (из next)
+			size = size_in(map, cline->num_next);
+			tpoint = get_point2(map, cline->num_next, 1);
+			tpoint->arr_lines = set_arr_lines_in(map, tpoint, size, 2); // добавляем вторые точки из first
+			cline = cline->next;
+		}
+}
+
+void	print_arr(t_data *map)
+{
+	t_point	*point;
+	int		i;
+
+	point = map->points;
+	while (point)
+	{
+		if (point->num == map->start->num)
+			printf("%s\n", "START POINT");
+		if (point->num == map->end->num)
+			printf("%s\n", "END POINT");
+		printf("%s [%d]:\t", point->name, point->p);
+		i = 0;
+		while (point->arr_lines[i])
+		{
+			printf("%s [%d]:\t", point->arr_lines[i]->name, point->arr_lines[i]->p);
+			i++;
+		}
+		printf("\n");
+		point = point->next;
+	}
 }
 
 t_data	*read_map(int fd)
@@ -312,10 +477,14 @@ t_data	*read_map(int fd)
 			mod_command = 0;
 		}
 	}
-	check_start_end_connected(map);
 	if (!map->start || !map->end)
 		put_err("ERROR.Not start or end");
-	connected_points(map);
+	check_start_end_connected(map);
+	del_free_point(map);
+	copy_points(map);
+	connected_points2(map);
+	print_arr(map);
+//	connected_points(map);
 	if (line)
 		free(line);
 	return (map);
