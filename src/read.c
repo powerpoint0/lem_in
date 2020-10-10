@@ -53,6 +53,7 @@ t_point	*new_point(char **str, int num)
 	new->y = ft_atoi_check(str[2]);
 	new->in_path = 0;
 	new->next = NULL;
+	new->check = NULL;
 	return (new);
 }
 
@@ -382,6 +383,25 @@ t_point	*get_point2(t_data *map, int num, int	p)
 	return (cpoint);
 }
 
+int		add_to_arrline(t_point **arr_lines, t_point *point, int count)
+{
+	int	i;
+	int	in;
+	i = 0;
+
+	in = 0;
+	while (i < count)
+	{
+		if (arr_lines[i]->num == point->num && arr_lines[i]->p == point->p)
+			in++;
+		i++;
+	}
+	if (in > 0)
+		return (count);
+	arr_lines[count] = point;
+	return (count + 1);
+}
+
 t_point	**set_arr_lines_in(t_data *map, t_point *point, int size, int p)
 {
 	t_point **arr_lines;
@@ -395,16 +415,28 @@ t_point	**set_arr_lines_in(t_data *map, t_point *point, int size, int p)
 		put_err("Something went wrong");
 	while (cline)
 	{
-		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
+/*		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
 			arr_lines[i++] = get_point2(map, cline->num_next, p);
 		if (cline->num_next == point->num && point->p == 2)
 			arr_lines[i++] = get_point2(map, cline->num_next, p);
 		if (cline->num_next == point->num && (point->p == 1 || point->p == 0))
 			arr_lines[i++] = get_point2(map, cline->num_first, p);
 		if (cline->num_first == point->num && point->p == 1)
-			arr_lines[i++] = get_point2(map, cline->num_first, p);
+			arr_lines[i++] = get_point2(map, cline->num_first, p);*/
+
+		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_next, p), i);
+		if (cline->num_next == point->num && point->p == 2)
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_next, p), i);
+		if (cline->num_next == point->num && (point->p == 1 || point->p == 0))
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);
+		if (cline->num_first == point->num && point->p == 1)
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);
 		cline = cline->next;
 	}
+	if (!(point->check = (int*)ft_memalloc(sizeof(int) * (i + 1))))
+		put_err("Something went wrong");
+	point->check[0] = i;
 	return (arr_lines);
 }
 

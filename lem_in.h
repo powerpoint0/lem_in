@@ -26,6 +26,7 @@ typedef struct		s_point
 	int 			in_path;
 	int 			bfs_level;
 	struct s_point **arr_lines;
+	int				*check;
 	int				close;
 	struct s_point	*prev_room_path;
 	struct s_point	*next;
