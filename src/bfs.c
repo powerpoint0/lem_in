@@ -33,12 +33,14 @@ int		ft_bfs(t_data *map)
 	map->end->bfs_level = 0;
 	map->start->close = 1;
 	queue_p = 0;
-	while (queue_p < qp2) {
+	while (queue_p < qp2)
+	{
 		i = 0;
 		current = queue[queue_p];
-
-		while (current->arr_lines[i]) {
-			if (!current->arr_lines[i]->close) {
+		while (current->arr_lines[i])
+		{
+			if (current->check[i + 1] && !current->arr_lines[i]->close)
+			{
 				current->arr_lines[i]->bfs_level = current->bfs_level + 1;
 				current->arr_lines[i]->prev_room_path = current;
 			}
@@ -46,7 +48,7 @@ int		ft_bfs(t_data *map)
 				current->close = 1;
 			if (current->arr_lines[i] == map->end)
 				current->arr_lines[i]->close = 1;
-			if (!current->arr_lines[i]->close)
+			if (!current->arr_lines[i]->close && current->check[i + 1])
 				queue[qp2++] = current->arr_lines[i];
 			i++;
 		}

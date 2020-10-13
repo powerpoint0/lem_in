@@ -40,6 +40,16 @@ t_path 		**ft_realloc(t_path **paths, int str)
 	return(paths);
 }
 
+void ft_change_edge(t_path *path, t_data *map)
+{
+	int i = 0;
+
+	while (path->points->arr_lines[i] != path->next->points)
+		i++;
+	//path->points->check[i + 1] = (path->points->check[i + 1] == 1) ? -1 : 0;
+	path->points->check[i + 1] = 0;
+}
+
 t_path *		ft_create_path(t_path *path, t_data *map)
 {
 	t_path *new_point;
@@ -68,7 +78,8 @@ t_path *		ft_create_path(t_path *path, t_data *map)
 			path = new_point;
 			if(path->points == map->start)
 				break;
-			path->points->close = 2;
+			//path->points->close = 2;
+			ft_change_edge(path, map);
 		}
 	}
 	return (path);

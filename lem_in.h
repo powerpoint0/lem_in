@@ -28,6 +28,8 @@ typedef struct		s_point
 	struct s_point **arr_lines;
 	int				*check;
 	int				close;
+	int 			arr;
+	//struct s_point **arr_lines_rev;
 	struct s_point	*prev_room_path;
 	struct s_point	*next;
 }					t_point;
