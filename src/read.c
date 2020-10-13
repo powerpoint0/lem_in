@@ -402,6 +402,23 @@ int		add_to_arrline(t_point **arr_lines, t_point *point, int count)
 	return (count + 1);
 }
 
+int		*set_check(int size)
+{
+	int	*check;
+
+	if (size == 0)
+		put_err("Something went wrong");
+	if (!(check = (int*)ft_memalloc(sizeof(int) * (size + 1))))
+		put_err("Something went wrong");
+	check[0] = size;
+	while (size > 0)
+	{
+		check[size] = 1;
+		size--;
+	}
+	return (check);
+}
+
 t_point	**set_arr_lines_in(t_data *map, t_point *point, int size, int p)
 {
 	t_point **arr_lines;
@@ -434,9 +451,7 @@ t_point	**set_arr_lines_in(t_data *map, t_point *point, int size, int p)
 			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);
 		cline = cline->next;
 	}
-	if (!(point->check = (int*)ft_memalloc(sizeof(int) * (i + 1))))
-		put_err("Something went wrong");
-	point->check[0] = i;
+	point->check = set_check(i);
 	return (arr_lines);
 }
 
