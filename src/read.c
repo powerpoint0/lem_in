@@ -382,7 +382,7 @@ t_point	*get_point2(t_data *map, int num, int	p)
 		cpoint = cpoint->next;
 	return (cpoint);
 }
-
+/*
 int		add_to_arrline(t_point **arr_lines, t_point *point, int count)
 {
 	int	i;
@@ -401,7 +401,7 @@ int		add_to_arrline(t_point **arr_lines, t_point *point, int count)
 	arr_lines[count] = point;
 	return (count + 1);
 }
-
+*/
 int		*set_check(int size)
 {
 	int	*check;
@@ -432,23 +432,23 @@ t_point	**set_arr_lines_in(t_data *map, t_point *point, int size, int p)
 		put_err("Something went wrong");
 	while (cline)
 	{
-/*		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
+		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
 			arr_lines[i++] = get_point2(map, cline->num_next, p);
 		if (cline->num_next == point->num && point->p == 2)
 			arr_lines[i++] = get_point2(map, cline->num_next, p);
 		if (cline->num_next == point->num && (point->p == 1 || point->p == 0))
 			arr_lines[i++] = get_point2(map, cline->num_first, p);
 		if (cline->num_first == point->num && point->p == 1)
-			arr_lines[i++] = get_point2(map, cline->num_first, p);*/
+			arr_lines[i++] = get_point2(map, cline->num_first, p);
 
-		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
+/*		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
 			i = add_to_arrline (arr_lines, get_point2(map, cline->num_next, p), i);
 		if (cline->num_next == point->num && point->p == 2)
 			i = add_to_arrline (arr_lines, get_point2(map, cline->num_next, p), i);
 		if (cline->num_next == point->num && (point->p == 1 || point->p == 0))
 			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);
 		if (cline->num_first == point->num && point->p == 1)
-			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);*/
 		cline = cline->next;
 	}
 	point->check = set_check(i);
