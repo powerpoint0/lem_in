@@ -22,24 +22,6 @@ int		ft_letGoAnts(t_path **paths)
 //	free(copy);
 //}
 
-t_path 		**ft_realloc(t_path **paths, int str)
-{
-//	int	**copy;
-//	int j;
-//
-//	j = 0;
-//	copy = paths;
-//	if (!(paths = (int **)ft_memalloc(sizeof(int *) * str)))
-//		put_err("Init.there is no memory for paths");
-//	while(j <= copy[0][1])
-//	{
-//		ft_memcpy(paths[j], copy[j], sizeof(int)* (copy[j][0]+1));
-//		j++;
-//	}
-//	ft_free_int(copy);
-	return(paths);
-}
-
 void ft_change_edge(t_path *path, t_data *map)
 {
 	int i = 0;
@@ -56,6 +38,7 @@ t_path *		ft_create_path(t_path *path, t_data *map)
 
 	while(map->start)
 	{
+
 		if (!path)
 		{
 			if (!(path = (t_path *) ft_memalloc(sizeof(t_path))))
@@ -69,46 +52,65 @@ t_path *		ft_create_path(t_path *path, t_data *map)
 			if (!(new_point = (t_path *) ft_memalloc(sizeof(t_path))))
 				put_err("Init.there is no memory for path");
 			new_point->next = path;
-			if(path->points->prev_room_path)
+			if(path->points->prev_room_path2) {
+				new_point->points = path->points->prev_room_path2;
+				path->points->prev_room_path2 = NULL;
+			}
+			else if(path->points->prev_room_path)
 				new_point->points = path->points->prev_room_path;
 			else
 				new_point->points = map->start;
 			new_point->last_points = path->last_points;
 			new_point->len = map->end->bfs_level;
 			path = new_point;
+			ft_change_edge(path, map);
 			if(path->points == map->start)
 				break;
-			//path->points->close = 2;
-			ft_change_edge(path, map);
+			path->points->in_path =1;
+			path->points->close = 2;
+
 		}
 	}
 	return (path);
 }
+
+
+void print_paths(t_path **paths) {
+	t_path *path;
+	int i;
+
+	i = 0;
+
+	while (paths[i])
+	{
+		path = paths[i];
+		while (path) {
+			printf("%s ", path->points->name);
+			path = path->next;
+		}
+		printf("\n");
+		i++;
+	}
+}
+
 
 int	alg(t_data *map)
 {
 	t_path **paths;
 	int check;
 	int i;
-	int strings;
 
-	strings = 21;
 	i = 0;
-	if (!(paths = (t_path **)ft_memalloc(sizeof(t_path *) * strings)))
+	if (!(paths = (t_path **)ft_memalloc(sizeof(t_path *) * (map->start->check[0] + 1))))
 		put_err("ERROR.Init.there is no memory for paths");
-	//printf("end %d\n",map->end->bfs_level);
 	while (!(check = ft_bfs(map)))
 	{
-		if(i >= strings)
-		{
-			strings += 10;
-			paths = ft_realloc(paths, strings);
-		}
 		paths[i] = ft_create_path(paths[i], map);
 		i++;
 	}
 	if(check < 0 && !*paths)
 		put_err("ERROR.There is no path between START and END");
+	print_paths(paths);
 	ft_letGoAnts(paths);
 	return (0);
 }

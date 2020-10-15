@@ -18,7 +18,7 @@ int		ft_atoi_check(const char *str)
 		rez = rez * 10 + (str[i] - '0');
 		i++;
 	}
-	if (i == 0 || rez > INT_MAX)
+	if (i == 0 || rez > INT32_MAX)
 		put_err("Not valid int");
 	return (sig * (int)rez);
 }
