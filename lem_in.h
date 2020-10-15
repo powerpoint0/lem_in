@@ -71,6 +71,7 @@ typedef struct		s_path
 int					put_err(char *str);
 t_data				*int_map(void);
 t_data				*read_map(int fd);
+int					*set_check(int size);
 
 int					alg(t_data *map);
 int				ft_bfs(t_data *map);
