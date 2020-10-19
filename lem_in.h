@@ -50,6 +50,7 @@ typedef struct		s_path
 	int len;
 	t_point			*points;
 	t_point			*last_points;
+	struct s_path	*prev;
 	struct s_path	*next;
 }					t_path;
 

@@ -26,8 +26,6 @@ void ft_clean_close(t_data *map)
 	map->points = header;
 }
 
-
-
 /*
  * сначала заполняем 1 указатель
  * после второй
@@ -36,13 +34,13 @@ void ft_clean_close(t_data *map)
 
 int g_num = 0;
 
-void printf1(char *str, char *name, char *name2)
+void printf1(char *str, char *name, char *name2, int close1, int close2)
 {
 	if (g_num != 2)
 		return;
-	printf(str, name, name2);
-}
+	printf(str, name, name2,close1, close2);
 
+}
 
 t_point *ft_get_next_empty_room(t_point *current, t_point *next, int i, t_point *end)
 {
@@ -52,17 +50,14 @@ t_point *ft_get_next_empty_room(t_point *current, t_point *next, int i, t_point 
 		return (NULL);
 	if (next->close != FREE)
 		return (NULL);
-
-	printf1("%s_%s\n", current->name, next->name);
+//	printf1("%s_%s\n", current->name, next->name);
+	printf1("%s_%s %d_%d\n", current->name, next->name,current->close, next->close );
 	next->bfs_level = current->bfs_level + 1;
 	next->prev_room_path = current;
 	next->close = IN_QUEUE;
-
 	if (next == end)
 		next->close = VISITED;
-
 	return (next);
-
 }
 
 t_point *ft_get_next_path_room(t_point *current, t_point *next, int i, t_point *end)
@@ -74,13 +69,10 @@ t_point *ft_get_next_path_room(t_point *current, t_point *next, int i, t_point *
 		return (NULL);
 	if (next->close != PART_OF_PATH)
 		return (NULL);
-
-	printf1("%s_%s\n", current->name, next->name);
+	printf1("%s_%s %d_%d\n", current->name, next->name,current->close, next->close );
 	next->bfs_level = current->bfs_level + 1;
 	next->prev_room_path = current;
-
 	next->close = PART_OF_PATH_FIRST_STEP;
-
 	return (next);
 }
 
@@ -93,16 +85,14 @@ t_point *ft_get_next_path_in_room(t_point *current, t_point *next, int i, t_poin
 		return (NULL);
 	if (next->close != PART_OF_PATH && next->close != PART_OF_PATH_FIRST_STEP)
 		return (NULL);
-
-	printf1("%s_%s\n", current->name, next->name);
-	next->bfs_level = current->bfs_level + 1;
+	printf1("%s_%s %d_%d\n", current->name, next->name,current->close, next->close );
+//	printf1("%s_%s\n", current->name, next->name);
+	next->bfs_level = current->bfs_level - 1;
 	if (!next->prev_room_path)
 		next->prev_room_path = current;
 	else
 		next->prev_room_path2 = current;
-
 	next->close = PART_OF_PATH_SECOND_STEP;
-
 	return (next);
 }
 
@@ -115,19 +105,17 @@ t_point *ft_get_next_path_out_room(t_point *current, t_point *next, int i, t_poi
 		return (NULL);
 	if (next->close != FREE && next->close != PART_OF_PATH)
 		return (NULL);
-
-	printf1("%s_%s\n", current->name, next->name);
+//	printf1("%s_%s\n", current->name, next->name);
+	printf1("%s_%s %d_%d\n", current->name, next->name,current->close, next->close );
 	next->bfs_level = current->bfs_level + 1;
 	if (!next->prev_room_path)
 		next->prev_room_path = current;
 	else
 		next->prev_room_path2 = current;
-
 	if (next->close == PART_OF_PATH)
 		next->close = PART_OF_PATH_SECOND_STEP;
 	else
 		next->close = IN_QUEUE;
-
 	return (next);
 }
 
@@ -157,11 +145,10 @@ int		ft_bfs(t_data *map)
 		i = 0;
 		current = queue[queue_p];
 		//надо это обдумать
-
 		while (current->arr_lines[i])
 		{
 			next = current->arr_lines[i];
-//			if (!ft_strcmp(current->name, "8") && !ft_strcmp(next->name, "2") && g_num == 2)
+//			if (!ft_strcmp(current->name, "1") && !ft_strcmp(next->name, "2") && g_num == 2)
 //				ft_atoi("2");
 			if ((next = ft_get_next_empty_room(current, current->arr_lines[i], i, map->end)))
 				queue[qp2++] = next;

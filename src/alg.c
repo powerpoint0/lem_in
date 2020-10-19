@@ -51,8 +51,10 @@ t_path *		ft_create_path(t_path *path, t_data *map)
 		{
 			if (!(new_point = (t_path *) ft_memalloc(sizeof(t_path))))
 				put_err("Init.there is no memory for path");
+			path->prev = new_point;
 			new_point->next = path;
-			if(path->points->prev_room_path2) {
+			if(path->points->prev_room_path2)
+			{
 				new_point->points = path->points->prev_room_path2;
 				path->points->prev_room_path2 = NULL;
 			}
@@ -84,7 +86,8 @@ void print_paths(t_path **paths) {
 	while (paths[i])
 	{
 		path = paths[i];
-		while (path) {
+		while (path)
+		{
 			printf("%s ", path->points->name);
 			path = path->next;
 		}
