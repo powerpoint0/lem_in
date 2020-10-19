@@ -184,7 +184,7 @@ int		parsing_line(char *str, t_data *map, int mod_command)
 	}
 	return (1);
 }
-
+/*
 int	get_arr_size(t_line *line, int	num_point)
 {
 	t_line	*cline;
@@ -210,7 +210,7 @@ t_point	*get_point(t_data *map, int num)
 		cpoint = cpoint->next;
 	return (cpoint);
 }
-
+*/
 void	delete_point(t_data *map, int num_point)
 {
 	t_point	*delete;
@@ -229,7 +229,7 @@ void	delete_point(t_data *map, int num_point)
 	free(delete);
 	delete = NULL;
 }
-
+/*
 t_point	**set_arr_lines(t_data *map, t_point *point, int size)
 {
 	t_point	**arr_lines;
@@ -270,7 +270,7 @@ int		connected_points(t_data *map)
 	}
 	return (1);
 }
-
+*/
 void	check_start_end_connected(t_data *map)
 {
 	t_line	*cline;
@@ -291,7 +291,7 @@ void	check_start_end_connected(t_data *map)
 	if (st == 0 || end == 0)
 		put_err("ERROR. No valid paths");
 }
-/*
+
 void	copy_one_point(t_point *point, int snum)
 {
 	t_point	*new;
@@ -325,7 +325,7 @@ void	copy_points(t_data *map)
 		point = point->next;
 	}
 }
-*/
+
 void	del_free_point(t_data *map)
 {
 	t_point	*cpoint;
@@ -351,7 +351,7 @@ void	del_free_point(t_data *map)
 			delete_point(map, num);
 	}
 }
-/*
+
 int	size_in(t_data *map, int num)
 {
 	t_line	*cline;
@@ -367,6 +367,7 @@ int	size_in(t_data *map, int num)
 			size++;
 		cline = cline->next;
 	}
+	size *= 2; // удвоение связей
 	return (size);
 }
 
@@ -383,8 +384,7 @@ t_point	*get_point2(t_data *map, int num, int	p)
 		cpoint = cpoint->next;
 	return (cpoint);
 }
- */
-/*
+
 int		add_to_arrline(t_point **arr_lines, t_point *point, int count)
 {
 	int	i;
@@ -398,12 +398,12 @@ int		add_to_arrline(t_point **arr_lines, t_point *point, int count)
 			in++;
 		i++;
 	}
-	if (in > 0)
-		return (count);
+//	if (in > 0)
+//		return (count);
 	arr_lines[count] = point;
 	return (count + 1);
 }
-*/
+
 int		*set_check(int size)
 {
 	int	*check;
@@ -420,7 +420,7 @@ int		*set_check(int size)
 	}
 	return (check);
 }
-/*
+
 t_point	**set_arr_lines_in(t_data *map, t_point *point, int size, int p)
 {
 	t_point **arr_lines;
@@ -434,23 +434,27 @@ t_point	**set_arr_lines_in(t_data *map, t_point *point, int size, int p)
 		put_err("Something went wrong");
 	while (cline)
 	{
-		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
-			arr_lines[i++] = get_point2(map, cline->num_next, p);
-		if (cline->num_next == point->num && point->p == 2)
-			arr_lines[i++] = get_point2(map, cline->num_next, p);
-		if (cline->num_next == point->num && (point->p == 1 || point->p == 0))
-			arr_lines[i++] = get_point2(map, cline->num_first, p);
-		if (cline->num_first == point->num && point->p == 1)
-			arr_lines[i++] = get_point2(map, cline->num_first, p);
-
 //		if (cline->num_first == point->num && (point->p == 2 || point->p == 0))
-//			i = add_to_arrline (arr_lines, get_point2(map, cline->num_next, p), i);
+//			arr_lines[i++] = get_point2(map, cline->num_next, p);
 //		if (cline->num_next == point->num && point->p == 2)
-//			i = add_to_arrline (arr_lines, get_point2(map, cline->num_next, p), i);
+//			arr_lines[i++] = get_point2(map, cline->num_next, p);
 //		if (cline->num_next == point->num && (point->p == 1 || point->p == 0))
-//			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);
+//			arr_lines[i++] = get_point2(map, cline->num_first, p);
 //		if (cline->num_first == point->num && point->p == 1)
-//			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);
+//			arr_lines[i++] = get_point2(map, cline->num_first, p);
+
+		if (cline->num_first == point->num && (point->p == 2 || point->p == 0)) // выход точки (2 или старт)
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_next, p), i);
+		if (cline->num_first == point->num && (point->p == 1 || point->p == 0))
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_next, 2), i);
+		if (cline->num_next == point->num && point->p == 2)
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_next, p), i);
+		if (cline->num_next == point->num && (point->p == 1 || point->p == 0))
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);
+		if (cline->num_next == point->num && (point->p == 2 || point->p == 0))
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, 1), i);
+		if (cline->num_first == point->num && point->p == 1)
+			i = add_to_arrline (arr_lines, get_point2(map, cline->num_first, p), i);
 		cline = cline->next;
 	}
 	point->check = set_check(i);
@@ -477,7 +481,7 @@ void	connected_points2(t_data *map)
 			cline = cline->next;
 		}
 }
-*/
+
 void	print_arr(t_data *map)
 {
 	t_point	*point;
@@ -494,7 +498,7 @@ void	print_arr(t_data *map)
 		i = 0;
 		while (point->arr_lines[i])
 		{
-			printf("%s [%d]:\t", point->arr_lines[i]->name, point->arr_lines[i]->p);
+			printf("%s [%d]\t", point->arr_lines[i]->name, point->arr_lines[i]->p);
 			i++;
 		}
 		printf("\n");
@@ -530,9 +534,9 @@ t_data	*read_map(int fd)
 		put_err("ERROR.Not start or end");
 	check_start_end_connected(map);
 	del_free_point(map);
-//	copy_points(map);
-//	connected_points2(map);
-	connected_points(map);
+	copy_points(map);
+	connected_points2(map);
+//	connected_points(map);
 	print_arr(map);
 	if (line)
 		free(line);
