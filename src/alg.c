@@ -1,10 +1,10 @@
 #include "lem_in.h"
-
+/*
 int		ft_letGoAnts(t_path **paths)
 {
 	return(0);
 }
-
+*/
 //void	ft_free_int(int **copy)
 //{
 //	int j;
@@ -114,6 +114,6 @@ int	alg(t_data *map)
 	if(check < 0 && !*paths)
 		put_err("ERROR.There is no path between START and END");
 	print_paths(paths);
-	ft_letGoAnts(paths);
+	ft_letGoAnts(paths, map);
 	return (0);
 }

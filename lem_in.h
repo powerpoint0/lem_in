@@ -19,6 +19,7 @@ typedef struct		s_point
 	int				num;
 	int				snum;
 	int				p;
+	int				ant_num;
 	char			*name;
 	int				x;
 	int 			y;
@@ -34,15 +35,25 @@ typedef struct		s_point
 	struct s_point	*next;
 }					t_point;
 
+typedef struct		s_loc
+{
+	int				i;
+	char			*name;
+	struct s_loc	*next;
+}					t_loc;
+
 typedef struct		s_data
 {
 	int				num_ants;
+	int				ants_end;
+	int				ants_count;
 	t_point			*points;
 	t_line			*lines;
 	t_point			*last_points;
 	t_line			*last_lines;
 	t_point			*start;
 	t_point			*end;
+	t_loc			*location;
 }					t_data;
 
 typedef struct		s_path
@@ -53,7 +64,6 @@ typedef struct		s_path
 	struct s_path	*prev;
 	struct s_path	*next;
 }					t_path;
-
 
 //typedef struct		s_arr
 //{
@@ -76,4 +86,8 @@ int					*set_check(int size);
 
 int					alg(t_data *map);
 int				ft_bfs(t_data *map);
+
+int		ft_letGoAnts(t_path **paths, t_data *map);
+t_loc	*add_loc(t_data *map, char *name, int num_ant);
+
 #endif

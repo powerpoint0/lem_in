@@ -47,6 +47,7 @@ t_point	*new_point(char **str, int num)
 		put_err("Init.Not create point");
 	new->num = num;
 	new->snum = -1;
+	new->ant_num = -1;
 	new->p = 1;
 	new->name = str[0];
 	new->x = ft_atoi_check(str[1]);

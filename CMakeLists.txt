@@ -72,4 +72,9 @@ add_executable(lem_in
 		libft/src/ft_strtrim.c
 		libft/src/ft_tolower.c
 		libft/src/ft_toupper.c
-		libft/src/get_next_line.c src/init.c src/read.c src/alg.c src/bfs.c)
+		libft/src/get_next_line.c
+		src/init.c
+		src/read.c
+		src/alg.c
+		src/bfs.c
+		src/moving_ants.c)
