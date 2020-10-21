@@ -22,29 +22,7 @@ sys/types.h
 unistd.h
 -
 
-/Users/cjoaquin/CLionProjects/lem_in7/src/alg.c
+/Users/cjoaquin/CLionProjects/lem_in8_razdv/src/bfs.c
 lem_in.h
-/Users/cjoaquin/CLionProjects/lem_in7/src/lem_in.h
-
-/Users/cjoaquin/CLionProjects/lem_in7/src/bfs.c
-lem_in.h
-/Users/cjoaquin/CLionProjects/lem_in7/src/lem_in.h
-
-/Users/cjoaquin/CLionProjects/lem_in7/src/init.c
-lem_in.h
-/Users/cjoaquin/CLionProjects/lem_in7/src/lem_in.h
-
-/Users/cjoaquin/CLionProjects/lem_in7/src/lem_in.c
-stdio.h
--
-lem_in.h
-/Users/cjoaquin/CLionProjects/lem_in7/src/lem_in.h
-fcntl.h
--
-stdlib.h
--
-
-/Users/cjoaquin/CLionProjects/lem_in7/src/read.c
-lem_in.h
-/Users/cjoaquin/CLionProjects/lem_in7/src/lem_in.h
+/Users/cjoaquin/CLionProjects/lem_in8_razdv/src/lem_in.h
 

@@ -66,6 +66,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in.dir/src/bfs.c.o"
   "CMakeFiles/lem_in.dir/src/init.c.o"
   "CMakeFiles/lem_in.dir/src/lem_in.c.o"
+  "CMakeFiles/lem_in.dir/src/moving_ants.c.o"
   "CMakeFiles/lem_in.dir/src/read.c.o"
   "lem_in"
   "lem_in.pdb"

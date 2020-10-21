@@ -205,6 +205,10 @@ CMakeFiles/lem_in.dir/src/lem_in.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/src/lem_in.c.o: ../libft/includes/libft.h
 CMakeFiles/lem_in.dir/src/lem_in.c.o: ../src/lem_in.c
 
+CMakeFiles/lem_in.dir/src/moving_ants.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/src/moving_ants.c.o: ../libft/includes/libft.h
+CMakeFiles/lem_in.dir/src/moving_ants.c.o: ../src/moving_ants.c
+
 CMakeFiles/lem_in.dir/src/read.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/src/read.c.o: ../libft/includes/libft.h
 CMakeFiles/lem_in.dir/src/read.c.o: ../src/read.c
