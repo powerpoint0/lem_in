@@ -483,29 +483,29 @@ void	connected_points2(t_data *map)
 		}
 }
 
-void	print_arr(t_data *map)
-{
-	t_point	*point;
-	int		i;
-
-	point = map->points;
-	while (point)
-	{
-		if (point->num == map->start->num)
-			printf("%s\n", "START POINT");
-		if (point->num == map->end->num)
-			printf("%s\n", "END POINT");
-		printf("%s [%d]:\t", point->name, point->p);
-		i = 0;
-		while (point->arr_lines[i])
-		{
-			printf("%s [%d]\t", point->arr_lines[i]->name, point->arr_lines[i]->p);
-			i++;
-		}
-		printf("\n");
-		point = point->next;
-	}
-}
+//void	print_arr(t_data *map)
+//{
+//	t_point	*point;
+//	int		i;
+//
+//	point = map->points;
+//	while (point)
+//	{
+//		if (point->num == map->start->num)
+//			printf("%s\n", "START POINT");
+//		if (point->num == map->end->num)
+//			printf("%s\n", "END POINT");
+//		printf("%s [%d]:\t", point->name, point->p);
+//		i = 0;
+//		while (point->arr_lines[i])
+//		{
+//			printf("%s [%d]\t", point->arr_lines[i]->name, point->arr_lines[i]->p);
+//			i++;
+//		}
+//		printf("\n");
+//		point = point->next;
+//	}
+//}
 
 t_data	*read_map(int fd)
 {
@@ -538,7 +538,7 @@ t_data	*read_map(int fd)
 	copy_points(map);
 	connected_points2(map);
 //	connected_points(map);
-	print_arr(map);
+//	print_arr(map);
 	if (line)
 		free(line);
 	return (map);

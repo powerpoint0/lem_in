@@ -32,13 +32,7 @@
 // * восстанавливаем путь в обратном порядке и затираем указатели
 // */
 //
-//int g_num = 0;
-//
-//void printf1(char *str, char *name, char *name2, int close1, int close2)
-//{
-//	if (g_num != 2)
-//		return;
-//	printf(str, name, name2,close1, close2);
+
 //
 //}
 //
@@ -168,7 +162,11 @@
 //		return (-1);
 //	return (0);
 //}
+
+#include <stdio.h>
 #include "lem_in.h"
+
+
 
 void ft_clean_close(t_data *map)
 {
@@ -185,11 +183,22 @@ void ft_clean_close(t_data *map)
 	map->points->close = 0;
 	map->points = header;
 }
+int g_num = 0;
+void printf1(char *str, char *name,int close1, char *name2,  int close2)
+{
+	if (g_num != 1)
+		return;
+	printf(str, name,close1, name2,  close2);
+
+}
 
 int		ft_bfs(t_data *map)
 {
+	g_num++;
+
 	t_point **queue;
 	t_point *current;
+	t_point *next;
 	int queue_p;
 	int i;
 	int qp2;
@@ -207,24 +216,28 @@ int		ft_bfs(t_data *map)
 	{
 		i = 0;
 		current = queue[queue_p];
-		while (current->arr_lines[i])
+		if(current && current->arr_lines)
 		{
-			if (current->check[i + 1] && !current->arr_lines[i]->close)
-			{
-				current->arr_lines[i]->bfs_level = current->bfs_level + 1;
-				current->arr_lines[i]->prev_room_path = current;
+			while (current->arr_lines[i]) {
+				next = current->arr_lines[i];
+				printf1("%s%d_%s%d\n", current->name, current->p, next->name, next->p);
+				if (current->check[i + 1] && !current->arr_lines[i]->close) {
+					current->arr_lines[i]->bfs_level = current->bfs_level + 1;
+					current->arr_lines[i]->prev_room_path = current;
+				}
+				if (current->close != 2)
+					current->close = 1;
+				if (current->arr_lines[i] == map->end)
+					current->arr_lines[i]->close = 1;
+				if (!current->arr_lines[i]->close && current->check[i + 1])
+					queue[qp2++] = current->arr_lines[i];
+				i++;
 			}
-			if (current->close != 2)
-				current->close = 1;
-			if (current->arr_lines[i] == map->end)
-				current->arr_lines[i]->close = 1;
-			if (!current->arr_lines[i]->close && current->check[i + 1])
-				queue[qp2++] = current->arr_lines[i];
-			i++;
 		}
 		queue_p++;
 	}
 	if (!map->end->bfs_level)
 		return (-1);
+	printf("\n");
 	return (0);
 }

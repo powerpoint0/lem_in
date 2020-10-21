@@ -70,7 +70,6 @@ t_path *		ft_create_path(t_path *path, t_data *map)
 				break;
 			path->points->in_path =1;
 			path->points->close = 2;
-
 		}
 	}
 	return (path);
@@ -88,14 +87,13 @@ void print_paths(t_path **paths) {
 		path = paths[i];
 		while (path)
 		{
-			printf("%s ", path->points->name);
+			printf("%s%d ", path->points->name,  path->points->p);
 			path = path->next;
 		}
 		printf("\n");
 		i++;
 	}
 }
-
 
 int	alg(t_data *map)
 {

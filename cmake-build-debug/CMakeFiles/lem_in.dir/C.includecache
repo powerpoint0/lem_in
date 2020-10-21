@@ -23,6 +23,8 @@ unistd.h
 -
 
 /Users/cjoaquin/CLionProjects/lem_in8_razdv/src/bfs.c
+stdio.h
+-
 lem_in.h
 /Users/cjoaquin/CLionProjects/lem_in8_razdv/src/lem_in.h
 
