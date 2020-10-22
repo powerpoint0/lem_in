@@ -26,6 +26,35 @@ t_loc	*set_new_loc(char *name, int num_ant)
 	return (new);
 }
 
+void	ins_loc(t_data *map, char *name, int num_ant)
+{
+	t_loc	*new;
+	t_loc	*next;
+	t_loc	*loc;
+
+	loc = map->location;
+	new = set_new_loc(name, num_ant);
+	if (loc->i > num_ant)
+	{
+		next = loc;
+		new->next = next;
+		map->location = new;
+	}
+	else
+	{
+		while (loc->next && loc->next->i <= num_ant)
+			loc = loc->next;
+		if (!loc->next)
+			loc->next = new;
+		else if (loc->i < num_ant)
+		{
+			next = loc->next;
+			loc->next = new;
+			new->next = next;
+		}
+	}
+}
+
 t_loc	*add_loc(t_data *map, char *name, int num_ant)
 {
 	t_loc	*header;
@@ -39,9 +68,10 @@ t_loc	*add_loc(t_data *map, char *name, int num_ant)
 	else
 	{
 		header = map->location;
-		while (map->location->next)
-			map->location = map->location->next;
-		map->location->next = set_new_loc(name, num_ant);
+		ins_loc(map, name, num_ant);
+//		while (map->location->next)
+//			map->location = map->location->next;
+//		map->location->next = set_new_loc(name, num_ant);
 	}
 	return (header);
 }
@@ -60,10 +90,7 @@ void	move_by_path(t_path **paths, t_data *map, int *ants)
 		while (path->prev)
 		{
 			if (path->points->num == map->end->num && path->points->ant_num != -1)
-			{
-				map->location = add_loc(map, path->points->name, path->points->ant_num);
 				map->ants_end++;
-			}
 			if (path->prev->points->num != map->start->num)
 			{
 				path->points->ant_num = path->prev->points->ant_num;
