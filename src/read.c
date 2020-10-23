@@ -18,7 +18,7 @@ int		ft_atoi_check(const char *str)
 		rez = rez * 10 + (str[i] - '0');
 		i++;
 	}
-	if (i == 0 || rez > INT32_MAX)
+	if (i == 0 || rez > INT_MAX)
 		put_err("Not valid int");
 	return (sig * (int)rez);
 }
@@ -399,8 +399,8 @@ int		add_to_arrline(t_point **arr_lines, t_point *point, int count)
 			in++;
 		i++;
 	}
-//	if (in > 0)
-//		return (count);
+	if (in > 0)
+		return (count);
 	arr_lines[count] = point;
 	return (count + 1);
 }
@@ -507,6 +507,79 @@ void	connected_points2(t_data *map)
 //	}
 //}
 
+
+t_sline	*new_sline(t_point *p1, t_point *p2, int weight)
+{
+	t_sline	*new;
+
+	if (!(new = (t_sline*)ft_memalloc(sizeof(t_sline))))
+		put_err("Init.Not creat line");
+	new->in = p1;
+	new->out = p2;
+	new->weight = weight;
+	new->next = NULL;
+	return (new);
+}
+
+t_sline	*add_sline(t_data *map, t_point *p1, t_point *p2, int weight)
+{
+	t_sline	*header;
+
+	if (!map->slines)
+		header = new_sline(p1, p2, weight);
+	else
+	{
+		header = map->slines;
+		while (map->slines->next)
+			map->slines = map->slines->next;
+		map->slines->next = new_sline(p1, p2, weight);
+	}
+	return (header);
+}
+
+t_sline	*set_sline(t_data *map)
+{
+	t_line	*line;
+
+	line = map->lines;
+	while (line)
+	{
+		if (line->num_first == map->start->num)
+		{
+			map->slines = add_sline(map, get_point2(map, line->num_first, 0), get_point2(map, line->num_next, 1), 1);
+			map->slines = add_sline(map, get_point2(map, line->num_next, 1), get_point2(map, line->num_next, 2), 0);
+			map->slines = add_sline(map, get_point2(map, line->num_next, 2), get_point2(map, line->num_first, 0), 1);
+		}
+		else if (line->num_first == map->end->num)
+		{
+			map->slines = add_sline(map, get_point2(map, line->num_first, 0), get_point2(map, line->num_next, 1), 1);
+			map->slines = add_sline(map, get_point2(map, line->num_next, 1), get_point2(map, line->num_next, 2), 0);
+			map->slines = add_sline(map, get_point2(map, line->num_next, 2), get_point2(map, line->num_first, 0), 1);
+		}
+		else
+		{
+			map->slines = add_sline(map, get_point2(map, line->num_first, 1), get_point2(map, line->num_first, 2), 0);
+			map->slines = add_sline(map, get_point2(map, line->num_first, 2), get_point2(map, line->num_next, 1), 1);
+			map->slines = add_sline(map, get_point2(map, line->num_next, 1), get_point2(map, line->num_next, 2), 0);
+			map->slines = add_sline(map, get_point2(map, line->num_next, 2), get_point2(map, line->num_first, 1), 1);
+		}
+		line = line->next;
+	}
+	return (map->slines);
+}
+
+void	print_sline(t_data *map)
+{
+	t_sline	*line;
+
+	line = map->slines;
+	while (line)
+	{
+		printf("%s(%d) - %s(%d)\n", line->in->name, line->in->p, line->out->name, line->out->p);
+		line = line->next;
+	}
+}
+
 t_data	*read_map(int fd)
 {
 	int 	rd;
@@ -537,6 +610,8 @@ t_data	*read_map(int fd)
 	del_free_point(map);
 	copy_points(map);
 	connected_points2(map);
+	map->slines = set_sline(map);
+	print_sline(map);
 //	connected_points(map);
 //	print_arr(map);
 	if (line)

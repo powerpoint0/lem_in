@@ -7,12 +7,13 @@
 
 typedef struct		s_line
 {
+	int				weight;
 	char			*p_first;
 	char			*p_next;
 	int				num_first;
 	int				num_next;
 	struct s_line	*next;
-}				t_line;
+}					t_line;
 
 typedef struct		s_point
 {
@@ -35,6 +36,14 @@ typedef struct		s_point
 	struct s_point	*next;
 }					t_point;
 
+typedef struct		s_sline
+{
+	int				weight;
+	t_point			*in;
+	t_point			*out;
+	struct s_sline	*next;
+}					t_sline;
+
 typedef struct		s_loc
 {
 	int				i;
@@ -49,6 +58,7 @@ typedef struct		s_data
 	int				ants_count;
 	t_point			*points;
 	t_line			*lines;
+	t_sline			*slines;
 	t_point			*last_points;
 	t_line			*last_lines;
 	t_point			*start;
