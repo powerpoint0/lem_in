@@ -550,11 +550,11 @@ t_sline	*set_sline(t_data *map)
 			map->slines = add_sline(map, get_point2(map, line->num_next, 1), get_point2(map, line->num_next, 2), 0);
 			map->slines = add_sline(map, get_point2(map, line->num_next, 2), get_point2(map, line->num_first, 0), 1);
 		}
-		else if (line->num_first == map->end->num)
+		else if (line->num_next == map->end->num)
 		{
-			map->slines = add_sline(map, get_point2(map, line->num_first, 0), get_point2(map, line->num_next, 1), 1);
-			map->slines = add_sline(map, get_point2(map, line->num_next, 1), get_point2(map, line->num_next, 2), 0);
-			map->slines = add_sline(map, get_point2(map, line->num_next, 2), get_point2(map, line->num_first, 0), 1);
+			map->slines = add_sline(map, get_point2(map, line->num_first, 1), get_point2(map, line->num_first, 2), 0);
+			map->slines = add_sline(map, get_point2(map, line->num_first, 2), get_point2(map, line->num_next, 0), 1);
+			map->slines = add_sline(map, get_point2(map, line->num_next, 0), get_point2(map, line->num_first, 1), 1);
 		}
 		else
 		{
@@ -575,7 +575,7 @@ void	print_sline(t_data *map)
 	line = map->slines;
 	while (line)
 	{
-		printf("%s(%d) - %s(%d)\n", line->in->name, line->in->p, line->out->name, line->out->p);
+		printf("%s(%d) - %s(%d) [%d]\n", line->in->name, line->in->p, line->out->name, line->out->p, line->weight);
 		line = line->next;
 	}
 }
