@@ -18,7 +18,7 @@ int		ft_atoi_check(const char *str)
 		rez = rez * 10 + (str[i] - '0');
 		i++;
 	}
-	if (i == 0 || rez > INT_MAX)
+	if (i == 0 || rez > INT32_MAX)
 		put_err("Not valid int");
 	return (sig * (int)rez);
 }
@@ -575,7 +575,7 @@ void	print_sline(t_data *map)
 	line = map->slines;
 	while (line)
 	{
-		printf("%s(%d) - %s(%d) [%d]\n", line->in->name, line->in->p, line->out->name, line->out->p, line->weight);
+		printf("%s(%d)cost%d - %s(%d)cost%d [%d]\n", line->in->name, line->in->p, line->in->cost, line->out->name, line->out->p, line->out->cost, line->weight);
 		line = line->next;
 	}
 }

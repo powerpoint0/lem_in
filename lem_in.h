@@ -30,7 +30,7 @@ typedef struct		s_point
 	struct s_point **arr_lines;
 	int				*check;
 	int				close;
-	int 			arr;
+	int 			cost;
 	struct s_point	*prev_room_path;
 	struct s_point	*prev_room_path2;
 	struct s_point	*next;
@@ -96,8 +96,10 @@ int					*set_check(int size);
 
 int					alg(t_data *map);
 int				ft_bfs(t_data *map);
+int				ft_bellman_ford(t_data *map);
 
 int		ft_letGoAnts(t_path **paths, t_data *map);
 t_loc	*add_loc(t_data *map, char *name, int num_ant);
-
+void	print_sline(t_data *map);
+void print_paths(t_path **paths);
 #endif
