@@ -76,5 +76,5 @@ add_executable(lem_in
 		src/init.c
 		src/read.c
 		src/alg.c
-		src/bfs.c
+		src/bellman_ford.c
 		src/moving_ants.c)

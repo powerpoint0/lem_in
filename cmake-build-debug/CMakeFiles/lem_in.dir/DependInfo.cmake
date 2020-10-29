@@ -68,7 +68,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/cjoaquin/CLionProjects/lem_in10/libft/src/ft_toupper.c" "/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles/lem_in.dir/libft/src/ft_toupper.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in10/libft/src/get_next_line.c" "/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles/lem_in.dir/libft/src/get_next_line.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in10/src/alg.c" "/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles/lem_in.dir/src/alg.c.o"
-  "/Users/cjoaquin/CLionProjects/lem_in10/src/bfs.c" "/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles/lem_in.dir/src/bfs.c.o"
+  "/Users/cjoaquin/CLionProjects/lem_in10/src/bellman_ford.c" "/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles/lem_in.dir/src/bellman_ford.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in10/src/init.c" "/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles/lem_in.dir/src/init.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in10/src/lem_in.c" "/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles/lem_in.dir/src/lem_in.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in10/src/moving_ants.c" "/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles/lem_in.dir/src/moving_ants.c.o"

@@ -1871,32 +1871,32 @@ src/alg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/alg.c.s
 .PHONY : src/alg.c.s
 
-src/bfs.o: src/bfs.c.o
+src/bellman_ford.o: src/bellman_ford.c.o
 
-.PHONY : src/bfs.o
+.PHONY : src/bellman_ford.o
 
 # target to build an object file
-src/bfs.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/bfs.c.o
-.PHONY : src/bfs.c.o
+src/bellman_ford.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/bellman_ford.c.o
+.PHONY : src/bellman_ford.c.o
 
-src/bfs.i: src/bfs.c.i
+src/bellman_ford.i: src/bellman_ford.c.i
 
-.PHONY : src/bfs.i
+.PHONY : src/bellman_ford.i
 
 # target to preprocess a source file
-src/bfs.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/bfs.c.i
-.PHONY : src/bfs.c.i
+src/bellman_ford.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/bellman_ford.c.i
+.PHONY : src/bellman_ford.c.i
 
-src/bfs.s: src/bfs.c.s
+src/bellman_ford.s: src/bellman_ford.c.s
 
-.PHONY : src/bfs.s
+.PHONY : src/bellman_ford.s
 
 # target to generate assembly for a file
-src/bfs.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/bfs.c.s
-.PHONY : src/bfs.c.s
+src/bellman_ford.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/bellman_ford.c.s
+.PHONY : src/bellman_ford.c.s
 
 src/init.o: src/init.c.o
 
@@ -2207,9 +2207,9 @@ help:
 	@echo "... src/alg.o"
 	@echo "... src/alg.i"
 	@echo "... src/alg.s"
-	@echo "... src/bfs.o"
-	@echo "... src/bfs.i"
-	@echo "... src/bfs.s"
+	@echo "... src/bellman_ford.o"
+	@echo "... src/bellman_ford.i"
+	@echo "... src/bellman_ford.s"
 	@echo "... src/init.o"
 	@echo "... src/init.i"
 	@echo "... src/init.s"

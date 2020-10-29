@@ -282,7 +282,7 @@
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in10/src/alg.c">
 			<Option target="lem_in"/>
 		</Unit>
-		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in10/src/bfs.c">
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in10/src/bellman_ford.c">
 			<Option target="lem_in"/>
 		</Unit>
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in10/src/init.c">

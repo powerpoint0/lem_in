@@ -1,26 +1,4 @@
 #include "lem_in.h"
-/*
-int		ft_letGoAnts(t_path **paths)
-{
-	return(0);
-}
-*/
-//void	ft_free_int(int **copy)
-//{
-//	int j;
-//	int str;
-//
-//	if(!copy)
-//		return;
-//	str = copy[0][1];
-//	j = 0;
-//	while(j <= str)
-//	{
-//		free(copy[j]);
-//		j++;
-//	}
-//	free(copy);
-//}
 
 //void ft_change_edge(t_path *path, t_data *map)
 //{
@@ -31,6 +9,7 @@ int		ft_letGoAnts(t_path **paths)
 //	//path->points->check[i + 1] = (path->points->check[i + 1] == 1) ? -1 : 0;
 //	path->points->check[i + 1] = 0;
 //}
+
 void ft_change_edge(t_path *path, t_sline *slines, t_point *end)
 {
 	t_sline *header;
@@ -39,8 +18,8 @@ void ft_change_edge(t_path *path, t_sline *slines, t_point *end)
 	header = slines;
 	while(slines)
 	{
-		if(!slines->out->in_path)
-			slines->out->prev_room_path = NULL;
+//		if(!slines->out->in_path)
+		slines->out->prev_room_path = NULL;
 		end->prev_room_path = NULL;
 		if(slines->out->in_path && slines->in->in_path)
 		{
@@ -88,6 +67,7 @@ t_path *		ft_create_path(t_path *path, t_data *map)
 			new_point->len = map->end->cost;
 			path = new_point;
 			//ft_change_edge(path, map->slines, map->end);
+
 			if(path->points == map->start)
 				break;
 			path->points->in_path =2;
@@ -129,14 +109,17 @@ int	alg(t_data *map)
 		put_err("ERROR.Init.there is no memory for paths");
 	while (!(check = ft_bellman_ford(map)))
 	{
+		print_sline(map);
 		paths[i] = ft_create_path(paths[i], map);
 		i++;
 		ft_change_edge(paths[i-1], map->slines, map->end);
 		print_paths(paths);
+
 	}
 	if(check < 0 && !*paths)
 		put_err("ERROR.There is no path between START and END");
-	print_paths(paths);
+	//print_paths(paths);
+
 	ft_letGoAnts(paths, map);
 	return (0);
 }

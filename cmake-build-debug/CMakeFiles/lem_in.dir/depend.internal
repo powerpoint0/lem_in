@@ -193,10 +193,10 @@ CMakeFiles/lem_in.dir/src/alg.c.o
  ../lem_in.h
  ../libft/includes/libft.h
  /Users/cjoaquin/CLionProjects/lem_in10/src/alg.c
-CMakeFiles/lem_in.dir/src/bfs.c.o
+CMakeFiles/lem_in.dir/src/bellman_ford.c.o
  ../lem_in.h
  ../libft/includes/libft.h
- /Users/cjoaquin/CLionProjects/lem_in10/src/bfs.c
+ /Users/cjoaquin/CLionProjects/lem_in10/src/bellman_ford.c
 CMakeFiles/lem_in.dir/src/init.c.o
  ../lem_in.h
  ../libft/includes/libft.h

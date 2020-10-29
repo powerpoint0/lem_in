@@ -948,18 +948,18 @@ CMakeFiles/lem_in.dir/src/alg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/src/alg.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in10/src/alg.c -o CMakeFiles/lem_in.dir/src/alg.c.s
 
-CMakeFiles/lem_in.dir/src/bfs.c.o: CMakeFiles/lem_in.dir/flags.make
-CMakeFiles/lem_in.dir/src/bfs.c.o: ../src/bfs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/lem_in.dir/src/bfs.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/src/bfs.c.o   -c /Users/cjoaquin/CLionProjects/lem_in10/src/bfs.c
+CMakeFiles/lem_in.dir/src/bellman_ford.c.o: CMakeFiles/lem_in.dir/flags.make
+CMakeFiles/lem_in.dir/src/bellman_ford.c.o: ../src/bellman_ford.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in10/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/lem_in.dir/src/bellman_ford.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/src/bellman_ford.c.o   -c /Users/cjoaquin/CLionProjects/lem_in10/src/bellman_ford.c
 
-CMakeFiles/lem_in.dir/src/bfs.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/src/bfs.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in10/src/bfs.c > CMakeFiles/lem_in.dir/src/bfs.c.i
+CMakeFiles/lem_in.dir/src/bellman_ford.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/src/bellman_ford.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in10/src/bellman_ford.c > CMakeFiles/lem_in.dir/src/bellman_ford.c.i
 
-CMakeFiles/lem_in.dir/src/bfs.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/src/bfs.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in10/src/bfs.c -o CMakeFiles/lem_in.dir/src/bfs.c.s
+CMakeFiles/lem_in.dir/src/bellman_ford.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/src/bellman_ford.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in10/src/bellman_ford.c -o CMakeFiles/lem_in.dir/src/bellman_ford.c.s
 
 CMakeFiles/lem_in.dir/src/moving_ants.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/src/moving_ants.c.o: ../src/moving_ants.c
@@ -1043,7 +1043,7 @@ lem_in_OBJECTS = \
 "CMakeFiles/lem_in.dir/src/init.c.o" \
 "CMakeFiles/lem_in.dir/src/read.c.o" \
 "CMakeFiles/lem_in.dir/src/alg.c.o" \
-"CMakeFiles/lem_in.dir/src/bfs.c.o" \
+"CMakeFiles/lem_in.dir/src/bellman_ford.c.o" \
 "CMakeFiles/lem_in.dir/src/moving_ants.c.o"
 
 # External object files for target lem_in
@@ -1116,7 +1116,7 @@ lem_in: CMakeFiles/lem_in.dir/libft/src/get_next_line.c.o
 lem_in: CMakeFiles/lem_in.dir/src/init.c.o
 lem_in: CMakeFiles/lem_in.dir/src/read.c.o
 lem_in: CMakeFiles/lem_in.dir/src/alg.c.o
-lem_in: CMakeFiles/lem_in.dir/src/bfs.c.o
+lem_in: CMakeFiles/lem_in.dir/src/bellman_ford.c.o
 lem_in: CMakeFiles/lem_in.dir/src/moving_ants.c.o
 lem_in: CMakeFiles/lem_in.dir/build.make
 lem_in: CMakeFiles/lem_in.dir/link.txt
