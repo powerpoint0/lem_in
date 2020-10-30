@@ -19,9 +19,8 @@ void ft_change_edge(t_path *path, t_sline *slines, t_point *end)
 	while(slines)
 	{
 //		if(!slines->out->in_path)
-		slines->out->prev_room_path = NULL;
-		end->prev_room_path = NULL;
-		if(slines->out->in_path && slines->in->in_path)
+		//slines->out->prev_room_path = NULL;
+		if(slines->out->in_path && slines->in->in_path && slines->out->prev_room_path == slines->in)
 		{
 			tmp = slines->in;
 			slines->in = slines->out;
@@ -53,12 +52,6 @@ t_path *		ft_create_path(t_path *path, t_data *map)
 				put_err("Init.there is no memory for path");
 			path->prev = new_point;
 			new_point->next = path;
-//			if(path->points->prev_room_path2)
-//			{
-//				new_point->points = path->points->prev_room_path2;
-//				path->points->prev_room_path2 = NULL;
-//			}
-//			else
 			if(path->points->prev_room_path)
 				new_point->points = path->points->prev_room_path;
 			else
@@ -66,12 +59,9 @@ t_path *		ft_create_path(t_path *path, t_data *map)
 			new_point->last_points = path->last_points;
 			new_point->len = map->end->cost;
 			path = new_point;
-			//ft_change_edge(path, map->slines, map->end);
-
+			path->points->in_path =2;
 			if(path->points == map->start)
 				break;
-			path->points->in_path =2;
-			//path->points->close = 2;
 		}
 	}
 	return (path);
@@ -109,17 +99,14 @@ int	alg(t_data *map)
 		put_err("ERROR.Init.there is no memory for paths");
 	while (!(check = ft_bellman_ford(map)))
 	{
-		print_sline(map);
 		paths[i] = ft_create_path(paths[i], map);
+		ft_change_edge(paths[i], map->slines, map->end);
 		i++;
-		ft_change_edge(paths[i-1], map->slines, map->end);
-		print_paths(paths);
-
+		//print_sline(map);
 	}
 	if(check < 0 && !*paths)
 		put_err("ERROR.There is no path between START and END");
-	//print_paths(paths);
-
+	print_paths(paths);
 	ft_letGoAnts(paths, map);
 	return (0);
 }

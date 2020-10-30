@@ -261,6 +261,7 @@ void printf1(char *str, char *name,int close1, char *name2,  int close2)
 void	ft_init_points(t_data *map)
 {
 	map->start->cost = 0;
+	map->end->prev_room_path = NULL;
 	while (map->points)
 	{
 		//else if (!map->points->in_path)
@@ -269,7 +270,6 @@ void	ft_init_points(t_data *map)
 		map->points = map->points->next;
 	}
 	map->end->in_path = 0;
-	//map->end->cost = INF;
 	map->points = map->start;
 }
 
@@ -326,7 +326,7 @@ int		ft_bellman_ford(t_data *map)
 			iter = num_of_edges;
 		iter++;
 	}
-	ft_bellman_ford_deep(map->slines,map->start);
+	//ft_bellman_ford_deep(map->slines,map->start);
 //	if (ft_bellman_ford_deep(map->slines,map->start))               // - cycle
 //		put_err("ERROR.Bellman-Ford.graph has negative cycle");
 	if(!map->end->prev_room_path)

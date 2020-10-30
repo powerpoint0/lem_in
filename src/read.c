@@ -611,7 +611,7 @@ t_data	*read_map(int fd)
 	copy_points(map);
 	connected_points2(map);
 	map->slines = set_sline(map);
-	print_sline(map);
+	//print_sline(map);
 //	connected_points(map);
 //	print_arr(map);
 	if (line)
