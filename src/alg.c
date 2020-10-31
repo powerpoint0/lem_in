@@ -1,5 +1,7 @@
 #include "lem_in.h"
 
+#define CLOSE 1
+
 //void ft_change_edge(t_path *path, t_data *map)
 //{
 //	int i = 0;
@@ -25,6 +27,8 @@ void ft_change_edge(t_path *path, t_sline *slines, t_point *end)
 			tmp = slines->in;
 			slines->in = slines->out;
 			slines->out = tmp;
+			if (slines->weight == -1)
+				slines->close= CLOSE;
 			slines->weight *= -1;
 		}
 		slines = slines->next;
@@ -48,6 +52,11 @@ t_path *		ft_create_path(t_path *path, t_data *map)
 		}
 		else
 		{
+//			if (path->points->name,path->points->prev_room_path->name)
+//			{
+//				path->points->prev_room_path->in_path =2;
+//
+//			}
 			if (!(new_point = (t_path *) ft_memalloc(sizeof(t_path))))
 				put_err("Init.there is no memory for path");
 			path->prev = new_point;
@@ -101,6 +110,11 @@ int	alg(t_data *map)
 	{
 		paths[i] = ft_create_path(paths[i], map);
 		ft_change_edge(paths[i], map->slines, map->end);
+		//если есть общие ребра,то удаляем их и заменяем путь снова через БФ
+		//проверяем ,за сколько шагов пройдет
+		//находим еще один путь.во второй комплект путей.смотрим,за сколько шагов пройдет
+		//если с новым путем быстрее,то добавляем путь
+		// если медленнее ,выходим из цикла
 		i++;
 		//print_sline(map);
 	}

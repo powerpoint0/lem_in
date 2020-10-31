@@ -10,7 +10,8 @@ super="--big-superposition" #: generates a big map with overlapping paths
 
 var=$(eval echo "\$$var")
 
-echo "./generator ${var}"
+#echo "./generator ${var}"
+echo "./generator ${var}" > file.txt
 
 for ((i=1; i < 10; i++))
 do
@@ -28,7 +29,8 @@ do
 
   LEM=$(./lem_in file.txt | tail -n $SIZE)
 
-  #echo $LEM
+#LEM=$(./lem_in file.txt)
+
   cat file.txt | wc -l
   echo $LEM | head -n 1
   echo $LEM | wc -l

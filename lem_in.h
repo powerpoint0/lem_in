@@ -39,6 +39,7 @@ typedef struct		s_point
 typedef struct		s_sline
 {
 	int				weight;
+	int 			close;
 	t_point			*in;
 	t_point			*out;
 	struct s_sline	*next;
