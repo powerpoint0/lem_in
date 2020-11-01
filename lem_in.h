@@ -4,6 +4,7 @@
 # include <stdio.h>
 # define START 1
 # define END 2
+# define CLOSE 1
 
 typedef struct		s_line
 {
@@ -40,6 +41,7 @@ typedef struct		s_sline
 {
 	int				weight;
 	int 			close;
+	t_point			*tmp_in;
 	t_point			*in;
 	t_point			*out;
 	struct s_sline	*next;
@@ -69,38 +71,28 @@ typedef struct		s_data
 
 typedef struct		s_path
 {
-	int len;
+	int				num_of_steps_for_all_paths;
+	int				len;
 	t_point			*points;
 	t_point			*last_points;
 	struct s_path	*prev;
 	struct s_path	*next;
 }					t_path;
 
-//typedef struct		s_arr
-//{
-//	int size;
-//	int used;
-//	void			**arr;
-//}					t_arr;
-//
-//typedef struct		s_list2
-//{
-//	t_node			*start;
-//	t_node			*end;
-//}					t_list2;
-
-
 int					put_err(char *str);
 t_data				*int_map(void);
 t_data				*read_map(int fd);
 int					*set_check(int size);
 
-int					alg(t_data *map);
-int				ft_bfs(t_data *map);
-int				ft_bellman_ford(t_data *map);
+t_path				**ft_alg(t_data *map);
+int					ft_bellman_ford(t_data *map);
+void				ft_init_slines(t_sline *slines);
+void				ft_init_points(t_data *map);
 
-int		ft_letGoAnts(t_path **paths, t_data *map);
-t_loc	*add_loc(t_data *map, char *name, int num_ant);
-void	print_sline(t_data *map);
-void print_paths(t_path **paths);
+int					ft_letGoAnts(t_path **paths, t_data *map);
+t_loc				*add_loc(t_data *map, char *name, int num_ant);
+
+void				print_sline(t_data *map);
+void				print_paths(t_path **paths);
+
 #endif

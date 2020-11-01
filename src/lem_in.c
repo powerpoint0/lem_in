@@ -33,15 +33,18 @@ int 	main(int argc, char **argv)
 {
 	int		fd;
 	t_data	*map;
+	t_path **best_paths;
 
 	map = NULL;
+	best_paths = NULL;
 	if (argc < 2)
 		put_err("Error");
 	fd = (ft_strequ(argv[1], "<")) ? open(argv[2], O_RDONLY) : open(argv[1], O_RDONLY);
 	if (fd < 0)
 		put_err("Not open file");
 	map = read_map(fd);
-	alg(map);
+	best_paths = ft_alg(map);
+	ft_letGoAnts(best_paths, map);
 	free_all(map);
-	return 0;
+	return(0);
 }
