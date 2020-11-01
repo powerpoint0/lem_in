@@ -22,14 +22,12 @@ void	ft_init_points(t_data *map)
 		map->points->in_path = 0;
 		map->points = map->points->next;
 	}
-	//map->end->in_path = 0;
 	map->points = map->start;
 }
 
 void	ft_init_slines(t_sline *slines)
 {
 	t_sline *header;
-	t_point *tmp;
 
 	header = slines;
 	while(slines)
@@ -88,13 +86,11 @@ int		ft_bellman_ford_deep(t_sline *slines, t_point *start)
 	return(k);
 }
 
-int		ft_bellman_ford(t_data *map)
+int		ft_bellman_ford(t_data *map, int num_of_edges)
 {
-	int num_of_edges;
 	int iter = 0;
 
 	ft_init_points(map);
-	num_of_edges = ft_how_much_edges(map->slines);
 	while (iter < num_of_edges)
 	{
 		if (!ft_bellman_ford_deep(map->slines, map->start))

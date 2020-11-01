@@ -71,7 +71,7 @@ typedef struct		s_data
 
 typedef struct		s_path
 {
-	int				num_of_steps_for_all_paths;
+	int				num_of_steps_in_paths;
 	int				len;
 	t_point			*points;
 	t_point			*last_points;
@@ -85,9 +85,10 @@ t_data				*read_map(int fd);
 int					*set_check(int size);
 
 t_path				**ft_alg(t_data *map);
-int					ft_bellman_ford(t_data *map);
+int					ft_bellman_ford(t_data *map, int num_of_edges);
 void				ft_init_slines(t_sline *slines);
 void				ft_init_points(t_data *map);
+int					ft_how_much_edges(t_sline *slines);
 
 int					ft_letGoAnts(t_path **paths, t_data *map);
 t_loc				*add_loc(t_data *map, char *name, int num_ant);
