@@ -8,7 +8,6 @@
 
 typedef struct		s_line
 {
-	int				weight;
 	char			*p_first;
 	char			*p_next;
 	int				num_first;
@@ -25,15 +24,11 @@ typedef struct		s_point
 	char			*name;
 	int				x;
 	int 			y;
-	int				st_end;
 	int 			in_path;
-	int 			bfs_level;
-	struct s_point **arr_lines;
-	int				*check;
-	int				close;
+	struct s_point **arr_lines;  //////
+	int 			*check;   //////poschitat kolvo svyazey tolko u starta
 	int 			cost;
 	struct s_point	*prev_room_path;
-	struct s_point	*prev_room_path2;
 	struct s_point	*next;
 }					t_point;
 

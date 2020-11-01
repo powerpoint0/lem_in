@@ -167,6 +167,7 @@ t_path	**ft_alg(t_data *map)
 		put_err("ERROR.Init.there is no memory for paths");
 	if (!(best_paths = (t_path **)ft_memalloc(sizeof(t_path *) * (map->start->check[0] + 1))))
 		put_err("ERROR.Init.there is no memory for paths");
+
 	num_of_edges = ft_how_much_edges(map->slines);
 	while(!(check = ft_bellman_ford(map, num_of_edges)))
 	{
