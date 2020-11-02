@@ -575,7 +575,8 @@ void	print_sline(t_data *map)
 	line = map->slines;
 	while (line)
 	{
-		printf("%s(%d)cost%d - %s(%d)cost%d [%d]\n", line->in->name, line->in->p, line->in->cost, line->out->name, line->out->p, line->out->cost, line->weight);
+		printf("%s(%d)cost%d - %s(%d)cost%d [%d] close=%d\n", line->in->name, line->in->p, line->in->cost,
+		 line->out->name, line->out->p, line->out->cost, line->weight, line->close);
 		line = line->next;
 	}
 }

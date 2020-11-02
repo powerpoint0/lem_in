@@ -20,6 +20,7 @@ void	ft_init_points(t_data *map)
 		if (map->points != map->start)
 			map->points->cost = INF;
 		map->points->in_path = 0;
+		map->points->prev_room_path = 0;
 		map->points = map->points->next;
 	}
 	map->points = map->start;
@@ -65,10 +66,10 @@ int		ft_how_much_edges(t_sline *slines)   /////////////est li analog?
 int		ft_bellman_ford_deep(t_sline *slines, t_point *start)
 {
 	t_sline *header;
-	header = slines;
 	int k;
 
 	k = 0;
+	header = slines;
 	while(slines)
 	{
 		if(slines->out != start && slines->close != CLOSE &&
@@ -93,7 +94,7 @@ int		ft_bellman_ford(t_data *map, int num_of_edges)
 	ft_init_points(map);
 	while (iter < num_of_edges)
 	{
-		if (!ft_bellman_ford_deep(map->slines, map->start))
+		if (!ft_bellman_ford_deep(map->slines, map->start))  ////
 			iter = num_of_edges;
 		iter++;
 	}

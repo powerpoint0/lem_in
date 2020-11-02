@@ -202,6 +202,24 @@ void	del_locatin(t_data *map)
 
 }
 
+int iter_count(t_path **paths, t_data *map)
+{
+	int       i;
+	int       count;
+	int       *ants;
+	i = 0;
+	count = 0;
+	ants = set_ant_in_path(paths, map);
+	while (paths[i])
+	{
+		count += paths[i]->len + (ants[i] - 1);
+		i++;
+	}
+	if (ants)
+		free(ants);
+	return (count);
+}
+
 int		ft_letGoAnts(t_path **paths, t_data *map)
 {
 	int		*ants;

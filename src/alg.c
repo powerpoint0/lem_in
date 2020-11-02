@@ -20,9 +20,11 @@ int	ft_change_edge(t_path *path, t_sline *slines, t_point *end)
 				slines->close = CLOSE;
 				common_edges = 1;
 			}
-			tmp = slines->in;
-			slines->in = slines->out;
-			slines->out = tmp;
+			if(slines->in != slines->tmp_in)
+			{
+				slines->in = slines->out;
+				slines->out = slines->tmp_in;
+			}
 			slines->weight *= -1;
 		}
 		slines = slines->next;
@@ -63,6 +65,7 @@ t_path*		ft_create_path(t_path *path, t_data *map)
 			path->points->in_path =2;
 			if(path->points == map->start)
 				break;
+
 		}
 	}
 	return (path);
@@ -87,15 +90,28 @@ void print_paths(t_path **paths)
 	}
 }
 
-t_path**	ft_paths_without_common_edges(t_sline *slines,t_path **paths, t_data *map)
+t_path**	ft_paths_without_common_edges(t_sline *slines, t_path **paths, t_data *map, int num_of_edges)
 {
+	int		check;
+	int		i;
+	t_path **last_path;
+
+	i = 0;
+	check = 0;
+	last_path = paths;
+	//best_slines = ft_copy_slines(slines);
 	ft_init_slines(slines);
 	//ft_init_points(map);
-//	while(!(check = ft_bellman_ford(map, num_of_edges)))
-//	{
-//		paths[i] = ft_create_path(paths[i], map);
-//		i++;
-//	}
+	print_paths(paths);
+	print_sline(map);
+	while (!(check = ft_bellman_ford(map, num_of_edges)))
+	{
+
+		ft_create_path(paths[i], map);
+		//ft_free_path(last_path);
+		i++;
+	}
+	return (paths);
 	//обнуляем все данные в ребрах и комнатах, кроме отметок клоз
 	//запуск БФ с условием:если слозе,то пропуск ребра
 	//собираем пути на место прежнего патс,изменяя данные
@@ -167,17 +183,25 @@ t_path	**ft_alg(t_data *map)
 		put_err("ERROR.Init.there is no memory for paths");
 	if (!(best_paths = (t_path **)ft_memalloc(sizeof(t_path *) * (map->start->check[0] + 1))))
 		put_err("ERROR.Init.there is no memory for paths");
-
 	num_of_edges = ft_how_much_edges(map->slines);
 	while(!(check = ft_bellman_ford(map, num_of_edges)))
 	{
 		paths[i] = ft_create_path(paths[i], map);
 		paths[0]->num_of_steps_in_paths = ft_num_of_steps(paths);
+//		print_paths(paths);
+//		print_sline(map);
 		if(ft_change_edge(paths[i], map->slines, map->end))
-			paths = ft_paths_without_common_edges(map->slines, paths, map);
-		if(ft_change_paths_for_the_best(paths, best_paths))
+		{
+			//print_paths(best_paths);
+			paths = ft_paths_without_common_edges(map->slines, paths, map,num_of_edges);/////
+			print_paths(paths);
+			print_sline(map);
+		}
+		print_paths(paths);
+		if (ft_change_paths_for_the_best(paths, best_paths))
 			break;
 		i++;
+		print_paths(paths);
 	}
 	if(check < 0 && !*best_paths)
 		put_err("ERROR.There is no path between START and END");
