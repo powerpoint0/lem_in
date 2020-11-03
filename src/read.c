@@ -515,6 +515,7 @@ t_sline	*new_sline(t_point *p1, t_point *p2, int weight)
 	if (!(new = (t_sline*)ft_memalloc(sizeof(t_sline))))
 		put_err("Init.Not creat line");
 	new->in = p1;
+	new->tmp_in = new->tmp_in;
 	new->out = p2;
 	new->weight = weight;
 	new->next = NULL;

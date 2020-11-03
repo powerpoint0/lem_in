@@ -147,12 +147,12 @@ int			ft_change_paths_for_the_best(t_path **paths,t_path **best_paths)
 
 //	printf("\n%d\n", paths[0]->num_of_steps_in_paths);
 //	printf("\n%d\n", best_paths[0]->num_of_steps_in_paths);
-	if(paths[0]->num_of_steps_in_paths <= best_paths[0]->num_of_steps_in_paths)  //////чем меньшее колво шагов требуется муравьям
+	if(paths[0]->num_of_steps_in_paths < best_paths[0]->num_of_steps_in_paths)  //////чем меньшее колво шагов требуется муравьям
 	{
 		//ft_free_paths(best_paths); (чистим,удаляя пути все,не удаляя массив,заполняем нулями)
 		ft_copy_in_best_paths(paths, best_paths); //ft best_paths = paths;
 	}
-	else if (paths[0]->num_of_steps_in_paths > best_paths[0]->num_of_steps_in_paths)
+	else if (paths[0]->num_of_steps_in_paths >= best_paths[0]->num_of_steps_in_paths)
 	{
 		//ft_free_paths(paths);
 		return(-1);
@@ -191,8 +191,8 @@ t_path	**ft_alg(t_data *map)
 			printf("\npaths %d\n", 0);
 			print_paths(best_paths);
 		}
-//		printf("\n%d\n", iter_count(paths, map));
-		//printf("\n%d\n", iter_count(best_paths, map));
+		printf("\npaths %d\n", iter_count(paths, map));
+		printf("\nbest_paths %d\n", iter_count(best_paths, map));
 		if (ft_change_paths_for_the_best(paths, best_paths))
 			break;
 		i++;

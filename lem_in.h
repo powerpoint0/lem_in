@@ -5,6 +5,7 @@
 # define START 1
 # define END 2
 # define CLOSE 1
+#define INF 1000000
 
 typedef struct		s_line
 {

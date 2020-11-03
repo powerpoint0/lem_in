@@ -26,7 +26,7 @@ t_loc	*set_new_loc(char *name, int num_ant)
 	return (new);
 }
 
-void	ins_loc(t_data *map, char *name, int num_ant)
+t_loc	*ins_loc(t_data *map, char *name, int num_ant)
 {
 	t_loc	*new;
 	t_loc	*next;
@@ -67,8 +67,9 @@ t_loc	*add_loc(t_data *map, char *name, int num_ant)
 	}
 	else
 	{
-		header = map->location;
+		//header = map->location;
 		ins_loc(map, name, num_ant);
+		header = map->location;
 //		while (map->location->next)
 //			map->location = map->location->next;
 //		map->location->next = set_new_loc(name, num_ant);
@@ -89,11 +90,6 @@ void	move_by_path(t_path **paths, t_data *map, int *ants)
 			path = path->next;
 		while (path->prev)
 		{
-			if (path->points->num == map->end->num && path->points->ant_num != -1)
-			{
-				map->location = add_loc(map, path->points->name, path->points->ant_num);
-				map->ants_end++;
-			}
 			if (path->prev->points->num != map->start->num)
 			{
 				path->points->ant_num = path->prev->points->ant_num;
@@ -102,6 +98,11 @@ void	move_by_path(t_path **paths, t_data *map, int *ants)
 			}
 			else
 				ants[i] = add_ant(path, map, ants[i]);
+			if (path->points->num == map->end->num && path->points->ant_num != -1)
+			{
+				path->points->ant_num = -1;
+				map->ants_end++;
+			}
 			path = path->prev;
 		}
 		i++;
@@ -206,7 +207,8 @@ void	prt_path(t_path **paths)
 		path = paths[i];
 		while (path)
 		{
-			printf("%s%d\t", path->points->name, path->points->ant_num);
+			//printf("%s%d\t", path->points->name, path->points->p);
+			printf("%s(%d)\t", path->points->name, path->points->ant_num);
 			path = path->next;
 		}
 		printf("\n");
@@ -225,36 +227,28 @@ void	del_locatin(t_data *map)
 		free(del);
 		del = NULL;
 	}
-}
-/*
-int	get_path_len(t_path *path, t_data *map)
-{
-	int	len;
-	t_path *tmp;
 
-	len = 0;
-	tmp = path;
-	while (tmp->points->num != map->end->num)
-	{
-		if (tmp->points->num != tmp->next->points->num)
-			len++;
-		tmp = tmp->next;
-	}
-	return (len);
 }
-*/
+
 int	iter_count(t_path **paths, t_data *map)
 {
 	int	i;
+	int	pcount;
 	int	count;
 	int	*ants;
 
 	i = 0;
 	count = 0;
+	pcount = 0;
+	if (!*paths)
+		return (INF);
 	ants = set_ant_in_path(paths, map);
-	while (paths[i])
+	while (paths[i] && ants[i] > 0)
 	{
-		count += paths[i]->len + (ants[i] - 1);
+		count = paths[i]->len + (ants[i] - 1);
+		if (pcount != 0 && count < pcount)
+			count = pcount;
+		pcount = count;
 		i++;
 	}
 	if (ants)
@@ -291,10 +285,11 @@ void	cut_path(t_path **paths, t_data *map)
 int		ft_letGoAnts(t_path **paths, t_data *map)
 {
 	int		*ants;
-//	iter_count(paths, map);
+
 	map->ants_end = 0;
 	map->ants_count = 0;
 	cut_path(paths, map);
+//	prt_path(paths);
 	ants = set_ant_in_path(paths, map);
 	while (map->ants_end != map->num_ants)
 	{
@@ -303,8 +298,10 @@ int		ft_letGoAnts(t_path **paths, t_data *map)
 		print_posicion(map->location);
 		del_locatin(map);
 	}
+
 //	add_ants(paths, map);
 //	move_by_path(paths, map);
+
 	if (ants)
 		free(ants);
 	return (0);

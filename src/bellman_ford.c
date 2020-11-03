@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "lem_in.h"
-#define INF 1000000
 
 int g_num = 0;
 
