@@ -87,6 +87,7 @@ int					ft_how_much_edges(t_sline *slines);
 
 int					ft_letGoAnts(t_path **paths, t_data *map);
 t_loc				*add_loc(t_data *map, char *name, int num_ant);
+int					iter_count(t_path **paths, t_data *map);
 
 void				print_sline(t_data *map);
 void				print_paths(t_path **paths);

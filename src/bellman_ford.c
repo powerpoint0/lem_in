@@ -38,8 +38,9 @@ void	ft_init_slines(t_sline *slines)
 			slines->weight *= -1;
 			if(slines->in != slines->tmp_in)
 			{
-				slines->in = slines->out;
-				slines->out = slines->tmp_in;
+
+				slines->out = slines->in;
+				slines->in = slines->tmp_in;
 			}
 		}
 		slines = slines->next;
