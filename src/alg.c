@@ -8,8 +8,8 @@ int	ft_change_edge(t_path *path, t_sline *slines, t_point *end, t_data *map)
 
 	header = slines;
 	common_edges = 0;
-	printf("\nbefore change edge%d\n", 0);
-	print_sline(map);
+	//printf("\nbefore change edge%d\n", 0);
+	//print_sline(map);
 	while(slines)
 	{
 		if(!slines->tmp_in)                    //////////////////попросить Юру добавить при инициализации
@@ -28,11 +28,26 @@ int	ft_change_edge(t_path *path, t_sline *slines, t_point *end, t_data *map)
 		}
 		slines = slines->next;
 	}
-	printf("\nafter %d\n", 0);
-	print_sline(map);
+	//printf("\nafter %d\n", 0);
+//	print_sline(map);
 	slines = header;
 	//printf("\n%d\n", common_edges);
 	return(common_edges);
+}
+
+int	ft_num_of_steps(t_path **paths)   //////позже заменить на кол-во шагов от Юры
+{
+	int i;
+	int num;
+
+	num = 0;
+	i = 0;
+	while(paths[i])
+	{
+		num += paths[i]->len;
+		i++;
+	}
+	return(num);
 }
 
 t_path*		ft_create_path(t_path *path, t_data *map)
@@ -72,6 +87,95 @@ t_path*		ft_create_path(t_path *path, t_data *map)
 	return (path);
 }
 
+
+
+int		ft_counts()
+{
+	int ant_count = 349;
+	int		lines_in_answer;
+	int path[13] = {20, 23, 27, 28, 28, 29, 32, 32, 35, 39, 40, 40};
+
+	int ants[13];
+	ft_bzero(ants, 4 * 13);
+
+	lines_in_answer = 0;
+	while (ant_count > 0)
+	{
+		lines_in_answer++;
+		int i = 0;
+		while (i < 12) {
+			if (ants[i] + path[i] < lines_in_answer)
+			{
+				ants[i]++;
+				ant_count--;
+			}
+			i++;
+		}
+	}
+	return (lines_in_answer);
+}
+
+int is_repeate_room(t_path **paths, t_path *room) {
+	int repeates = 0;
+	t_path *path;
+	int i = 0;
+
+	while(paths[i])
+	{
+		path = paths[i];
+		while(path)
+		{
+			if (path->points == room->points)
+				repeates++;
+			if (repeates > 1)
+				printf("%s\n", room->points->name);
+			path = path->next;
+		}
+		i++;
+	}
+	if (repeates > 1)
+		return (1);
+	return(0);
+}
+
+
+void ft_check_repeate_rooms(t_path **paths)
+{
+	t_path *path;
+	int i = 0;
+
+	while(paths[i])
+	{
+		path = paths[i]->next;
+		while(path->next)
+		{
+			if (is_repeate_room(paths, path))
+			{
+				print_paths(paths);
+				printf("пути повторяются!\n");
+//				exit(0);
+				return;
+			}
+			path = path->next;
+		}
+		i++;
+	}
+	printf("пути не повторяются!\n");
+}
+
+
+int ft_num(t_path *paths)
+{
+	int len = 0;
+	while(paths)
+	{
+		len++;
+		paths = paths->next;
+	}
+	return(len/2 + 1);
+}
+//20 23 27 28 28 29 32 32 35 39 40 40
+//20 23 25 27 28 28 29 32 32 34 39 39
 void print_paths(t_path **paths)
 {
 	t_path *path;
@@ -80,7 +184,10 @@ void print_paths(t_path **paths)
 	i = 0;
 	while (paths[i])
 	{
+
 		path = paths[i];
+
+		printf("%d ",ft_num(paths[i]));
 		while (path)
 		{
 			printf("%s%d ", path->points->name,  path->points->p);
@@ -96,6 +203,8 @@ t_path**	ft_paths_without_common_edges(t_sline *slines, t_path **paths, t_data *
 	int		check;
 	int		i;
 	t_path **last_path;
+	int		num_paths;
+	int k = 0;
 
 	i = 0;
 	check = 0;
@@ -108,13 +217,17 @@ t_path**	ft_paths_without_common_edges(t_sline *slines, t_path **paths, t_data *
 	////////free(paths) vse puti
 	while(paths[i])
 		paths[i++] = NULL;
+	num_paths = i;
 	i = 0;
-	while (!(check = ft_bellman_ford(map, num_of_edges)))
+	while (!(check = ft_bellman_ford(map, num_of_edges)) && i < num_paths)
 	{
 		paths[i] = ft_create_path(paths[i], map);
-		ft_change_edge(paths[i], map->slines, map->end, map);
-		print_paths(paths);
+		if(ft_change_edge(paths[i], map->slines, map->end, map))
+			paths = ft_paths_without_common_edges(map->slines, paths, map,num_of_edges);
+
+		//print_paths(paths);
 		//ft_free_path(last_path);
+
 		i++;
 	}
 	return (paths);
@@ -137,22 +250,30 @@ void	ft_copy_in_best_paths(t_path **paths,t_path **best_paths)
 	best_paths[0]->num_of_steps_in_paths = paths[0]->num_of_steps_in_paths;
 }
 
-int			ft_change_paths_for_the_best(t_path **paths,t_path **best_paths)
+int g_num2 = 0;
+
+int			ft_change_paths_for_the_best(t_path **paths,t_path **best_paths, t_data *map)
 {
+	g_num2++;
+	if (paths[0]->num_of_steps_in_paths == 69) {
+		printf("");
+	}
+
 	if(!*best_paths)
 	{
 		ft_copy_in_best_paths(paths, best_paths);
 		return(0);
 	}
-
+//	paths[0]->num_of_steps_in_paths = count(paths, map);
+//	best_paths[0]->num_of_steps_in_paths = iter_count(best_paths, map);
 //	printf("\n%d\n", paths[0]->num_of_steps_in_paths);
 //	printf("\n%d\n", best_paths[0]->num_of_steps_in_paths);
-	if(paths[0]->num_of_steps_in_paths < best_paths[0]->num_of_steps_in_paths)  //////чем меньшее колво шагов требуется муравьям
+	if(paths[0]->num_of_steps_in_paths <=best_paths[0]->num_of_steps_in_paths)  //////чем меньшее колво шагов требуется муравьям
 	{
 		//ft_free_paths(best_paths); (чистим,удаляя пути все,не удаляя массив,заполняем нулями)
 		ft_copy_in_best_paths(paths, best_paths); //ft best_paths = paths;
 	}
-	else if (paths[0]->num_of_steps_in_paths >= best_paths[0]->num_of_steps_in_paths)
+	else if (paths[0]->num_of_steps_in_paths > best_paths[0]->num_of_steps_in_paths)
 	{
 		//ft_free_paths(paths);
 		return(-1);
@@ -180,30 +301,52 @@ t_path	**ft_alg(t_data *map)
 		paths[0]->num_of_steps_in_paths = iter_count(paths, map);
 //		print_paths(paths);
 //		print_sline(map);
-		printf("\n paths %d\n", 0);
-		print_paths(paths);
-		if(ft_change_edge(paths[i], map->slines, map->end, map))
+		//printf("\n paths %d\n", 0);
+		//print_paths(paths);
+		if (ft_change_edge(paths[i], map->slines, map->end, map))
 		{
-			printf("\nslines do %d\n", 0);
-			print_sline(map);
+//			printf("\nslines do %d\n", 0);
+//			print_sline(map);
 			paths = ft_paths_without_common_edges(map->slines, paths, map,num_of_edges);/////
+			//ft_check_repeate_rooms(paths);
 			paths[0]->num_of_steps_in_paths = iter_count(paths, map);
-			printf("\npaths %d\n", 0);
-			print_paths(best_paths);
+
+
 		}
-		printf("\npaths %d\n", iter_count(paths, map));
-		printf("\nbest_paths %d\n", iter_count(best_paths, map));
-		if (ft_change_paths_for_the_best(paths, best_paths))
+//		ft_check_repeate_rooms(paths);
+
+//		if (i == 8)
+//			printf("");
+
+		if (ft_change_paths_for_the_best(paths, best_paths, map))
+		{
+//			printf("\npaths %d\n", iter_count(paths, map));
+//			printf("\nbest_paths %d\n", iter_count(best_paths, map));
 			break;
+		}
+		else {
+//			printf("\npaths %d _ %d\n", iter_count(paths, map), i);
+//			printf("\nbest_paths %d\n", iter_count(best_paths, map));
+		}
+//		printf("\npaths %d\n", iter_count(paths, map));
+//		printf("\nbest_paths %d\n", iter_count(best_paths, map));
+
 		i++;
 
-		printf("\nbest paths %d\n", 0);
-		print_paths(best_paths);
+//			printf("\npaths %d\n", 0);
+//			print_paths(best_paths);
+//		printf("\nbest paths %d\n", 0);
+//		print_paths(best_paths);
+
 	}
 	if(check < 0 && !*best_paths)
 		put_err("ERROR.There is no path between START and END");
-	printf("\nbest paths end %d\n", 0);
-	print_paths(best_paths);
+//	ft_check_repeate_rooms(best_paths);
+
+//	printf("%d\n",ft_counts());
+//	printf("\nbest paths end %d\n", 0);
+//	print_paths(best_paths);
+//	printf("\nbest paths end %d\n", 0);
 	return (best_paths);
 }
 

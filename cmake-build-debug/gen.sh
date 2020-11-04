@@ -16,20 +16,17 @@ echo "./generator ${var}" > file.txt
 for ((i=1; i < 10; i++))
 do
   sleep 1
-  A=$(./generator ${var})
+  MAP=$(./generator ${var})
 
-  MAP=$(echo $A | head -n 1)
-
-  MAP=$MAP\\n$(echo $A | tail -n +3)
 
   echo $MAP > file.txt
+  echo $MAP > dir/file$i.txt
 
   SIZE=+$(echo $MAP | wc -l)
   SIZE=$(echo $SIZE | sed "s/ //g")
 
-  LEM=$(./lem_in file.txt | tail -n $SIZE)
-
-#LEM=$(./lem_in file.txt)
+  LEM=$(time ./lem_in file.txt)
+  LEM=$(echo $LEM | tail -n $SIZE)
 
   cat file.txt | wc -l
   echo $LEM | head -n 1
