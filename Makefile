@@ -4,16 +4,16 @@ LIBFT = libft/libft.a
 
 FLAGS = -Wall -Wextra -Werror
 
-source_dirs = . src libft/includes libft
+source_dirs = . src libft/includes
 
-SRCS = 	srcs/alg.c
-       		srcs/bellman_ford.c
-       		srcs/init.c
-       		srcs/lem-in.c
-       		srcs/moving_ants.c
-       		srcs/read.c
+SRCS = srcs/lem-in.c \
+		srcs/alg.c \
+			srcs/bellman_ford.c \
+			srcs/init.c \
+			srcs/moving_ants.c \
+			srcs/read.c
 
-OBJS = $(notdir $(patsubst %.c,%.o,$(SRCS_PS)))
+OBJS = $(notdir $(patsubst %.c,%.o,$(SRCS)))
 
 HEAD = lem-in.h
 
@@ -23,7 +23,7 @@ LIB_ALL = $(addsuffix .all,$(LDIRS))
 
 all: $(LIB_ALL) $(LIBFT) $(NAME)
 
-%.o: %.c
+%.o:%.c
 		gcc $(FLAGS) -c -MD $(addprefix -I,$(source_dirs)) $< -o $@
 
 $(NAME): $(OBJS) $(LIBFT)

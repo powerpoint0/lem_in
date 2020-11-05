@@ -515,7 +515,7 @@ t_sline	*new_sline(t_point *p1, t_point *p2, int weight)
 	if (!(new = (t_sline*)ft_memalloc(sizeof(t_sline))))
 		put_err("Init.Not creat line");
 	new->in = p1;
-	new->tmp_in = new->tmp_in;
+	new->tmp_in = new->in;
 	new->out = p2;
 	new->weight = weight;
 	new->next = NULL;
@@ -569,19 +569,6 @@ t_sline	*set_sline(t_data *map)
 	return (map->slines);
 }
 
-void	print_sline(t_data *map)
-{
-	t_sline	*line;
-
-	line = map->slines;
-	while (line)
-	{
-		printf("%s(%d)cost%d - %s(%d)cost%d [%d] close=%d\n", line->in->name, line->in->p, line->in->cost,
-		 line->out->name, line->out->p, line->out->cost, line->weight, line->close);
-		line = line->next;
-	}
-}
-
 t_data	*read_map(int fd)
 {
 	int 	rd;
@@ -611,7 +598,7 @@ t_data	*read_map(int fd)
 	check_start_end_connected(map);
 	del_free_point(map);
 	copy_points(map);
-	connected_points2(map);
+//	connected_points2(map);
 	map->slines = set_sline(map);
 	//print_sline(map);
 //	connected_points(map);

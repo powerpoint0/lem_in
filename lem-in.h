@@ -1,7 +1,11 @@
 #ifndef LEM_IN_H
 # define LEM_IN_H
 # include "libft.h"
+# include "get_next_line.h"
 # include <stdio.h>
+# include <fcntl.h>
+# include <stdlib.h>
+
 # define START 1
 # define END 2
 # define CLOSE 1
@@ -53,6 +57,8 @@ typedef struct		s_loc
 typedef struct		s_data
 {
 	int				num_ants;
+	int				num_of_edges;
+	int 			max_paths;
 	int				ants_end;
 	int				ants_count;
 	t_point			*points;
@@ -75,16 +81,19 @@ typedef struct		s_path
 	struct s_path	*next;
 }					t_path;
 
+int					main(int argc, char **argv);
 int					put_err(char *str);
 t_data				*int_map(void);
 t_data				*read_map(int fd);
 int					*set_check(int size);
 
 t_path				**ft_alg(t_data *map);
-int					ft_bellman_ford(t_data *map, int num_of_edges);
+int					ft_bellman_ford(t_data *map);
+t_path				**ft_init_paths(t_data *map);
 void				ft_init_slines(t_sline *slines);
 void				ft_init_points(t_data *map);
 int					ft_how_much_edges(t_sline *slines);
+void				ft_num_of_max_paths(t_data *map);
 
 int					ft_letGoAnts(t_path **paths, t_data *map);
 t_loc				*add_loc(t_data *map, char *name, int num_ant);
@@ -92,5 +101,6 @@ int					iter_count(t_path **paths, t_data *map);
 
 void				print_sline(t_data *map);
 void				print_paths(t_path **paths);
+void				ft_check_repeat_rooms(t_path **paths);
 
 #endif

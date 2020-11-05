@@ -25,7 +25,7 @@ do
   SIZE=+$(echo $MAP | wc -l)
   SIZE=$(echo $SIZE | sed "s/ //g")
 
-  LEM=$(time ./lem_in file.txt)
+  LEM=$(time ./lem-in file.txt)
   LEM=$(echo $LEM | tail -n $SIZE)
 
   cat file.txt | wc -l

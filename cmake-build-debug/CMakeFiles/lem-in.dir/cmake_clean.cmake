@@ -65,6 +65,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem-in.dir/libft/get_next_line.c.o"
   "CMakeFiles/lem-in.dir/srcs/alg.c.o"
   "CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o"
+  "CMakeFiles/lem-in.dir/srcs/debug.c.o"
   "CMakeFiles/lem-in.dir/srcs/init.c.o"
   "CMakeFiles/lem-in.dir/srcs/lem-in.c.o"
   "CMakeFiles/lem-in.dir/srcs/moving_ants.c.o"

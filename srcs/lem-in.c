@@ -1,7 +1,4 @@
-#include <stdio.h>
 #include "lem-in.h"
-#include <fcntl.h>
-#include <stdlib.h>
 
 void	free_all(t_data	*map)
 {

@@ -1925,6 +1925,33 @@ srcs/bellman_ford.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/bellman_ford.c.s
 .PHONY : srcs/bellman_ford.c.s
 
+srcs/debug.o: srcs/debug.c.o
+
+.PHONY : srcs/debug.o
+
+# target to build an object file
+srcs/debug.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/debug.c.o
+.PHONY : srcs/debug.c.o
+
+srcs/debug.i: srcs/debug.c.i
+
+.PHONY : srcs/debug.i
+
+# target to preprocess a source file
+srcs/debug.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/debug.c.i
+.PHONY : srcs/debug.c.i
+
+srcs/debug.s: srcs/debug.c.s
+
+.PHONY : srcs/debug.s
+
+# target to generate assembly for a file
+srcs/debug.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/debug.c.s
+.PHONY : srcs/debug.c.s
+
 srcs/init.o: srcs/init.c.o
 
 .PHONY : srcs/init.o
@@ -2240,6 +2267,9 @@ help:
 	@echo "... srcs/bellman_ford.o"
 	@echo "... srcs/bellman_ford.i"
 	@echo "... srcs/bellman_ford.s"
+	@echo "... srcs/debug.o"
+	@echo "... srcs/debug.i"
+	@echo "... srcs/debug.s"
 	@echo "... srcs/init.o"
 	@echo "... srcs/init.i"
 	@echo "... srcs/init.s"

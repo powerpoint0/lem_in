@@ -79,6 +79,4 @@ add_executable(lem-in
 		srcs/lem-in.c
 		srcs/moving_ants.c
 		srcs/read.c
-		author
-		CMakeLists.txt
-		lem-in.h)
+		lem-in.h srcs/debug.c)

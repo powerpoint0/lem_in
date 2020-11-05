@@ -180,27 +180,38 @@ CMakeFiles/lem-in.dir/libft/get_next_line.c.o
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
  /Users/cjoaquin/CLionProjects/lem_in11/libft/get_next_line.c
-CMakeFiles/lem-in.dir/src/alg.c.o
- ../lem_in.h
+CMakeFiles/lem-in.dir/srcs/alg.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
- /Users/cjoaquin/CLionProjects/lem_in11/src/alg.c
-CMakeFiles/lem-in.dir/src/bellman_ford.c.o
- ../lem_in.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/alg.c
+CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
- /Users/cjoaquin/CLionProjects/lem_in11/src/bellman_ford.c
-CMakeFiles/lem-in.dir/src/init.c.o
- ../lem_in.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/bellman_ford.c
+CMakeFiles/lem-in.dir/srcs/debug.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
- /Users/cjoaquin/CLionProjects/lem_in11/src/init.c
-CMakeFiles/lem-in.dir/src/lem_in.c.o
- ../lem_in.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/debug.c
+CMakeFiles/lem-in.dir/srcs/init.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
- /Users/cjoaquin/CLionProjects/lem_in11/src/lem_in.c
-CMakeFiles/lem-in.dir/src/moving_ants.c.o
- ../lem_in.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/init.c
+CMakeFiles/lem-in.dir/srcs/lem-in.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
- /Users/cjoaquin/CLionProjects/lem_in11/src/moving_ants.c
-CMakeFiles/lem-in.dir/src/read.c.o
- ../lem_in.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.c
+CMakeFiles/lem-in.dir/srcs/moving_ants.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
- /Users/cjoaquin/CLionProjects/lem_in11/src/read.c
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/moving_ants.c
+CMakeFiles/lem-in.dir/srcs/read.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/read.c

@@ -84,12 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in11/CMakeLists.txt">
-			<Option target="lem-in"/>
-		</Unit>
-		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in11/author">
-			<Option target="lem-in"/>
-		</Unit>
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in11/lem-in.h">
 			<Option target="lem-in"/>
 		</Unit>
@@ -295,6 +289,9 @@
 			<Option target="lem-in"/>
 		</Unit>
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in11/srcs/bellman_ford.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in11/srcs/debug.c">
 			<Option target="lem-in"/>
 		</Unit>
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in11/srcs/init.c">
