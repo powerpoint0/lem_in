@@ -24,7 +24,6 @@ int is_repeat_room(t_path **paths, t_path *room)
 	return(0);
 }
 
-
 void ft_check_repeat_rooms(t_path **paths)
 {
 	t_path *path;

@@ -113,6 +113,7 @@ int		ft_how_much_edges(t_sline *slines)
 void ft_free_paths(t_path **paths)
 {
 	int i;
+	t_path *path;
 
 	i = 0;
 	while(paths[i])
