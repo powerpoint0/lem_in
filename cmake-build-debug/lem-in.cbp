@@ -288,6 +288,9 @@
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in11/srcs/alg.c">
 			<Option target="lem-in"/>
 		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in11/srcs/alg2.c">
+			<Option target="lem-in"/>
+		</Unit>
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in11/srcs/bellman_ford.c">
 			<Option target="lem-in"/>
 		</Unit>

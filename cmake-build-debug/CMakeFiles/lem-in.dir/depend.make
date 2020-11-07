@@ -185,6 +185,11 @@ CMakeFiles/lem-in.dir/srcs/alg.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/alg.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/alg.c.o: ../srcs/alg.c
 
+CMakeFiles/lem-in.dir/srcs/alg2.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/alg2.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/alg2.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/alg2.c.o: ../srcs/alg2.c
+
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../lem-in.h
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../libft/includes/libft.h

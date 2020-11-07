@@ -79,4 +79,6 @@ add_executable(lem-in
 		srcs/lem-in.c
 		srcs/moving_ants.c
 		srcs/read.c
-		lem-in.h srcs/debug.c)
+		lem-in.h
+		srcs/debug.c
+		srcs/alg2.c)

@@ -31,7 +31,7 @@ typedef struct		s_point
 	int 			y;
 	int 			in_path;
 	struct s_point **arr_lines;  //////
-	int 			*check;   //////poschitat kolvo svyazey tolko u starta
+	int 			*check;  /////
 	int 			cost;
 	struct s_point	*prev_room_path;
 	struct s_point	*next;
@@ -94,6 +94,9 @@ void				ft_init_points(t_data *map);
 int					ft_how_much_edges(t_sline *slines);
 void				ft_num_of_max_paths(t_data *map);
 void				ft_free_paths(t_path **paths);
+int	ft_change_edge(t_sline *slines);
+t_path*		ft_create_path(t_data *map);
+void ft_free_path(t_path **path);
 
 int					ft_letGoAnts(t_path **paths, t_data *map);
 t_loc				*add_loc(t_data *map, char *name, int num_ant);

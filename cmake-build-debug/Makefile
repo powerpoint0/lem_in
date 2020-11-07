@@ -1898,6 +1898,33 @@ srcs/alg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg.c.s
 .PHONY : srcs/alg.c.s
 
+srcs/alg2.o: srcs/alg2.c.o
+
+.PHONY : srcs/alg2.o
+
+# target to build an object file
+srcs/alg2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg2.c.o
+.PHONY : srcs/alg2.c.o
+
+srcs/alg2.i: srcs/alg2.c.i
+
+.PHONY : srcs/alg2.i
+
+# target to preprocess a source file
+srcs/alg2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg2.c.i
+.PHONY : srcs/alg2.c.i
+
+srcs/alg2.s: srcs/alg2.c.s
+
+.PHONY : srcs/alg2.s
+
+# target to generate assembly for a file
+srcs/alg2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg2.c.s
+.PHONY : srcs/alg2.c.s
+
 srcs/bellman_ford.o: srcs/bellman_ford.c.o
 
 .PHONY : srcs/bellman_ford.o
@@ -2264,6 +2291,9 @@ help:
 	@echo "... srcs/alg.o"
 	@echo "... srcs/alg.i"
 	@echo "... srcs/alg.s"
+	@echo "... srcs/alg2.o"
+	@echo "... srcs/alg2.i"
+	@echo "... srcs/alg2.s"
 	@echo "... srcs/bellman_ford.o"
 	@echo "... srcs/bellman_ford.i"
 	@echo "... srcs/bellman_ford.s"

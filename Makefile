@@ -11,7 +11,9 @@ SRCS = srcs/lem-in.c \
 			srcs/bellman_ford.c \
 			srcs/init.c \
 			srcs/moving_ants.c \
-			srcs/read.c
+			srcs/read.c \
+			srcs/debug.c \
+            srcs/alg2.c
 
 OBJS = $(notdir $(patsubst %.c,%.o,$(SRCS)))
 
@@ -43,4 +45,5 @@ re: fclean all
 
 %.all:
 	make -C $*
+
 include $(wildcard *.d)
