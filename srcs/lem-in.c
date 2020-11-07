@@ -1,6 +1,6 @@
 #include "lem-in.h"
 
-void	free_all(t_data	*map)
+void	free_all(t_data	*map, t_path **best_paths)
 {
 	t_point	*prev_points;
 	t_line	*prev_lines;
@@ -19,7 +19,11 @@ void	free_all(t_data	*map)
 	}
 	if (map)
 		free(map);
+	ft_free_paths(best_paths);
+	if(best_paths)
+		free(best_paths);
 }
+
 int		put_err(char *str)
 {
 	ft_putendl_fd(str, 2);
@@ -42,6 +46,6 @@ int 	main(int argc, char **argv)
 	map = read_map(fd);
 	best_paths = ft_alg(map);
 	ft_letGoAnts(best_paths, map);
-	free_all(map);
+	free_all(map, best_paths);
 	return(0);
 }

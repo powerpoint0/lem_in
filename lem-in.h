@@ -76,7 +76,6 @@ typedef struct		s_path
 	int				num_of_steps_in_paths;
 	int				len;
 	t_point			*points;
-	t_point			*last_points;
 	struct s_path	*prev;
 	struct s_path	*next;
 }					t_path;
@@ -94,6 +93,7 @@ void				ft_init_slines(t_sline *slines);
 void				ft_init_points(t_data *map);
 int					ft_how_much_edges(t_sline *slines);
 void				ft_num_of_max_paths(t_data *map);
+void				ft_free_paths(t_path **paths);
 
 int					ft_letGoAnts(t_path **paths, t_data *map);
 t_loc				*add_loc(t_data *map, char *name, int num_ant);

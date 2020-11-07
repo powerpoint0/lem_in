@@ -26,7 +26,7 @@ t_loc	*set_new_loc(char *name, int num_ant)
 	return (new);
 }
 
-t_loc	*ins_loc(t_data *map, char *name, int num_ant)
+void	ins_loc(t_data *map, char *name, int num_ant)
 {
 	t_loc	*new;
 	t_loc	*next;

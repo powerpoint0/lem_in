@@ -14,7 +14,7 @@ t_data	*int_map(void)
 
 void ft_num_of_max_paths(t_data *map)
 {
-	int i;
+	int		i;
 	t_sline *header;
 
 	i = 0;

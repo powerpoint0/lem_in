@@ -4,7 +4,7 @@ LIBFT = libft/libft.a
 
 FLAGS = -Wall -Wextra -Werror
 
-source_dirs = . src libft/includes
+source_dirs = . srcs libft/includes
 
 SRCS = srcs/lem-in.c \
 		srcs/alg.c \

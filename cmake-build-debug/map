@@ -1,12 +1,12 @@
-10
+1
 #  A
-# / \
+# K \
 #B   E
 #|   |
 #C  /F
-#| / |
+#| / M
 #D/  G
-# \ /
+# \ L
 #  H
 ##start
 A 0 1
@@ -19,14 +19,20 @@ E 1 1
 G 4 0
 ##end
 H 5 1
+K 1 2
+L 1 2
+M 1 2
 #another comment
-A-B
+A-K
+K-B
 B-C
 A-E
 C-D
 E-F
 F-D
-F-G
+F-M
+M-G
 D-H
-G-H
+G-L
+L-H
 #another comment

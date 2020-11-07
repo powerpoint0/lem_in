@@ -26,7 +26,6 @@ do
   SIZE=$(echo $SIZE | sed "s/ //g")
 
   LEM=$(time ./lem-in file.txt)
-#  LEM=$(time  valgrind --leak-check=full  ./lem-in file.txt)
   LEM=$(echo $LEM | tail -n $SIZE)
 
   cat file.txt | wc -l
