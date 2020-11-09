@@ -1952,6 +1952,33 @@ srcs/bellman_ford.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/bellman_ford.c.s
 .PHONY : srcs/bellman_ford.c.s
 
+srcs/check_and_read.o: srcs/check_and_read.c.o
+
+.PHONY : srcs/check_and_read.o
+
+# target to build an object file
+srcs/check_and_read.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/check_and_read.c.o
+.PHONY : srcs/check_and_read.c.o
+
+srcs/check_and_read.i: srcs/check_and_read.c.i
+
+.PHONY : srcs/check_and_read.i
+
+# target to preprocess a source file
+srcs/check_and_read.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/check_and_read.c.i
+.PHONY : srcs/check_and_read.c.i
+
+srcs/check_and_read.s: srcs/check_and_read.c.s
+
+.PHONY : srcs/check_and_read.s
+
+# target to generate assembly for a file
+srcs/check_and_read.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/check_and_read.c.s
+.PHONY : srcs/check_and_read.c.s
+
 srcs/debug.o: srcs/debug.c.o
 
 .PHONY : srcs/debug.o
@@ -2086,6 +2113,87 @@ srcs/read.s: srcs/read.c.s
 srcs/read.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read.c.s
 .PHONY : srcs/read.c.s
+
+srcs/read_lines.o: srcs/read_lines.c.o
+
+.PHONY : srcs/read_lines.o
+
+# target to build an object file
+srcs/read_lines.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_lines.c.o
+.PHONY : srcs/read_lines.c.o
+
+srcs/read_lines.i: srcs/read_lines.c.i
+
+.PHONY : srcs/read_lines.i
+
+# target to preprocess a source file
+srcs/read_lines.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_lines.c.i
+.PHONY : srcs/read_lines.c.i
+
+srcs/read_lines.s: srcs/read_lines.c.s
+
+.PHONY : srcs/read_lines.s
+
+# target to generate assembly for a file
+srcs/read_lines.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_lines.c.s
+.PHONY : srcs/read_lines.c.s
+
+srcs/read_points.o: srcs/read_points.c.o
+
+.PHONY : srcs/read_points.o
+
+# target to build an object file
+srcs/read_points.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_points.c.o
+.PHONY : srcs/read_points.c.o
+
+srcs/read_points.i: srcs/read_points.c.i
+
+.PHONY : srcs/read_points.i
+
+# target to preprocess a source file
+srcs/read_points.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_points.c.i
+.PHONY : srcs/read_points.c.i
+
+srcs/read_points.s: srcs/read_points.c.s
+
+.PHONY : srcs/read_points.s
+
+# target to generate assembly for a file
+srcs/read_points.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_points.c.s
+.PHONY : srcs/read_points.c.s
+
+srcs/read_reline.o: srcs/read_reline.c.o
+
+.PHONY : srcs/read_reline.o
+
+# target to build an object file
+srcs/read_reline.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_reline.c.o
+.PHONY : srcs/read_reline.c.o
+
+srcs/read_reline.i: srcs/read_reline.c.i
+
+.PHONY : srcs/read_reline.i
+
+# target to preprocess a source file
+srcs/read_reline.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_reline.c.i
+.PHONY : srcs/read_reline.c.i
+
+srcs/read_reline.s: srcs/read_reline.c.s
+
+.PHONY : srcs/read_reline.s
+
+# target to generate assembly for a file
+srcs/read_reline.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_reline.c.s
+.PHONY : srcs/read_reline.c.s
 
 # Help Target
 help:
@@ -2297,6 +2405,9 @@ help:
 	@echo "... srcs/bellman_ford.o"
 	@echo "... srcs/bellman_ford.i"
 	@echo "... srcs/bellman_ford.s"
+	@echo "... srcs/check_and_read.o"
+	@echo "... srcs/check_and_read.i"
+	@echo "... srcs/check_and_read.s"
 	@echo "... srcs/debug.o"
 	@echo "... srcs/debug.i"
 	@echo "... srcs/debug.s"
@@ -2312,6 +2423,15 @@ help:
 	@echo "... srcs/read.o"
 	@echo "... srcs/read.i"
 	@echo "... srcs/read.s"
+	@echo "... srcs/read_lines.o"
+	@echo "... srcs/read_lines.i"
+	@echo "... srcs/read_lines.s"
+	@echo "... srcs/read_points.o"
+	@echo "... srcs/read_points.i"
+	@echo "... srcs/read_points.s"
+	@echo "... srcs/read_reline.o"
+	@echo "... srcs/read_reline.i"
+	@echo "... srcs/read_reline.s"
 .PHONY : help
 
 

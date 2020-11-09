@@ -71,11 +71,15 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/cjoaquin/CLionProjects/lem_in11/srcs/alg.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/alg.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in11/srcs/alg2.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/alg2.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in11/srcs/bellman_ford.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o"
+  "/Users/cjoaquin/CLionProjects/lem_in11/srcs/check_and_read.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/check_and_read.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in11/srcs/debug.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/debug.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in11/srcs/init.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/init.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/lem-in.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in11/srcs/moving_ants.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/moving_ants.c.o"
   "/Users/cjoaquin/CLionProjects/lem_in11/srcs/read.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/read.c.o"
+  "/Users/cjoaquin/CLionProjects/lem_in11/srcs/read_lines.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/read_lines.c.o"
+  "/Users/cjoaquin/CLionProjects/lem_in11/srcs/read_points.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/read_points.c.o"
+  "/Users/cjoaquin/CLionProjects/lem_in11/srcs/read_reline.c" "/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/lem-in.dir/srcs/read_reline.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

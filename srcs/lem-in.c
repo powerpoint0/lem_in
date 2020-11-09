@@ -32,6 +32,7 @@ int		put_err(char *str)
 
 int 	main(int argc, char **argv)
 {
+	clock_t all_1 = clock();
 	int		fd;
 	t_data	*map;
 	t_path **best_paths;
@@ -43,9 +44,26 @@ int 	main(int argc, char **argv)
 	fd = (ft_strequ(argv[1], "<")) ? open(argv[2], O_RDONLY) : open(argv[1], O_RDONLY);
 	if (fd < 0)
 		put_err("Not open file");
+	clock_t r_1 = clock();
 	map = read_map(fd);
+		clock_t r_2 = clock();
+		double r_diff = (double) (r_2 - r_1)/CLOCKS_PER_SEC;
+
+		clock_t a_1 = clock();
 	best_paths = ft_alg(map);
+		clock_t a_2 = clock();
+		double a_diff = (double) (a_2 - a_1)/CLOCKS_PER_SEC;
+
+	clock_t go_1 = clock();
 	ft_letGoAnts(best_paths, map);
+	clock_t go_2 = clock();
+	double go_diff = (double) (go_2 - go_1)/CLOCKS_PER_SEC;
 	free_all(map, best_paths);
+	clock_t all_2 = clock();
+	double all_diff = (double) (all_2 - all_1)/CLOCKS_PER_SEC;
+	printf("Read time = %f\n", r_diff);
+	printf("Algo time = %f\n", a_diff);
+	printf("Go time = %f\n", go_diff);
+	printf("All time = %f\n", all_diff);
 	return(0);
 }

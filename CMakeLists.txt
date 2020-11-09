@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(lem-in)
+project(lem_in11)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -74,11 +74,15 @@ add_executable(lem-in
 		libft/ft_toupper.c
 		libft/get_next_line.c
 		srcs/alg.c
+		srcs/alg2.c
 		srcs/bellman_ford.c
+		srcs/check_and_read.c
+		srcs/debug.c
 		srcs/init.c
 		srcs/lem-in.c
 		srcs/moving_ants.c
 		srcs/read.c
-		lem-in.h
-		srcs/debug.c
-		srcs/alg2.c)
+		srcs/read_lines.c
+		srcs/read_points.c
+		srcs/read_reline.c
+		lem-in.h)

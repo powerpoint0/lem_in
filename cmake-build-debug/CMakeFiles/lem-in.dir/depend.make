@@ -195,6 +195,11 @@ CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../srcs/bellman_ford.c
 
+CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../srcs/check_and_read.c
+
 CMakeFiles/lem-in.dir/srcs/debug.c.o: ../lem-in.h
 CMakeFiles/lem-in.dir/srcs/debug.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/debug.c.o: ../libft/includes/libft.h
@@ -219,4 +224,19 @@ CMakeFiles/lem-in.dir/srcs/read.c.o: ../lem-in.h
 CMakeFiles/lem-in.dir/srcs/read.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/read.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/read.c.o: ../srcs/read.c
+
+CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../srcs/read_lines.c
+
+CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../srcs/read_points.c
+
+CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../srcs/read_reline.c
 

@@ -195,6 +195,11 @@ CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
  /Users/cjoaquin/CLionProjects/lem_in11/srcs/bellman_ford.c
+CMakeFiles/lem-in.dir/srcs/check_and_read.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/check_and_read.c
 CMakeFiles/lem-in.dir/srcs/debug.c.o
  ../lem-in.h
  ../libft/includes/get_next_line.h
@@ -220,3 +225,18 @@ CMakeFiles/lem-in.dir/srcs/read.c.o
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
  /Users/cjoaquin/CLionProjects/lem_in11/srcs/read.c
+CMakeFiles/lem-in.dir/srcs/read_lines.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_lines.c
+CMakeFiles/lem-in.dir/srcs/read_points.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_points.c
+CMakeFiles/lem-in.dir/srcs/read_reline.c.o
+ ../lem-in.h
+ ../libft/includes/get_next_line.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_reline.c

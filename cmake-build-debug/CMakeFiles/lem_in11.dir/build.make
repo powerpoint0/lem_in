@@ -909,83 +909,161 @@ CMakeFiles/lem_in11.dir/libft/get_next_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/libft/get_next_line.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/libft/get_next_line.c -o CMakeFiles/lem_in11.dir/libft/get_next_line.c.s
 
-CMakeFiles/lem_in11.dir/src/alg.c.o: CMakeFiles/lem_in11.dir/flags.make
-CMakeFiles/lem_in11.dir/src/alg.c.o: ../src/alg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/lem_in11.dir/src/alg.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/src/alg.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/src/alg.c
+CMakeFiles/lem_in11.dir/srcs/alg.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/alg.c.o: ../srcs/alg.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/lem_in11.dir/srcs/alg.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/alg.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/alg.c
 
-CMakeFiles/lem_in11.dir/src/alg.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/src/alg.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/src/alg.c > CMakeFiles/lem_in11.dir/src/alg.c.i
+CMakeFiles/lem_in11.dir/srcs/alg.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/alg.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/alg.c > CMakeFiles/lem_in11.dir/srcs/alg.c.i
 
-CMakeFiles/lem_in11.dir/src/alg.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/src/alg.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/src/alg.c -o CMakeFiles/lem_in11.dir/src/alg.c.s
+CMakeFiles/lem_in11.dir/srcs/alg.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/alg.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/alg.c -o CMakeFiles/lem_in11.dir/srcs/alg.c.s
 
-CMakeFiles/lem_in11.dir/src/bellman_ford.c.o: CMakeFiles/lem_in11.dir/flags.make
-CMakeFiles/lem_in11.dir/src/bellman_ford.c.o: ../src/bellman_ford.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/lem_in11.dir/src/bellman_ford.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/src/bellman_ford.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/src/bellman_ford.c
+CMakeFiles/lem_in11.dir/srcs/alg2.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/alg2.c.o: ../srcs/alg2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/lem_in11.dir/srcs/alg2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/alg2.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/alg2.c
 
-CMakeFiles/lem_in11.dir/src/bellman_ford.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/src/bellman_ford.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/src/bellman_ford.c > CMakeFiles/lem_in11.dir/src/bellman_ford.c.i
+CMakeFiles/lem_in11.dir/srcs/alg2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/alg2.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/alg2.c > CMakeFiles/lem_in11.dir/srcs/alg2.c.i
 
-CMakeFiles/lem_in11.dir/src/bellman_ford.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/src/bellman_ford.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/src/bellman_ford.c -o CMakeFiles/lem_in11.dir/src/bellman_ford.c.s
+CMakeFiles/lem_in11.dir/srcs/alg2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/alg2.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/alg2.c -o CMakeFiles/lem_in11.dir/srcs/alg2.c.s
 
-CMakeFiles/lem_in11.dir/src/init.c.o: CMakeFiles/lem_in11.dir/flags.make
-CMakeFiles/lem_in11.dir/src/init.c.o: ../src/init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/lem_in11.dir/src/init.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/src/init.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/src/init.c
+CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.o: ../srcs/bellman_ford.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/bellman_ford.c
 
-CMakeFiles/lem_in11.dir/src/init.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/src/init.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/src/init.c > CMakeFiles/lem_in11.dir/src/init.c.i
+CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/bellman_ford.c > CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.i
 
-CMakeFiles/lem_in11.dir/src/init.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/src/init.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/src/init.c -o CMakeFiles/lem_in11.dir/src/init.c.s
+CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/bellman_ford.c -o CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.s
 
-CMakeFiles/lem_in11.dir/src/lem_in.c.o: CMakeFiles/lem_in11.dir/flags.make
-CMakeFiles/lem_in11.dir/src/lem_in.c.o: ../src/lem_in.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/lem_in11.dir/src/lem_in.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/src/lem_in.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/src/lem_in.c
+CMakeFiles/lem_in11.dir/srcs/check_and_read.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/check_and_read.c.o: ../srcs/check_and_read.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/lem_in11.dir/srcs/check_and_read.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/check_and_read.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/check_and_read.c
 
-CMakeFiles/lem_in11.dir/src/lem_in.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/src/lem_in.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/src/lem_in.c > CMakeFiles/lem_in11.dir/src/lem_in.c.i
+CMakeFiles/lem_in11.dir/srcs/check_and_read.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/check_and_read.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/check_and_read.c > CMakeFiles/lem_in11.dir/srcs/check_and_read.c.i
 
-CMakeFiles/lem_in11.dir/src/lem_in.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/src/lem_in.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/src/lem_in.c -o CMakeFiles/lem_in11.dir/src/lem_in.c.s
+CMakeFiles/lem_in11.dir/srcs/check_and_read.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/check_and_read.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/check_and_read.c -o CMakeFiles/lem_in11.dir/srcs/check_and_read.c.s
 
-CMakeFiles/lem_in11.dir/src/moving_ants.c.o: CMakeFiles/lem_in11.dir/flags.make
-CMakeFiles/lem_in11.dir/src/moving_ants.c.o: ../src/moving_ants.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/lem_in11.dir/src/moving_ants.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/src/moving_ants.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/src/moving_ants.c
+CMakeFiles/lem_in11.dir/srcs/debug.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/debug.c.o: ../srcs/debug.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/lem_in11.dir/srcs/debug.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/debug.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/debug.c
 
-CMakeFiles/lem_in11.dir/src/moving_ants.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/src/moving_ants.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/src/moving_ants.c > CMakeFiles/lem_in11.dir/src/moving_ants.c.i
+CMakeFiles/lem_in11.dir/srcs/debug.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/debug.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/debug.c > CMakeFiles/lem_in11.dir/srcs/debug.c.i
 
-CMakeFiles/lem_in11.dir/src/moving_ants.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/src/moving_ants.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/src/moving_ants.c -o CMakeFiles/lem_in11.dir/src/moving_ants.c.s
+CMakeFiles/lem_in11.dir/srcs/debug.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/debug.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/debug.c -o CMakeFiles/lem_in11.dir/srcs/debug.c.s
 
-CMakeFiles/lem_in11.dir/src/read.c.o: CMakeFiles/lem_in11.dir/flags.make
-CMakeFiles/lem_in11.dir/src/read.c.o: ../src/read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/lem_in11.dir/src/read.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/src/read.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/src/read.c
+CMakeFiles/lem_in11.dir/srcs/init.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/init.c.o: ../srcs/init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/lem_in11.dir/srcs/init.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/init.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/init.c
 
-CMakeFiles/lem_in11.dir/src/read.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/src/read.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/src/read.c > CMakeFiles/lem_in11.dir/src/read.c.i
+CMakeFiles/lem_in11.dir/srcs/init.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/init.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/init.c > CMakeFiles/lem_in11.dir/srcs/init.c.i
 
-CMakeFiles/lem_in11.dir/src/read.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/src/read.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/src/read.c -o CMakeFiles/lem_in11.dir/src/read.c.s
+CMakeFiles/lem_in11.dir/srcs/init.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/init.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/init.c -o CMakeFiles/lem_in11.dir/srcs/init.c.s
+
+CMakeFiles/lem_in11.dir/srcs/lem-in.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/lem-in.c.o: ../srcs/lem-in.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/lem_in11.dir/srcs/lem-in.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/lem-in.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.c
+
+CMakeFiles/lem_in11.dir/srcs/lem-in.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/lem-in.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.c > CMakeFiles/lem_in11.dir/srcs/lem-in.c.i
+
+CMakeFiles/lem_in11.dir/srcs/lem-in.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/lem-in.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.c -o CMakeFiles/lem_in11.dir/srcs/lem-in.c.s
+
+CMakeFiles/lem_in11.dir/srcs/moving_ants.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/moving_ants.c.o: ../srcs/moving_ants.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/lem_in11.dir/srcs/moving_ants.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/moving_ants.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/moving_ants.c
+
+CMakeFiles/lem_in11.dir/srcs/moving_ants.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/moving_ants.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/moving_ants.c > CMakeFiles/lem_in11.dir/srcs/moving_ants.c.i
+
+CMakeFiles/lem_in11.dir/srcs/moving_ants.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/moving_ants.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/moving_ants.c -o CMakeFiles/lem_in11.dir/srcs/moving_ants.c.s
+
+CMakeFiles/lem_in11.dir/srcs/read.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/read.c.o: ../srcs/read.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/lem_in11.dir/srcs/read.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/read.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/read.c
+
+CMakeFiles/lem_in11.dir/srcs/read.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/read.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/read.c > CMakeFiles/lem_in11.dir/srcs/read.c.i
+
+CMakeFiles/lem_in11.dir/srcs/read.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/read.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/read.c -o CMakeFiles/lem_in11.dir/srcs/read.c.s
+
+CMakeFiles/lem_in11.dir/srcs/read_lines.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/read_lines.c.o: ../srcs/read_lines.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/lem_in11.dir/srcs/read_lines.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/read_lines.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_lines.c
+
+CMakeFiles/lem_in11.dir/srcs/read_lines.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/read_lines.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_lines.c > CMakeFiles/lem_in11.dir/srcs/read_lines.c.i
+
+CMakeFiles/lem_in11.dir/srcs/read_lines.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/read_lines.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_lines.c -o CMakeFiles/lem_in11.dir/srcs/read_lines.c.s
+
+CMakeFiles/lem_in11.dir/srcs/read_points.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/read_points.c.o: ../srcs/read_points.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/lem_in11.dir/srcs/read_points.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/read_points.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_points.c
+
+CMakeFiles/lem_in11.dir/srcs/read_points.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/read_points.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_points.c > CMakeFiles/lem_in11.dir/srcs/read_points.c.i
+
+CMakeFiles/lem_in11.dir/srcs/read_points.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/read_points.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_points.c -o CMakeFiles/lem_in11.dir/srcs/read_points.c.s
+
+CMakeFiles/lem_in11.dir/srcs/read_reline.c.o: CMakeFiles/lem_in11.dir/flags.make
+CMakeFiles/lem_in11.dir/srcs/read_reline.c.o: ../srcs/read_reline.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/lem_in11.dir/srcs/read_reline.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in11.dir/srcs/read_reline.c.o   -c /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_reline.c
+
+CMakeFiles/lem_in11.dir/srcs/read_reline.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in11.dir/srcs/read_reline.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_reline.c > CMakeFiles/lem_in11.dir/srcs/read_reline.c.i
+
+CMakeFiles/lem_in11.dir/srcs/read_reline.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in11.dir/srcs/read_reline.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in11/srcs/read_reline.c -o CMakeFiles/lem_in11.dir/srcs/read_reline.c.s
 
 # Object files for target lem_in11
 lem_in11_OBJECTS = \
@@ -1053,12 +1131,18 @@ lem_in11_OBJECTS = \
 "CMakeFiles/lem_in11.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/lem_in11.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/lem_in11.dir/libft/get_next_line.c.o" \
-"CMakeFiles/lem_in11.dir/src/alg.c.o" \
-"CMakeFiles/lem_in11.dir/src/bellman_ford.c.o" \
-"CMakeFiles/lem_in11.dir/src/init.c.o" \
-"CMakeFiles/lem_in11.dir/src/lem_in.c.o" \
-"CMakeFiles/lem_in11.dir/src/moving_ants.c.o" \
-"CMakeFiles/lem_in11.dir/src/read.c.o"
+"CMakeFiles/lem_in11.dir/srcs/alg.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/alg2.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/check_and_read.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/debug.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/init.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/lem-in.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/moving_ants.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/read.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/read_lines.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/read_points.c.o" \
+"CMakeFiles/lem_in11.dir/srcs/read_reline.c.o"
 
 # External object files for target lem_in11
 lem_in11_EXTERNAL_OBJECTS =
@@ -1127,15 +1211,21 @@ lem_in11: CMakeFiles/lem_in11.dir/libft/ft_strtrim.c.o
 lem_in11: CMakeFiles/lem_in11.dir/libft/ft_tolower.c.o
 lem_in11: CMakeFiles/lem_in11.dir/libft/ft_toupper.c.o
 lem_in11: CMakeFiles/lem_in11.dir/libft/get_next_line.c.o
-lem_in11: CMakeFiles/lem_in11.dir/src/alg.c.o
-lem_in11: CMakeFiles/lem_in11.dir/src/bellman_ford.c.o
-lem_in11: CMakeFiles/lem_in11.dir/src/init.c.o
-lem_in11: CMakeFiles/lem_in11.dir/src/lem_in.c.o
-lem_in11: CMakeFiles/lem_in11.dir/src/moving_ants.c.o
-lem_in11: CMakeFiles/lem_in11.dir/src/read.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/alg.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/alg2.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/bellman_ford.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/check_and_read.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/debug.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/init.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/lem-in.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/moving_ants.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/read.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/read_lines.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/read_points.c.o
+lem_in11: CMakeFiles/lem_in11.dir/srcs/read_reline.c.o
 lem_in11: CMakeFiles/lem_in11.dir/build.make
 lem_in11: CMakeFiles/lem_in11.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Linking C executable lem_in11"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Linking C executable lem_in11"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lem_in11.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

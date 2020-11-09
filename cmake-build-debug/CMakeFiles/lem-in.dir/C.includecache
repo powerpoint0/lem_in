@@ -17,6 +17,8 @@ fcntl.h
 -
 stdlib.h
 -
+time.h
+-
 
 ../libft/includes/get_next_line.h
 sys/types.h
@@ -39,34 +41,6 @@ stdlib.h
 -
 unistd.h
 -
-
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/alg.c
-lem-in.h
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.h
-
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/alg2.c
-lem-in.h
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.h
-
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/bellman_ford.c
-lem-in.h
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.h
-
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/debug.c
-lem-in.h
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.h
-
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/init.c
-lem-in.h
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.h
-
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.c
-lem-in.h
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.h
-
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/moving_ants.c
-lem-in.h
-/Users/cjoaquin/CLionProjects/lem_in11/srcs/lem-in.h
 
 /Users/cjoaquin/CLionProjects/lem_in11/srcs/read.c
 lem-in.h
