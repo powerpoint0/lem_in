@@ -13,7 +13,11 @@ SRCS = srcs/lem-in.c \
 			srcs/moving_ants.c \
 			srcs/read.c \
 			srcs/debug.c \
-            srcs/alg2.c
+            srcs/alg2.c \
+            srcs/check_and_read.c \
+			srcs/read_points.c \
+			srcs/read_reline.c \
+			srcs/read_lines.c
 
 OBJS = $(notdir $(patsubst %.c,%.o,$(SRCS)))
 

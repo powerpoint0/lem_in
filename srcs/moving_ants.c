@@ -8,7 +8,7 @@ int	add_ant(t_path *path, t_data *map, int ants)
 	{
 		map->ants_count++;
 		path->points->ant_num = map->ants_count;
-		map->location = add_loc(map, path->points->name, path->points->ant_num);
+		add_loc(map, path->points->name, path->points->ant_num);
 		ants--;
 	}
 	return (ants);
@@ -20,7 +20,7 @@ t_loc	*set_new_loc(char *name, int num_ant)
 
 	if (!(new = (t_loc*)ft_memalloc(sizeof(t_loc))))
 		put_err("ERROR");
-	new->name = ft_strdup(name);
+	new->name = name;
 	new->i = num_ant;
 	new->next = NULL;
 	return (new);
@@ -55,26 +55,27 @@ void	ins_loc(t_data *map, char *name, int num_ant)
 	}
 }
 
-t_loc	*add_loc(t_data *map, char *name, int num_ant)
+//t_loc	*add_loc(t_data *map, char *name, int num_ant)
+void	add_loc(t_data *map, char *name, int num_ant)
 {
-	t_loc	*header;
+//	t_loc	*header;
 
-	header = NULL;
+//	header = NULL;
 	if (!map->location)
 	{
 		map->location = set_new_loc(name, num_ant);
-		header = map->location;
+//		header = map->location;
 	}
 	else
 	{
 		//header = map->location;
 		ins_loc(map, name, num_ant);
-		header = map->location;
+//		header = map->location;
 //		while (map->location->next)
 //			map->location = map->location->next;
 //		map->location->next = set_new_loc(name, num_ant);
 	}
-	return (header);
+//	return (header);
 }
 
 void	move_by_path(t_path **paths, t_data *map, int *ants)
@@ -94,7 +95,7 @@ void	move_by_path(t_path **paths, t_data *map, int *ants)
 			{
 				path->points->ant_num = path->prev->points->ant_num;
 				if (path->points->ant_num != -1)
-					map->location = add_loc(map, path->points->name, path->points->ant_num);
+					add_loc(map, path->points->name, path->points->ant_num);
 			}
 			else
 				ants[i] = add_ant(path, map, ants[i]);

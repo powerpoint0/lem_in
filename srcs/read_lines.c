@@ -36,8 +36,8 @@ t_line	*new_line(char **str)
 
 	if (!(new = (t_line*)ft_memalloc(sizeof(t_line))))
 		put_err("Init.Not creat line");
-	new->p_first = ft_strdup(str[0]);
-	new->p_next = ft_strdup(str[1]);
+	new->p_first = str[0];
+	new->p_next = str[1];
 	new->next = NULL;
 	return (new);
 }
@@ -63,7 +63,6 @@ int		add_line(char **str, t_data *map)
 		map->last_lines = map->last_lines->next;
 		check_line(map);
 	}
-	free_str(str);
 	return (1);
 }
 

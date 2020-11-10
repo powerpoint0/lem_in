@@ -24,7 +24,7 @@ t_point	*new_point(char **str, int num)
 	new->snum = -1;
 	new->ant_num = -1;
 	new->p = 1;
-	new->name = ft_strdup(str[0]);
+	new->name = str[0];
 	new->x = ft_atoi_check(str[1]);
 	new->y = ft_atoi_check(str[2]);
 	new->in_path = 0;
@@ -56,7 +56,7 @@ int		add_point(char **str, t_data *map, int mod_command)
 		map->start = map->last_points;
 	if (mod_command == END)
 		map->end = map->last_points;
-	free_str(str);
+//	free_str(str);
 	return (1);
 }
 

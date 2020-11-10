@@ -115,7 +115,8 @@ t_path*				ft_create_path(t_data *map);
 void				ft_free_path(t_path **path);
 
 int					ft_letGoAnts(t_path **paths, t_data *map);
-t_loc				*add_loc(t_data *map, char *name, int num_ant);
+//t_loc				*add_loc(t_data *map, char *name, int num_ant);
+void				add_loc(t_data *map, char *name, int num_ant);
 int					iter_count(t_path **paths, t_data *map);
 
 void				print_sline(t_data *map);

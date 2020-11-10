@@ -9,7 +9,8 @@ void	free_str(char **str)
 	{
 		while(str[i])
 		{
-			free(str[i]);
+			//free(str[i]);
+			ft_strdel(&str[i]);
 			i++;
 		}
 		free(str);
@@ -61,6 +62,8 @@ void	del_free_point(t_data *map)
 	}
 }
 
+
+
 t_data	*read_map(int fd)
 {
 	int		rd;
@@ -90,13 +93,16 @@ t_data	*read_map(int fd)
 			sum += parsing_diff;
 			mod_command = 0;
 		}
+		if (line)
+			ft_strdel(&line);
 	}
+	write(1, " ", 1);
 	printf("Parsing time = %f\n", sum);
 	if (!map->start || !map->end)
 		put_err("ERROR.Not start or end");
 
-	//check_start_end_connected(map);
-	//del_free_point(map);
+	check_start_end_connected(map);
+	del_free_point(map);
 		clock_t copy_points_1 = clock();
 	copy_points(map);
 		clock_t copy_points_2 = clock();
@@ -107,7 +113,5 @@ t_data	*read_map(int fd)
 	clock_t slines_2 = clock();
 	double slines_diff = (double) (slines_2 - slines_1)/CLOCKS_PER_SEC;
 	printf("Set_sline time = %f\n", slines_diff);
-	if (line)
-		free(line);
 	return (map);
 }
