@@ -100,7 +100,7 @@ int					parsing_line(char *str, t_data *map, int mod_command);
 //read
 t_data				*int_map(void);
 t_data				*read_map(int fd);
-void				free_str(char **str);
+void				free_str(char **str, int num);
 
 t_path				**ft_alg(t_data *map);
 int					ft_bellman_ford(t_data *map);
@@ -122,5 +122,9 @@ int					iter_count(t_path **paths, t_data *map);
 void				print_sline(t_data *map);
 void				print_paths(t_path **paths);
 void				ft_check_repeat_rooms(t_path **paths);
+
+
+void				free_point(t_point	*point);
+void				free_line(t_line	*line);
 
 #endif

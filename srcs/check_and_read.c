@@ -34,65 +34,63 @@ void	check_st_end(t_data *map, int mod_command)
 void	chek_point_in_line(t_data *map)
 {
 	int		count;
-	t_point	*header;
+	t_point	*point;
 
 	count = 0;
-	header = map->points;
-	while (map->points)
+	point = map->points;
+	while (point)
 	{
-		if (ft_strequ(map->points->name, map->last_lines->p_first))
+		if (point->p != 2 && ft_strequ(point->name, map->last_lines->p_first))
 		{
-			map->last_lines->num_first = map->points->num;
+			map->last_lines->num_first = point->num;
 			count++;
 		}
-		if (ft_strequ(map->points->name, map->last_lines->p_next))
+		if (point->p != 2 && ft_strequ(point->name, map->last_lines->p_next))
 		{
-			map->last_lines->num_next = map->points->num;
+			map->last_lines->num_next = point->num;
 			count++;
 		}
-		map->points = map->points->next;
+		point = point->next;
 	}
-	map->points = header;
 	if (count != 2)
 		put_err("invalid line");
 }
 
 void	check_line(t_data *map)
 {
-	t_line	*header;
+	t_line	*line;
 
 	chek_point_in_line(map);
-	header = map->lines;
-	while (map->lines)
+	line = map->lines;
+	while (line)
 	{
-		if (map->lines != map->last_lines &&
-			map->lines->num_first == map->last_lines->num_first &&
-			map->lines->num_next == map->last_lines->num_next)
+		if (line != map->last_lines &&
+			line->num_first == map->last_lines->num_first &&
+			line->num_next == map->last_lines->num_next)
 			put_err("Line. Duplicate error");
-		map->lines = map->lines->next;
+		line = line->next;
 	}
-	map->lines = header;
 }
-
-void	check_start_end_connected(t_data *map)
-{
-	t_line	*cline;
-	int		st;
-	int		end;
-
-	st = 0;
-	end = 0;
-	cline = map->lines;
-	while (cline)
-	{
-		if (cline->num_first == map->start->num
-		|| cline->num_next == map->start->num)
-			st++;
-		if (cline->num_first == map->end->num
-		|| cline->num_next == map->end->num)
-			end++;
-		cline = cline->next;
-	}
-	if (st == 0 || end == 0)
-		put_err("ERROR. No valid paths");
-}
+//
+//void	check_start_end_connected(t_data *map)
+//{
+//	t_line	*cline;
+//	int		st;
+//	int		end;
+//
+//	st = 0;
+//	end = 0;
+//	cline = map->lines;
+//	while (cline)
+//	{
+//		if (cline->num_first == map->start->num
+//		|| cline->num_next == map->start->num)
+//			st++;
+//		if (cline->num_first == map->end->num
+//		|| cline->num_next == map->end->num)
+//			end++;
+//		cline = cline->next;
+//	}
+//	if (st == 0 || end == 0)
+//		put_err("ERROR. No valid paths");
+//}

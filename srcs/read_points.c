@@ -5,10 +5,6 @@ t_point	*get_point(t_data *map, int num, int p)
 	t_point	*cpoint;
 
 	cpoint = map->points;
-	if (num == map->start->num)
-		return (map->start);
-	if (num == map->end->num)
-		return (map->end);
 	while (cpoint->num != num || cpoint->p != p)
 		cpoint = cpoint->next;
 	return (cpoint);
@@ -32,6 +28,19 @@ t_point	*new_point(char **str, int num)
 	return (new);
 }
 
+void	free_point(t_point	*point)
+{
+	if (point && point->p != 2)
+		free(point->name);
+	free(point);
+}
+
+//void	free_point(t_point	**point)
+//{
+//	free((*point)->name);
+//	ft_memdel(point);
+//}
+
 int		add_point(char **str, t_data *map, int mod_command)
 {
 	int	i;
@@ -41,7 +50,7 @@ int		add_point(char **str, t_data *map, int mod_command)
 	while (str[i] != NULL)
 		i++;
 	if (i != 3)
-		return (0);
+		put_err("Error!!!!!");
 	if (!map->points)
 	{
 		map->points = new_point(str, 0);
@@ -56,7 +65,8 @@ int		add_point(char **str, t_data *map, int mod_command)
 		map->start = map->last_points;
 	if (mod_command == END)
 		map->end = map->last_points;
-//	free_str(str);
+	str[0] = NULL;
+	free_str(str, 3);
 	return (1);
 }
 

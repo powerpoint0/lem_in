@@ -7,14 +7,14 @@ FLAGS = -Wall -Wextra -Werror
 source_dirs = . srcs libft/includes
 
 SRCS = srcs/lem-in.c \
-		srcs/alg.c \
+			srcs/alg.c \
 			srcs/bellman_ford.c \
 			srcs/init.c \
 			srcs/moving_ants.c \
 			srcs/read.c \
 			srcs/debug.c \
-            srcs/alg2.c \
-            srcs/check_and_read.c \
+			srcs/alg2.c \
+			srcs/check_and_read.c \
 			srcs/read_points.c \
 			srcs/read_reline.c \
 			srcs/read_lines.c
