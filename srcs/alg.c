@@ -10,7 +10,7 @@ void	ft_free_all_in_alg(t_path **paths, t_sline *slines)
 		slines = slines->next;
 		free(prev_slines);
 	}
-	ft_free_paths(paths);
+	ft_free_all_paths(paths);
 	if(paths)
 		free(paths);
 }
@@ -26,7 +26,7 @@ t_path**    ft_paths_without_common_edges(t_sline *slines, t_path **paths, t_dat
 
 	while(paths[i++])
 		num_paths++;
-	ft_free_paths(paths);
+	ft_free_all_paths(paths);
 	i = 0;
 	while (!ft_bellman_ford(map) && i < num_paths)
 	{
@@ -48,7 +48,7 @@ t_path  *ft_copy_in_best_one_path(t_path *path)
 	while(path)
 	{
 		if(!(new_point = (t_path *) ft_memalloc(sizeof(t_path))))
-			put_err("Init.there is no memory for path");
+			put_err("ERROR.No memory for malloc");
 		new_point->points = path->points;
 		if(best_path)
 		{
@@ -87,7 +87,7 @@ int		ft_change_paths_for_the_best(t_path **paths,t_path **best_paths, t_data *ma
 	best_paths[0]->num_of_steps_in_paths = iter_count(best_paths, map);
 	if(paths[0]->num_of_steps_in_paths <=best_paths[0]->num_of_steps_in_paths)
 	{
-		ft_free_paths(best_paths);
+		ft_free_all_paths(best_paths);
 		ft_copy_in_best_paths(paths, best_paths);
 	}
 	else if (paths[0]->num_of_steps_in_paths > best_paths[0]->num_of_steps_in_paths)

@@ -7,7 +7,7 @@
 #C  /F
 #| / M
 #D/  G
-# \ L
+# \ /
 #  H
 ##start
 A 0 1
@@ -34,6 +34,5 @@ F-D
 F-M
 M-G
 D-H
-G-L
-L-H
+G-H
 #another comment

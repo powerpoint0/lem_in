@@ -1,3 +1,4 @@
+#пустая строка в связях
 1
 #  A
 # K \
@@ -6,10 +7,11 @@
 #C  /F
 #| / M
 #D/  G
-# \ L
+# \ /
 #  H
 ##start
 A 0 1
+
 B 1 2
 #comment
 C 3 2
@@ -20,7 +22,6 @@ G 4 0
 ##end
 H 5 1
 K 1 2
-L 1 2
 M 1 2
 #another comment
 A-K
@@ -33,6 +34,5 @@ F-D
 F-M
 M-G
 D-H
-G-L
-L-H
+G-H
 #another comment

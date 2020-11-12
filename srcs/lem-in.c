@@ -5,7 +5,7 @@ void	free_all(t_data	*map, t_path **best_paths)
 	t_point	*prev_points;
 	t_line	*prev_lines;
 
-	ft_free_paths(best_paths);
+	ft_free_all_paths(best_paths);
 
 	while (map && map->points)
 	{
@@ -39,10 +39,10 @@ int 	main(int argc, char **argv)
 	map = NULL;
 	best_paths = NULL;
 	if (argc < 2)
-		put_err("Error");
+		put_err("ERROR.No file for reading");
 	fd = (ft_strequ(argv[1], "<")) ? open(argv[2], O_RDONLY) : open(argv[1], O_RDONLY);
 	if (fd < 0)
-		put_err("Not open file");
+		put_err("ERROR.File did not open");
 	clock_t r_1 = clock();
 	map = read_map(fd);
 		clock_t r_2 = clock();
@@ -63,6 +63,6 @@ int 	main(int argc, char **argv)
 //	printf("Read time = %f\n", r_diff);
 //	printf("Algo time = %f\n", a_diff);
 //	printf("Go time = %f\n", go_diff);
-//	printf("All time = %f\n", all_diff);
+	printf("All time = %f\n", all_diff);
 	return(0);
 }

@@ -11,6 +11,8 @@
 # define END 2
 # define CLOSE 1
 #define INF 1000000
+# define POINTS 2
+# define LINES 3
 
 typedef struct		s_line
 {
@@ -96,7 +98,7 @@ void				copy_points(t_data *map);
 t_point				*get_point(t_data *map, int num, int p);
 t_sline				*new_sline(t_point *p1, t_point *p2, int weight);
 t_sline				*set_sline(t_data *map);
-int					parsing_line(char *str, t_data *map, int mod_command);
+void				parsing_line(char *str, t_data *map, int mod_command);
 //read
 t_data				*int_map(void);
 t_data				*read_map(int fd);
@@ -109,7 +111,7 @@ void				ft_init_slines(t_sline *slines);
 void				ft_init_points(t_data *map);
 int					ft_how_much_edges(t_sline *slines);
 void				ft_num_of_max_paths(t_data *map);
-void				ft_free_paths(t_path **paths);
+void				ft_free_all_paths(t_path **paths);
 int					ft_change_edge(t_sline *slines);
 t_path*				ft_create_path(t_data *map);
 void				ft_free_path(t_path **path);

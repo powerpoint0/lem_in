@@ -5,7 +5,7 @@ t_data	*int_map(void)
 	t_data	*map;
 
 	if (!(map = (t_data*)ft_memalloc(sizeof(t_data))))
-		put_err("Init.Not creat map");
+		put_err("ERROR.No memory for malloc");
 	map->num_ants = -1;
 	map->points = NULL;
 	map->lines = NULL;
@@ -34,7 +34,7 @@ t_path	**ft_init_paths(t_data *map)
 	t_path	**paths;
 
 	if (!(paths = (t_path **) ft_memalloc(sizeof(t_path *) * (map->max_paths + 1))))
-		put_err("ERROR.Init.there is no memory for paths");
+		put_err("ERROR.No memory for malloc");
 	return(paths);
 }
 

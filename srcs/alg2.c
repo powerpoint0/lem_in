@@ -37,7 +37,7 @@ t_path*		ft_create_path(t_data *map)
 	while(point)
 	{
 		if (!(new_point = (t_path *) ft_memalloc(sizeof(t_path))))
-			put_err("Init.there is no memory for path");
+			put_err("ERROR.No memory for malloc");
 		if(path)
 			path->prev = new_point;
 		new_point->next = path;
@@ -49,19 +49,6 @@ t_path*		ft_create_path(t_data *map)
 		point = point->prev_room_path;
 	}
 	return (path);
-}
-
-int		ft_how_much_edges(t_sline *slines)
-{
-	int i;
-
-	i = 0;
-	while(slines)
-	{
-		i++;
-		slines = slines->next;
-	}
-	return(i);
 }
 
 void ft_free_path(t_path **path)
@@ -79,7 +66,7 @@ void ft_free_path(t_path **path)
 	*path = NULL;
 }
 
-void ft_free_paths(t_path **paths)
+void ft_free_all_paths(t_path **paths)
 {
 	int i;
 
@@ -92,27 +79,4 @@ void ft_free_paths(t_path **paths)
 		i++;
 	}
 }
-
-//void ft_free_paths(t_path **paths)
-//{
-//	int i;
-//	t_path *tmp;
-//	t_path *path_point;
-//
-//	i = 0;
-//	if(!paths)
-//		return;
-//	while(paths[i])
-//	{
-//		path_point = paths[i];
-//		while(path_point)
-//		{
-//			tmp = path_point;
-//			path_point = path_point->next;
-//			free(tmp);
-//		}
-//		paths[i] = NULL;
-//		i++;
-//	}
-//}
 

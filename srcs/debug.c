@@ -38,7 +38,6 @@ void ft_check_repeat_rooms(t_path **paths)
 			{
 				print_paths(paths);
 				printf("пути повторяются!\n");
-//				exit(0);
 				return;
 			}
 			path = path->next;

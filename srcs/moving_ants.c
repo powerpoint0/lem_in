@@ -19,7 +19,7 @@ t_loc	*set_new_loc(char *name, int num_ant)
 	t_loc	*new;
 
 	if (!(new = (t_loc*)ft_memalloc(sizeof(t_loc))))
-		put_err("ERROR");
+		put_err("ERROR.No memory for malloc");
 	new->name = name;
 	new->i = num_ant;
 	new->next = NULL;
@@ -169,7 +169,7 @@ int	*set_ant_in_path(t_path **paths, t_data *map)
 
 	size = get_num_path(paths);
 	if(!(ant_in_path = (int*)ft_memalloc(sizeof(int) * size)))
-		put_err("ERROR. ants problem");
+		put_err("ERROR.No memory for malloc.Ants");
 	set_len_paths(paths, map);
 	i = 0;
 	count = 0;
@@ -299,10 +299,8 @@ int		ft_letGoAnts(t_path **paths, t_data *map)
 		print_posicion(map->location);
 		del_locatin(map);
 	}
-
 //	add_ants(paths, map);
 //	move_by_path(paths, map);
-
 	if (ants)
 		free(ants);
 	return (0);

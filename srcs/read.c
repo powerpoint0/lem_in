@@ -73,11 +73,11 @@ t_data	*read_map(int fd)
 	while ((rd = get_next_line(fd, &line)))
 	{
 		if (rd == -1)
-			put_err("Not read file");
+			put_err("ERROR.Empty file");
 		ft_putendl(line);
 		if (mod_command == 1 && (ft_strequ(line, "##start")
 								 || ft_strequ(line, "##end")))
-			put_err("ERROR. more line ##start or ##end");
+			put_err("ERROR.Duplicate line ##start or ##end");
 		if (ft_strequ(line, "##start") || ft_strequ(line, "##end"))
 			mod_command = (ft_strequ(line, "##start")) ? START : END;
 		else if (line[0] != '#')
@@ -95,8 +95,7 @@ t_data	*read_map(int fd)
 	write(1, "\n", 1);
 //	printf("Parsing time = %f\n", sum);
 	if (!map->start || !map->end)
-		put_err("ERROR.Not start or end");
-//	check_start_end_connected(map);
+		put_err("ERROR.There is no start or end");
 //	del_free_point(map);
 	clock_t copy_points_1 = clock();
 //	copy_points(map);

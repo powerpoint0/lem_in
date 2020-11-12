@@ -35,12 +35,6 @@ void	free_point(t_point	*point)
 	free(point);
 }
 
-//void	free_point(t_point	**point)
-//{
-//	free((*point)->name);
-//	ft_memdel(point);
-//}
-
 int		add_point(char **str, t_data *map, int mod_command)
 {
 	int	i;
@@ -50,7 +44,7 @@ int		add_point(char **str, t_data *map, int mod_command)
 	while (str[i] != NULL)
 		i++;
 	if (i != 3)
-		put_err("Error!!!!!");
+		put_err("ERROR.Invalid point");
 	if (!map->points)
 	{
 		map->points = new_point(str, 0);
@@ -75,7 +69,7 @@ void	copy_one_point(t_point *point, int snum)
 	t_point	*new;
 
 	if (!(new = (t_point*)ft_memalloc(sizeof(t_point))))
-		put_err("ERROR. Copy point");
+		put_err("ERROR.No memory for malloc");
 	ft_memcpy(new, point, sizeof(t_point));
 	new->snum = snum;
 	new->p = 2;
