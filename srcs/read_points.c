@@ -41,10 +41,10 @@ int		add_point(char **str, t_data *map, int mod_command)
 
 	i = 0;
 	check_st_end(map, mod_command);
-	while (str[i] != NULL)
-		i++;
-	if (i != 3)
-		put_err("ERROR.Invalid point");
+//	while (str[i] != NULL)
+//		i++;
+//	if (i != 3)
+//		put_err("ERROR.Invalid point");
 	if (!map->points)
 	{
 		map->points = new_point(str, 0);

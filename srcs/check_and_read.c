@@ -53,7 +53,7 @@ void	chek_point_in_line(t_data *map)
 		point = point->next;
 	}
 	if (count != 2)
-		put_err("ERROR.Duplicate line");
+		put_err("ERROR.Invalid line");
 }
 
 void	check_line(t_data *map)

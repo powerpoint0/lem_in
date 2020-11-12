@@ -118,7 +118,13 @@ int		ft_change_paths_for_the_best(t_path **paths,t_path **best_paths, t_data *ma
 	if(check < 0 && !*best_paths)
 		put_err("ERROR.There is no path between START and END");
 	ft_free_all_in_alg(paths,map->slines);
-	return (best_paths);
+//	ft_check_repeat_rooms(best_paths);
+//
+//	printf("\nbest paths end %d\n", 0);
+//	print_paths(best_paths);
+//	printf("\nbest paths end %d\n", 0);
+
+	 return (best_paths);
 }
 
 //ft_check_repeat_rooms(best_paths);

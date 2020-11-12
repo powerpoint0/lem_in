@@ -107,6 +107,8 @@ void	copy_points2(t_data *map)
 
 int		ft_check_num_ants(char *str)
 {
+	if(*str == '0')
+		put_err("ERROR.Invalid num of ants");
 	while(*str)
 		if(!ft_isdigit(*str++))
 			put_err("ERROR.Invalid num of ants");
