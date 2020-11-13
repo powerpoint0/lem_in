@@ -91,6 +91,7 @@ int					ft_atoi_check(const char *str);
 void				check_st_end(t_data *map, int mod_command);
 void				check_line(t_data *map);
 void				check_start_end_connected(t_data *map);
+void				check_duplicate(t_data *map, char *name);
 //read points
 int					add_point(char **str, t_data *map, int mod_command);
 void				copy_points(t_data *map);

@@ -123,8 +123,15 @@ int		sline_start(t_data *map, t_line *line)
 	next2 = next1->next;
 
 	add_sline(map, first0, next1, 1);
-	add_sline(map, next1, next2, 0);
-	add_sline(map, next2, first0, 1);
+	if (next1 == map->end)
+	{
+		add_sline(map, next1, first0, 1);
+	}
+	else
+	{
+		add_sline(map, next1, next2, 0);
+		add_sline(map, next2, first0, 1);
+	}
 	return(3);
 }
 
@@ -163,6 +170,19 @@ int		sline_body(t_data *map, t_line *line)
 	return(4);
 }
 
+void	line_swap(t_line *line)
+{
+	char	*tmp;
+	int		tnum;
+
+	tmp = line->p_first;
+	line->p_first = line->p_next;
+	line->p_next = tmp;
+	tnum = line->num_first;
+	line->num_first = line->num_next;
+	line->num_next = tnum;
+}
+
 t_sline	*set_sline(t_data *map)
 {
 	t_line	*line;
@@ -173,6 +193,8 @@ t_sline	*set_sline(t_data *map)
 
 	while (line)
 	{
+		if (line->num_first == map->end->num)
+			line_swap(line);
 		if (line->num_first == map->start->num)
 			num_of_edges += sline_start(map, line);
 		else if (line->num_next == map->end->num)

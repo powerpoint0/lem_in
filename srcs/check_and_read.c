@@ -71,3 +71,16 @@ void	check_line(t_data *map)
 		line = line->next;
 	}
 }
+
+void	check_duplicate(t_data *map, char *name)
+{
+	t_point	*point;
+
+	point = map->points;
+	while(point)
+	{
+		if (ft_strcmp(point->name, name) == 0)
+			put_err("ERROR. Duplicate points");
+		point = point->next;
+	}
+}

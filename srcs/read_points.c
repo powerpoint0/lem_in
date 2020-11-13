@@ -41,10 +41,6 @@ int		add_point(char **str, t_data *map, int mod_command)
 
 	i = 0;
 	check_st_end(map, mod_command);
-//	while (str[i] != NULL)
-//		i++;
-//	if (i != 3)
-//		put_err("ERROR.Invalid point");
 	if (!map->points)
 	{
 		map->points = new_point(str, 0);
@@ -52,6 +48,7 @@ int		add_point(char **str, t_data *map, int mod_command)
 	}
 	else
 	{
+		check_duplicate(map, str[0]);
 		map->last_points->next = new_point(str, (map->last_points->num + 1));
 		map->last_points = map->last_points->next;
 	}
