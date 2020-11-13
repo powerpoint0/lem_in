@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/cjoaquin/CLionProjects/lem_in11/. -I/Users/cjoaquin/CLionProjects/lem_in11/libft/includes 
+C_INCLUDES = -I/Users/cjoaquin/CLionProjects/lem_in14/. -I/Users/cjoaquin/CLionProjects/lem_in14/libft/includes 
 

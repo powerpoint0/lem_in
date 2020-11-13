@@ -180,63 +180,78 @@ CMakeFiles/lem-in.dir/libft/get_next_line.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/libft/get_next_line.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
 
-CMakeFiles/lem-in.dir/srcs/alg.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/alg.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/alg.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/alg.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/alg.c.o: ../srcs/alg.c
 
-CMakeFiles/lem-in.dir/srcs/alg2.c.o: ../lem-in.h
-CMakeFiles/lem-in.dir/srcs/alg2.c.o: ../libft/includes/get_next_line.h
-CMakeFiles/lem-in.dir/srcs/alg2.c.o: ../libft/includes/libft.h
-CMakeFiles/lem-in.dir/srcs/alg2.c.o: ../srcs/alg2.c
+CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o: ../lem_in.h
+CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o: ../srcs/alg_copy_n_free_paths.c
 
-CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../srcs/bellman_ford.c
 
-CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../srcs/check_and_read.c
 
-CMakeFiles/lem-in.dir/srcs/debug.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/debug.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/debug.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/debug.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/debug.c.o: ../srcs/debug.c
 
-CMakeFiles/lem-in.dir/srcs/init.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/init.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/init.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/init.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/init.c.o: ../srcs/init.c
 
-CMakeFiles/lem-in.dir/srcs/lem-in.c.o: ../lem-in.h
-CMakeFiles/lem-in.dir/srcs/lem-in.c.o: ../libft/includes/get_next_line.h
-CMakeFiles/lem-in.dir/srcs/lem-in.c.o: ../libft/includes/libft.h
-CMakeFiles/lem-in.dir/srcs/lem-in.c.o: ../srcs/lem-in.c
+CMakeFiles/lem-in.dir/srcs/lem_in.c.o: ../lem_in.h
+CMakeFiles/lem-in.dir/srcs/lem_in.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/lem_in.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/lem_in.c.o: ../srcs/lem_in.c
 
-CMakeFiles/lem-in.dir/srcs/moving_ants.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/moving_ants.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/moving_ants.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/moving_ants.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/moving_ants.c.o: ../srcs/moving_ants.c
 
-CMakeFiles/lem-in.dir/srcs/read.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/read.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/read.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/read.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/read.c.o: ../srcs/read.c
 
-CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../srcs/read_lines.c
 
-CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../srcs/read_points.c
 
-CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../lem-in.h
+CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../lem_in.h
 CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../libft/includes/libft.h
 CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../srcs/read_reline.c
+
+CMakeFiles/lem-in.dir/srcs/util_ants.c.o: ../lem_in.h
+CMakeFiles/lem-in.dir/srcs/util_ants.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/util_ants.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/util_ants.c.o: ../srcs/util_ants.c
+
+CMakeFiles/lem-in.dir/srcs/util_lines.c.o: ../lem_in.h
+CMakeFiles/lem-in.dir/srcs/util_lines.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/util_lines.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/util_lines.c.o: ../srcs/util_lines.c
+
+CMakeFiles/lem-in.dir/srcs/util_slines.c.o: ../lem_in.h
+CMakeFiles/lem-in.dir/srcs/util_slines.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/lem-in.dir/srcs/util_slines.c.o: ../libft/includes/libft.h
+CMakeFiles/lem-in.dir/srcs/util_slines.c.o: ../srcs/util_slines.c
 

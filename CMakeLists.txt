@@ -74,15 +74,15 @@ add_executable(lem-in
 		libft/ft_toupper.c
 		libft/get_next_line.c
 		srcs/alg.c
-		srcs/alg2.c
+		srcs/alg_copy_n_free_paths.c
 		srcs/bellman_ford.c
 		srcs/check_and_read.c
 		srcs/debug.c
 		srcs/init.c
-		srcs/lem-in.c
+		srcs/lem_in.c
 		srcs/moving_ants.c
 		srcs/read.c
 		srcs/read_lines.c
 		srcs/read_points.c
 		srcs/read_reline.c
-		lem-in.h)
+		lem_in.h srcs/util_slines.c srcs/util_lines.c srcs/util_ants.c)

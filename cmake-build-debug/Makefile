@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/cjoaquin/CLionProjects/lem_in11
+CMAKE_SOURCE_DIR = /Users/cjoaquin/CLionProjects/lem_in14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles /Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles /Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cjoaquin/CLionProjects/lem_in11/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1898,32 +1898,32 @@ srcs/alg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg.c.s
 .PHONY : srcs/alg.c.s
 
-srcs/alg2.o: srcs/alg2.c.o
+srcs/alg_copy_n_free_paths.o: srcs/alg_copy_n_free_paths.c.o
 
-.PHONY : srcs/alg2.o
+.PHONY : srcs/alg_copy_n_free_paths.o
 
 # target to build an object file
-srcs/alg2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg2.c.o
-.PHONY : srcs/alg2.c.o
+srcs/alg_copy_n_free_paths.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o
+.PHONY : srcs/alg_copy_n_free_paths.c.o
 
-srcs/alg2.i: srcs/alg2.c.i
+srcs/alg_copy_n_free_paths.i: srcs/alg_copy_n_free_paths.c.i
 
-.PHONY : srcs/alg2.i
+.PHONY : srcs/alg_copy_n_free_paths.i
 
 # target to preprocess a source file
-srcs/alg2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg2.c.i
-.PHONY : srcs/alg2.c.i
+srcs/alg_copy_n_free_paths.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.i
+.PHONY : srcs/alg_copy_n_free_paths.c.i
 
-srcs/alg2.s: srcs/alg2.c.s
+srcs/alg_copy_n_free_paths.s: srcs/alg_copy_n_free_paths.c.s
 
-.PHONY : srcs/alg2.s
+.PHONY : srcs/alg_copy_n_free_paths.s
 
 # target to generate assembly for a file
-srcs/alg2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg2.c.s
-.PHONY : srcs/alg2.c.s
+srcs/alg_copy_n_free_paths.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.s
+.PHONY : srcs/alg_copy_n_free_paths.c.s
 
 srcs/bellman_ford.o: srcs/bellman_ford.c.o
 
@@ -2033,32 +2033,32 @@ srcs/init.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/init.c.s
 .PHONY : srcs/init.c.s
 
-srcs/lem-in.o: srcs/lem-in.c.o
+srcs/lem_in.o: srcs/lem_in.c.o
 
-.PHONY : srcs/lem-in.o
+.PHONY : srcs/lem_in.o
 
 # target to build an object file
-srcs/lem-in.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/lem-in.c.o
-.PHONY : srcs/lem-in.c.o
+srcs/lem_in.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/lem_in.c.o
+.PHONY : srcs/lem_in.c.o
 
-srcs/lem-in.i: srcs/lem-in.c.i
+srcs/lem_in.i: srcs/lem_in.c.i
 
-.PHONY : srcs/lem-in.i
+.PHONY : srcs/lem_in.i
 
 # target to preprocess a source file
-srcs/lem-in.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/lem-in.c.i
-.PHONY : srcs/lem-in.c.i
+srcs/lem_in.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/lem_in.c.i
+.PHONY : srcs/lem_in.c.i
 
-srcs/lem-in.s: srcs/lem-in.c.s
+srcs/lem_in.s: srcs/lem_in.c.s
 
-.PHONY : srcs/lem-in.s
+.PHONY : srcs/lem_in.s
 
 # target to generate assembly for a file
-srcs/lem-in.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/lem-in.c.s
-.PHONY : srcs/lem-in.c.s
+srcs/lem_in.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/lem_in.c.s
+.PHONY : srcs/lem_in.c.s
 
 srcs/moving_ants.o: srcs/moving_ants.c.o
 
@@ -2194,6 +2194,87 @@ srcs/read_reline.s: srcs/read_reline.c.s
 srcs/read_reline.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/read_reline.c.s
 .PHONY : srcs/read_reline.c.s
+
+srcs/util_ants.o: srcs/util_ants.c.o
+
+.PHONY : srcs/util_ants.o
+
+# target to build an object file
+srcs/util_ants.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/util_ants.c.o
+.PHONY : srcs/util_ants.c.o
+
+srcs/util_ants.i: srcs/util_ants.c.i
+
+.PHONY : srcs/util_ants.i
+
+# target to preprocess a source file
+srcs/util_ants.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/util_ants.c.i
+.PHONY : srcs/util_ants.c.i
+
+srcs/util_ants.s: srcs/util_ants.c.s
+
+.PHONY : srcs/util_ants.s
+
+# target to generate assembly for a file
+srcs/util_ants.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/util_ants.c.s
+.PHONY : srcs/util_ants.c.s
+
+srcs/util_lines.o: srcs/util_lines.c.o
+
+.PHONY : srcs/util_lines.o
+
+# target to build an object file
+srcs/util_lines.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/util_lines.c.o
+.PHONY : srcs/util_lines.c.o
+
+srcs/util_lines.i: srcs/util_lines.c.i
+
+.PHONY : srcs/util_lines.i
+
+# target to preprocess a source file
+srcs/util_lines.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/util_lines.c.i
+.PHONY : srcs/util_lines.c.i
+
+srcs/util_lines.s: srcs/util_lines.c.s
+
+.PHONY : srcs/util_lines.s
+
+# target to generate assembly for a file
+srcs/util_lines.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/util_lines.c.s
+.PHONY : srcs/util_lines.c.s
+
+srcs/util_slines.o: srcs/util_slines.c.o
+
+.PHONY : srcs/util_slines.o
+
+# target to build an object file
+srcs/util_slines.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/util_slines.c.o
+.PHONY : srcs/util_slines.c.o
+
+srcs/util_slines.i: srcs/util_slines.c.i
+
+.PHONY : srcs/util_slines.i
+
+# target to preprocess a source file
+srcs/util_slines.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/util_slines.c.i
+.PHONY : srcs/util_slines.c.i
+
+srcs/util_slines.s: srcs/util_slines.c.s
+
+.PHONY : srcs/util_slines.s
+
+# target to generate assembly for a file
+srcs/util_slines.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lem-in.dir/build.make CMakeFiles/lem-in.dir/srcs/util_slines.c.s
+.PHONY : srcs/util_slines.c.s
 
 # Help Target
 help:
@@ -2399,9 +2480,9 @@ help:
 	@echo "... srcs/alg.o"
 	@echo "... srcs/alg.i"
 	@echo "... srcs/alg.s"
-	@echo "... srcs/alg2.o"
-	@echo "... srcs/alg2.i"
-	@echo "... srcs/alg2.s"
+	@echo "... srcs/alg_copy_n_free_paths.o"
+	@echo "... srcs/alg_copy_n_free_paths.i"
+	@echo "... srcs/alg_copy_n_free_paths.s"
 	@echo "... srcs/bellman_ford.o"
 	@echo "... srcs/bellman_ford.i"
 	@echo "... srcs/bellman_ford.s"
@@ -2414,9 +2495,9 @@ help:
 	@echo "... srcs/init.o"
 	@echo "... srcs/init.i"
 	@echo "... srcs/init.s"
-	@echo "... srcs/lem-in.o"
-	@echo "... srcs/lem-in.i"
-	@echo "... srcs/lem-in.s"
+	@echo "... srcs/lem_in.o"
+	@echo "... srcs/lem_in.i"
+	@echo "... srcs/lem_in.s"
 	@echo "... srcs/moving_ants.o"
 	@echo "... srcs/moving_ants.i"
 	@echo "... srcs/moving_ants.s"
@@ -2432,6 +2513,15 @@ help:
 	@echo "... srcs/read_reline.o"
 	@echo "... srcs/read_reline.i"
 	@echo "... srcs/read_reline.s"
+	@echo "... srcs/util_ants.o"
+	@echo "... srcs/util_ants.i"
+	@echo "... srcs/util_ants.s"
+	@echo "... srcs/util_lines.o"
+	@echo "... srcs/util_lines.i"
+	@echo "... srcs/util_lines.s"
+	@echo "... srcs/util_slines.o"
+	@echo "... srcs/util_slines.i"
+	@echo "... srcs/util_slines.s"
 .PHONY : help
 
 

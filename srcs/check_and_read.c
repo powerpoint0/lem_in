@@ -1,10 +1,22 @@
-#include "lem-in.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_and_read.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dfigg <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/13 20:27:11 by cjoaquin          #+#    #+#             */
+/*   Updated: 2020/11/13 20:27:20 by cjoaquin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_atoi_check(const char *str)
+#include "lem_in.h"
+
+int			ft_atoi_check(const char *str)
 {
-	int			i;
-	int			sig;
-	int long	rez;
+	int		i;
+	int		sig;
+	long	rez;
 
 	i = 0;
 	sig = 1;
@@ -23,7 +35,7 @@ int		ft_atoi_check(const char *str)
 	return (sig * (int)rez);
 }
 
-void	check_st_end(t_data *map, int mod_command)
+void		check_st_end(t_data *map, int mod_command)
 {
 	if (mod_command == START && map->start)
 		put_err("ERROR.2-nd start");
@@ -31,7 +43,7 @@ void	check_st_end(t_data *map, int mod_command)
 		put_err("ERROR.2-nd end");
 }
 
-void	chek_point_in_line(t_data *map)
+void		chek_point_in_line(t_data *map)
 {
 	int		count;
 	t_point	*point;
@@ -56,7 +68,7 @@ void	chek_point_in_line(t_data *map)
 		put_err("ERROR.Invalid line");
 }
 
-void	check_line(t_data *map)
+void		check_line(t_data *map)
 {
 	t_line	*line;
 
@@ -72,15 +84,15 @@ void	check_line(t_data *map)
 	}
 }
 
-void	check_duplicate(t_data *map, char *name)
+void		check_duplicate(t_data *map, char *name)
 {
 	t_point	*point;
 
 	point = map->points;
-	while(point)
+	while (point)
 	{
 		if (ft_strcmp(point->name, name) == 0)
-			put_err("ERROR. Duplicate points");
+			put_err("ERROR.Duplicate points");
 		point = point->next;
 	}
 }

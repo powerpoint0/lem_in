@@ -1,4 +1,16 @@
-#include "lem-in.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_points.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dfigg <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/13 20:28:56 by cjoaquin          #+#    #+#             */
+/*   Updated: 2020/11/13 20:28:58 by cjoaquin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "lem_in.h"
 
 t_point	*get_point(t_data *map, int num, int p)
 {
@@ -28,7 +40,7 @@ t_point	*new_point(char **str, int num)
 	return (new);
 }
 
-void	free_point(t_point	*point)
+void	free_point(t_point *point)
 {
 	if (point && point->p != 2)
 		free(point->name);
@@ -37,9 +49,6 @@ void	free_point(t_point	*point)
 
 int		add_point(char **str, t_data *map, int mod_command)
 {
-	int	i;
-
-	i = 0;
 	check_st_end(map, mod_command);
 	if (!map->points)
 	{
@@ -59,38 +68,4 @@ int		add_point(char **str, t_data *map, int mod_command)
 	str[0] = NULL;
 	free_str(str, 3);
 	return (1);
-}
-
-void	copy_one_point(t_point *point, int snum)
-{
-	t_point	*new;
-
-	if (!(new = (t_point*)ft_memalloc(sizeof(t_point))))
-		put_err("ERROR.No memory for malloc");
-	ft_memcpy(new, point, sizeof(t_point));
-	new->snum = snum;
-	new->p = 2;
-	new->next = point->next;
-	point->next = new;
-}
-
-void	copy_points(t_data *map)
-{
-	t_point	*point;
-	int		snum;
-
-	snum = 0;
-	point = map->points;
-	while (point)
-	{
-		if (point->num != map->start->num &&
-			point->num != map->end->num)
-		{
-			point->snum = snum++;
-			copy_one_point(point, snum);
-			point = point->next;
-		}
-		snum++;
-		point = point->next;
-	}
 }

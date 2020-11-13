@@ -1,6 +1,18 @@
-#include "lem-in.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cjoaquin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/13 20:27:46 by cjoaquin          #+#    #+#             */
+/*   Updated: 2020/11/13 20:27:49 by cjoaquin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-t_data	*int_map(void)
+#include "lem_in.h"
+
+t_data		*int_map(void)
 {
 	t_data	*map;
 
@@ -12,16 +24,16 @@ t_data	*int_map(void)
 	return (map);
 }
 
-void ft_num_of_max_paths(t_data *map)
+void		ft_num_of_max_paths(t_data *map)
 {
 	int		i;
-	t_sline *header;
+	t_sline	*header;
 
 	i = 0;
 	header = map->slines;
-	while(map->slines)
+	while (map->slines)
 	{
-		if(map->slines->in == map->start || map->slines->out == map->start)
+		if (map->slines->in == map->start || map->slines->out == map->start)
 			i++;
 		map->slines = map->slines->next;
 	}
@@ -29,16 +41,17 @@ void ft_num_of_max_paths(t_data *map)
 	map->slines = header;
 }
 
-t_path	**ft_init_paths(t_data *map)
+t_path		**ft_init_paths(t_data *map)
 {
 	t_path	**paths;
 
-	if (!(paths = (t_path **) ft_memalloc(sizeof(t_path *) * (map->max_paths + 1))))
+	if (!(paths = (t_path **)ft_memalloc(sizeof(t_path*)
+			* (map->max_paths + 1))))
 		put_err("ERROR.No memory for malloc");
-	return(paths);
+	return (paths);
 }
 
-void	ft_init_points(t_data *map)
+void		ft_init_points(t_data *map)
 {
 	map->start->cost = 0;
 	map->end->prev_room_path = NULL;
@@ -53,16 +66,15 @@ void	ft_init_points(t_data *map)
 	map->points = map->start;
 }
 
-void	ft_init_slines(t_sline *slines)
+void		ft_init_slines(t_sline *slines)
 {
-	while(slines)
+	while (slines)
 	{
-		if(slines->weight == -1 || slines->weight == 0)
+		if (slines->weight == -1 || slines->weight == 0)
 		{
 			slines->weight *= -1;
-			if(slines->in != slines->tmp_in)
+			if (slines->in != slines->tmp_in)
 			{
-
 				slines->out = slines->in;
 				slines->in = slines->tmp_in;
 			}

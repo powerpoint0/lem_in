@@ -13,7 +13,7 @@ var=$(eval echo "\$$var")
 #echo "./generator ${var}"
 echo "./generator ${var}" > file.txt
 
-for ((i=1; i < 2; i++))
+for ((i=1; i < 10; i++))
 do
   sleep 1
   MAP=$(./generator ${var})

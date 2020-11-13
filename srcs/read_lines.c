@@ -1,38 +1,20 @@
-#include "lem-in.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_lines.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dfigg <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/13 20:28:43 by cjoaquin          #+#    #+#             */
+/*   Updated: 2020/11/13 20:28:46 by cjoaquin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_find_count(const char *s, int c)
+#include "lem_in.h"
+
+t_line			*new_line(char **str)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == (char)c)
-			return (i);
-		i++;
-	}
-	if ((char)c == '\0')
-		return (i);
-	return (-1);
-}
-
-t_sline	*new_sline(t_point *p1, t_point *p2, int weight)
-{
-	t_sline	*new;
-
-	if (!(new = (t_sline*)ft_memalloc(sizeof(t_sline))))
-		put_err("ERROR.No memory for malloc");
-	new->in = p1;
-	new->tmp_in = new->in;
-	new->out = p2;
-	new->weight = weight;
-	new->next = NULL;
-	return (new);
-}
-
-t_line	*new_line(char **str)
-{
-	t_line	*new;
+	t_line		*new;
 
 	if (!(new = (t_line*)ft_memalloc(sizeof(t_line))))
 		put_err("ERROR.No memory for malloc");
@@ -42,19 +24,9 @@ t_line	*new_line(char **str)
 	return (new);
 }
 
-void	free_line(t_line	*line)
+int				add_line(char **str, t_data *map)
 {
-	if (line)
-	{
-		free(line->p_first);
-		free(line->p_next);
-	}
-	free(line);
-}
-
-int		add_line(char **str, t_data *map)
-{
-	int	i;
+	int			i;
 
 	i = 0;
 	while (str[i] != NULL)
@@ -77,72 +49,44 @@ int		add_line(char **str, t_data *map)
 	return (1);
 }
 
-
-void	copy_one_point2(t_point *point)
+int				ft_check_num_ants(char *str)
 {
-	t_point	*new;
-
-	if (!(new = (t_point*)ft_memalloc(sizeof(t_point))))
-		put_err("ERROR.No memory for malloc");
-	ft_memcpy(new, point, sizeof(t_point));
-	new->snum = point->snum + 1;
-	new->p = 2;
-	new->next = point->next;
-	point->next = new;
-}
-
-
-void	copy_points2(t_data *map)
-{
-	t_point	*point;
-
-	point = map->last_points;
-	if (point != map->start &&
-		point != map->end)
-	{
-		copy_one_point2(point);
-		map->last_points = point->next;
-	}
-}
-
-int		ft_check_num_ants(char *str)
-{
-	if(*str == '0')
+	if (*str == '0')
 		put_err("ERROR.Invalid num of ants");
-	while(*str)
-		if(!ft_isdigit(*str++))
+	while (*str)
+		if (!ft_isdigit(*str++))
 			put_err("ERROR.Invalid num of ants");
-	return(0);
+	return (0);
 }
 
-void	ft_check_extra_symbols_in_line(char *str)
+void			ft_check_extra_symbols_in_line(char *str)
 {
-	int space;
-	int minus;
-	int tab;
+	int			space;
+	int			minus;
+	int			tab;
 
 	space = 0;
 	minus = 0;
 	tab = 0;
-	if(str[0] == 'L')
+	if (str[0] == 'L')
 		put_err("ERROR.Invalid name of point: L");
-	while(*str)
+	while (*str)
 	{
-		if(*str == ' ')
+		if (*str == ' ')
 			space++;
-		else if(*str == '-')
+		else if (*str == '-')
 			minus++;
-		else if(*str == '\t')
+		else if (*str == '\t')
 			tab++;
 		++str;
 	}
-	if(!((space == 2  && !minus && !tab) || (!space && minus == 1 && !tab)))
+	if (!((space == 2 && !minus && !tab) || (!space && minus == 1 && !tab)))
 		put_err("ERROR.Invalid line: extra symbols in the line");
 }
 
-void		parsing_line(char *str, t_data *map, int mod_command)
+void			parsing_line(char *str, t_data *map, int mod_command)
 {
-	static int flag;
+	static int	flag;
 
 	if (map->num_ants == -1)
 	{
