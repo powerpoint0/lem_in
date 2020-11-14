@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-int				ft_find_count(const char *s, int c)
+int				ft_find_counts(const char *s, int c)
 {
 	int			i;
 

@@ -6,12 +6,11 @@
 /*   By: dfigg <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 06:58:53 by dfigg             #+#    #+#             */
-/*   Updated: 2020/05/07 06:59:03 by dfigg            ###   ########.fr       */
+/*   Updated: 2020/06/28 15:02:36 by cjoaquin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int		get_degree(long double *nbr)
 {
@@ -91,20 +90,7 @@ void	print_flag_str(t_prn *prn, int len)
 		prn->size_symb += write(1, &sign, 1);
 }
 
-int		print_format2(t_prn *prn, char *str)
-{
-	int len;
-
-	len = ft_strlen(str);
-	if (prn->width < len)
-		prn->width = (prn->sign == 0) ? len : (len + 1);
-
-
-	return (prn->width);
-}
-
-
-int		print_format(t_prn *prn, char *str)
+void	print_format(t_prn *prn, char *str)
 {
 	int	len;
 
@@ -119,11 +105,7 @@ int		print_format(t_prn *prn, char *str)
 	if (prn->fl_minus == 1)
 	{
 		if (prn->fl_plus == 1 || prn->sign == 1)
-		{
-			(prn->sign == 1) ? write(1, "-", 1) : write(1, "+", 1);
-			prn->size_symb++;
-			prn->width--;
-		}
+			write_sign(prn);
 		prn->size_symb += write(1, str, ft_strlen(str));
 		print_flag_str(prn, len);
 	}
@@ -132,10 +114,9 @@ int		print_format(t_prn *prn, char *str)
 		print_flag_str(prn, len);
 		prn->size_symb += write(1, str, ft_strlen(str));
 	}
-	return (prn->width);
 }
 
-void	add_point(char *str, t_prn *prn, int degree)
+void	add_dot(char *str, t_prn *prn, int degree)
 {
 	int	len;
 	int	count;

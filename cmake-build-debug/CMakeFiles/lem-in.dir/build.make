@@ -909,9 +909,126 @@ CMakeFiles/lem-in.dir/libft/get_next_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/get_next_line.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/get_next_line.c -o CMakeFiles/lem-in.dir/libft/get_next_line.c.s
 
+CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.o: CMakeFiles/lem-in.dir/flags.make
+CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.o: ../libft/ft_printf/ft_printf.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/ft_printf.c
+
+CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/ft_printf.c > CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.i
+
+CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/ft_printf.c -o CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.s
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.o: CMakeFiles/lem-in.dir/flags.make
+CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.o: ../libft/ft_printf/print_cs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_cs.c
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_cs.c > CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.i
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_cs.c -o CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.s
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.o: CMakeFiles/lem-in.dir/flags.make
+CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.o: ../libft/ft_printf/print_d.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_d.c
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_d.c > CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.i
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_d.c -o CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.s
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.o: CMakeFiles/lem-in.dir/flags.make
+CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.o: ../libft/ft_printf/print_efg.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_efg.c
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_efg.c > CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.i
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_efg.c -o CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.s
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.o: CMakeFiles/lem-in.dir/flags.make
+CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.o: ../libft/ft_printf/print_f_func.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_f_func.c
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_f_func.c > CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.i
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_f_func.c -o CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.s
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.o: CMakeFiles/lem-in.dir/flags.make
+CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.o: ../libft/ft_printf/print_oux_p.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_oux_p.c
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_oux_p.c > CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.i
+
+CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_oux_p.c -o CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.s
+
+CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.o: CMakeFiles/lem-in.dir/flags.make
+CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.o: ../libft/ft_printf/set_flags_n_mods.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/set_flags_n_mods.c
+
+CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/set_flags_n_mods.c > CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.i
+
+CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/set_flags_n_mods.c -o CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.s
+
+CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.o: CMakeFiles/lem-in.dir/flags.make
+CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.o: ../libft/ft_printf/utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/utils.c
+
+CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/utils.c > CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.i
+
+CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/utils.c -o CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.s
+
+CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.o: CMakeFiles/lem-in.dir/flags.make
+CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.o: ../libft/ft_printf/additional_func.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/additional_func.c
+
+CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/additional_func.c > CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.i
+
+CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/additional_func.c -o CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.s
+
 CMakeFiles/lem-in.dir/srcs/alg.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/alg.c.o: ../srcs/alg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/lem-in.dir/srcs/alg.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/lem-in.dir/srcs/alg.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/alg.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/alg.c
 
 CMakeFiles/lem-in.dir/srcs/alg.c.i: cmake_force
@@ -924,7 +1041,7 @@ CMakeFiles/lem-in.dir/srcs/alg.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o: ../srcs/alg_copy_n_free_paths.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/alg_copy_n_free_paths.c
 
 CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.i: cmake_force
@@ -937,7 +1054,7 @@ CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o: ../srcs/bellman_ford.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/bellman_ford.c
 
 CMakeFiles/lem-in.dir/srcs/bellman_ford.c.i: cmake_force
@@ -950,7 +1067,7 @@ CMakeFiles/lem-in.dir/srcs/bellman_ford.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/check_and_read.c.o: ../srcs/check_and_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/lem-in.dir/srcs/check_and_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/lem-in.dir/srcs/check_and_read.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/check_and_read.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/check_and_read.c
 
 CMakeFiles/lem-in.dir/srcs/check_and_read.c.i: cmake_force
@@ -963,7 +1080,7 @@ CMakeFiles/lem-in.dir/srcs/check_and_read.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/debug.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/debug.c.o: ../srcs/debug.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/lem-in.dir/srcs/debug.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/lem-in.dir/srcs/debug.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/debug.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/debug.c
 
 CMakeFiles/lem-in.dir/srcs/debug.c.i: cmake_force
@@ -976,7 +1093,7 @@ CMakeFiles/lem-in.dir/srcs/debug.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/init.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/init.c.o: ../srcs/init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/lem-in.dir/srcs/init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/lem-in.dir/srcs/init.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/init.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/init.c
 
 CMakeFiles/lem-in.dir/srcs/init.c.i: cmake_force
@@ -989,7 +1106,7 @@ CMakeFiles/lem-in.dir/srcs/init.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/lem_in.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/lem_in.c.o: ../srcs/lem_in.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/lem-in.dir/srcs/lem_in.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/lem-in.dir/srcs/lem_in.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/lem_in.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/lem_in.c
 
 CMakeFiles/lem-in.dir/srcs/lem_in.c.i: cmake_force
@@ -1002,7 +1119,7 @@ CMakeFiles/lem-in.dir/srcs/lem_in.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/moving_ants.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/moving_ants.c.o: ../srcs/moving_ants.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/lem-in.dir/srcs/moving_ants.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/lem-in.dir/srcs/moving_ants.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/moving_ants.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/moving_ants.c
 
 CMakeFiles/lem-in.dir/srcs/moving_ants.c.i: cmake_force
@@ -1015,7 +1132,7 @@ CMakeFiles/lem-in.dir/srcs/moving_ants.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/read.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/read.c.o: ../srcs/read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/lem-in.dir/srcs/read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/lem-in.dir/srcs/read.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/read.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/read.c
 
 CMakeFiles/lem-in.dir/srcs/read.c.i: cmake_force
@@ -1028,7 +1145,7 @@ CMakeFiles/lem-in.dir/srcs/read.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/read_lines.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/read_lines.c.o: ../srcs/read_lines.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/lem-in.dir/srcs/read_lines.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/lem-in.dir/srcs/read_lines.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/read_lines.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/read_lines.c
 
 CMakeFiles/lem-in.dir/srcs/read_lines.c.i: cmake_force
@@ -1041,7 +1158,7 @@ CMakeFiles/lem-in.dir/srcs/read_lines.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/read_points.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/read_points.c.o: ../srcs/read_points.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/lem-in.dir/srcs/read_points.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/lem-in.dir/srcs/read_points.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/read_points.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/read_points.c
 
 CMakeFiles/lem-in.dir/srcs/read_points.c.i: cmake_force
@@ -1054,7 +1171,7 @@ CMakeFiles/lem-in.dir/srcs/read_points.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/read_reline.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/read_reline.c.o: ../srcs/read_reline.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/lem-in.dir/srcs/read_reline.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/lem-in.dir/srcs/read_reline.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/read_reline.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/read_reline.c
 
 CMakeFiles/lem-in.dir/srcs/read_reline.c.i: cmake_force
@@ -1067,7 +1184,7 @@ CMakeFiles/lem-in.dir/srcs/read_reline.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/util_slines.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/util_slines.c.o: ../srcs/util_slines.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/lem-in.dir/srcs/util_slines.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/lem-in.dir/srcs/util_slines.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/util_slines.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/util_slines.c
 
 CMakeFiles/lem-in.dir/srcs/util_slines.c.i: cmake_force
@@ -1080,7 +1197,7 @@ CMakeFiles/lem-in.dir/srcs/util_slines.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/util_lines.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/util_lines.c.o: ../srcs/util_lines.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/lem-in.dir/srcs/util_lines.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/lem-in.dir/srcs/util_lines.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/util_lines.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/util_lines.c
 
 CMakeFiles/lem-in.dir/srcs/util_lines.c.i: cmake_force
@@ -1093,7 +1210,7 @@ CMakeFiles/lem-in.dir/srcs/util_lines.c.s: cmake_force
 
 CMakeFiles/lem-in.dir/srcs/util_ants.c.o: CMakeFiles/lem-in.dir/flags.make
 CMakeFiles/lem-in.dir/srcs/util_ants.c.o: ../srcs/util_ants.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/lem-in.dir/srcs/util_ants.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/lem-in.dir/srcs/util_ants.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem-in.dir/srcs/util_ants.c.o   -c /Users/cjoaquin/CLionProjects/lem_in14/srcs/util_ants.c
 
 CMakeFiles/lem-in.dir/srcs/util_ants.c.i: cmake_force
@@ -1170,6 +1287,15 @@ lem__in_OBJECTS = \
 "CMakeFiles/lem-in.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/lem-in.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/lem-in.dir/libft/get_next_line.c.o" \
+"CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.o" \
+"CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.o" \
+"CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.o" \
+"CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.o" \
+"CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.o" \
+"CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.o" \
+"CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.o" \
+"CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.o" \
+"CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.o" \
 "CMakeFiles/lem-in.dir/srcs/alg.c.o" \
 "CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o" \
 "CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o" \
@@ -1253,6 +1379,15 @@ lem-in: CMakeFiles/lem-in.dir/libft/ft_strtrim.c.o
 lem-in: CMakeFiles/lem-in.dir/libft/ft_tolower.c.o
 lem-in: CMakeFiles/lem-in.dir/libft/ft_toupper.c.o
 lem-in: CMakeFiles/lem-in.dir/libft/get_next_line.c.o
+lem-in: CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.o
+lem-in: CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.o
+lem-in: CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.o
+lem-in: CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.o
+lem-in: CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.o
+lem-in: CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.o
+lem-in: CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.o
+lem-in: CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.o
+lem-in: CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.o
 lem-in: CMakeFiles/lem-in.dir/srcs/alg.c.o
 lem-in: CMakeFiles/lem-in.dir/srcs/alg_copy_n_free_paths.c.o
 lem-in: CMakeFiles/lem-in.dir/srcs/bellman_ford.c.o
@@ -1270,7 +1405,7 @@ lem-in: CMakeFiles/lem-in.dir/srcs/util_lines.c.o
 lem-in: CMakeFiles/lem-in.dir/srcs/util_ants.c.o
 lem-in: CMakeFiles/lem-in.dir/build.make
 lem-in: CMakeFiles/lem-in.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Linking C executable lem-in"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cjoaquin/CLionProjects/lem_in14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Linking C executable lem-in"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lem-in.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

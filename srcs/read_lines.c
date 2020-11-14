@@ -12,6 +12,9 @@
 
 #include "lem_in.h"
 
+#define POINTS 2
+#define LINES 3
+
 t_line			*new_line(char **str)
 {
 	t_line		*new;
@@ -80,7 +83,7 @@ void			ft_check_extra_symbols_in_line(char *str)
 			tab++;
 		++str;
 	}
-	if (!((space == 2 && !minus && !tab) || (!space && minus == 1 && !tab)))
+	if (!((space == 2 && !tab) || (!space && minus == 1 && !tab)))
 		put_err("ERROR.Invalid line: extra symbols in the line");
 }
 
@@ -94,13 +97,13 @@ void			parsing_line(char *str, t_data *map, int mod_command)
 		map->num_ants = ft_atoi_check(str);
 		flag = POINTS;
 	}
-	else if (ft_find_count(str, ' ') != -1 && flag == POINTS)
+	else if (ft_find_counts(str, ' ') != -1 && flag == POINTS)
 	{
 		ft_check_extra_symbols_in_line(str);
 		add_point(ft_strsplit(str, ' '), map, mod_command);
 		copy_points2(map);
 	}
-	else if (ft_find_count(str, '-') != -1)
+	else if (ft_find_counts(str, '-') != -1)
 	{
 		ft_check_extra_symbols_in_line(str);
 		add_line(ft_strsplit(str, '-'), map);

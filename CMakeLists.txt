@@ -1,14 +1,24 @@
 cmake_minimum_required(VERSION 3.17)
-project(lem_in11)
+project(lem_in14 C)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 include_directories(libft/includes)
 
-add_executable(lem-in
+add_executable(lem_in
+		libft/ft_printf/additional_func.c
+		libft/ft_printf/ft_printf.c
+		libft/ft_printf/print_cs.c
+		libft/ft_printf/print_d.c
+		libft/ft_printf/print_efg.c
+		libft/ft_printf/print_f_func.c
+		libft/ft_printf/print_oux_p.c
+		libft/ft_printf/set_flags_n_mods.c
+		libft/ft_printf/utils.c
 		libft/includes/get_next_line.h
 		libft/includes/libft.h
+		libft/includes/ft_printf.h
 		libft/ft_atoi.c
 		libft/ft_binar_chr.c
 		libft/ft_bzero.c
@@ -75,14 +85,19 @@ add_executable(lem-in
 		libft/get_next_line.c
 		srcs/alg.c
 		srcs/alg_copy_n_free_paths.c
+		srcs/ants_location.c
 		srcs/bellman_ford.c
 		srcs/check_and_read.c
 		srcs/debug.c
 		srcs/init.c
 		srcs/lem_in.c
 		srcs/moving_ants.c
+		srcs/moving_ants2.c
 		srcs/read.c
 		srcs/read_lines.c
 		srcs/read_points.c
 		srcs/read_reline.c
-		lem_in.h srcs/util_slines.c srcs/util_lines.c srcs/util_ants.c)
+		srcs/util_ants.c
+		srcs/util_lines.c
+		srcs/util_slines.c
+		lem_in.h)

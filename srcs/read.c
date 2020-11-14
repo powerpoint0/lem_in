@@ -34,7 +34,7 @@ int		ft_check_n_parsing(int mod_command, char *line, t_data *map)
 							|| ft_strequ(line, "##end")))
 		put_err("ERROR.Duplicate line ##start or ##end");
 	if (ft_strequ(line, "##start") || ft_strequ(line, "##end"))
-		mod_command = (ft_strequ(line, "##start")) ? START : END;
+		mod_command = (ft_strequ(line, "##start")) ? START_POINT : END_POINT;
 	else if (line[0] != '#')
 	{
 		parsing_line(line, map, mod_command);

@@ -6,7 +6,7 @@
 /*   By: cjoaquin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 09:32:40 by dfigg             #+#    #+#             */
-/*   Updated: 2020/05/09 09:32:47 by dfigg            ###   ########.fr       */
+/*   Updated: 2020/06/28 16:43:46 by cjoaquin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,6 @@ uintmax_t	ft_get_unsigned_mod_llhh(t_prn *prn)
 		nbr = (unsigned long int)nbr;
 	else if (prn->mod_ll)
 		nbr = (unsigned long long int)nbr;
-	//else if (arg->length == j)
-		//nbr = (uintmax_t)nbr;
-	//else if (arg->length == z)
-		//nbr = (size_t)nbr;
 	else
 		nbr = (unsigned int)nbr;
 	return (nbr);
@@ -101,4 +97,11 @@ int			print_oux(t_prn *prn)
 	ft_print_number(len, size, str, prn);
 	prn->size_symb += size;
 	return (size);
+}
+
+void		write_sign(t_prn *prn)
+{
+	(prn->sign == 1) ? write(1, "-", 1) : write(1, "+", 1);
+	prn->size_symb++;
+	prn->width--;
 }

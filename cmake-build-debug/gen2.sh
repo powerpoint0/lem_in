@@ -8,5 +8,5 @@ do
   echo ______________________ $file _____________________
 
   cat not_valid/$file > file.txt
-  ./lem-in file.txt
+  ./lem-in < file.txt
 done

@@ -33,12 +33,14 @@ void	clear_format(t_prn *prn)
 
 int		set_param(const char *format, t_prn *prn)
 {
-	int	i;
+	int i;
+	int st;
 
+	st = 0;
 	i = 0;
 	if (((find_type(format, prn)) == -1) ||
 		(i = set_flag(format, prn, prn->size)) == -1 ||
-		(i = set_width(format, i, prn)) == -1 ||
+		(i = set_width(format, i, prn, st)) == -1 ||
 		((i = set_precision(format, i, prn)) == -1) ||
 		(set_mod(format, i, prn)) == -1)
 	{

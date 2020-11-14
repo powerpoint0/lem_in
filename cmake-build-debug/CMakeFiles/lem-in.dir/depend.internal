@@ -72,6 +72,42 @@ CMakeFiles/lem-in.dir/libft/ft_memset.c.o
 CMakeFiles/lem-in.dir/libft/ft_print_params.c.o
  ../libft/includes/libft.h
  /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_print_params.c
+CMakeFiles/lem-in.dir/libft/ft_printf/additional_func.c.o
+ ../libft/includes/ft_printf.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/additional_func.c
+CMakeFiles/lem-in.dir/libft/ft_printf/ft_printf.c.o
+ ../libft/includes/ft_printf.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/ft_printf.c
+CMakeFiles/lem-in.dir/libft/ft_printf/print_cs.c.o
+ ../libft/includes/ft_printf.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_cs.c
+CMakeFiles/lem-in.dir/libft/ft_printf/print_d.c.o
+ ../libft/includes/ft_printf.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_d.c
+CMakeFiles/lem-in.dir/libft/ft_printf/print_efg.c.o
+ ../libft/includes/ft_printf.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_efg.c
+CMakeFiles/lem-in.dir/libft/ft_printf/print_f_func.c.o
+ ../libft/includes/ft_printf.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_f_func.c
+CMakeFiles/lem-in.dir/libft/ft_printf/print_oux_p.c.o
+ ../libft/includes/ft_printf.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_oux_p.c
+CMakeFiles/lem-in.dir/libft/ft_printf/set_flags_n_mods.c.o
+ ../libft/includes/ft_printf.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/set_flags_n_mods.c
+CMakeFiles/lem-in.dir/libft/ft_printf/utils.c.o
+ ../libft/includes/ft_printf.h
+ ../libft/includes/libft.h
+ /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/utils.c
 CMakeFiles/lem-in.dir/libft/ft_putchar.c.o
  /Users/cjoaquin/CLionProjects/lem_in14/libft/ft_putchar.c
 CMakeFiles/lem-in.dir/libft/ft_putchar_fd.c.o

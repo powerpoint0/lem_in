@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="lem_vis" targetName="lem_vis" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="92fed756-f9ce-4d53-893f-daf5b61fb538" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1kE8Z5F6dCeFBqkhEMap5czX3N5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/includes" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lem_vis" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lem_vis" TARGET_NAME="lem_vis" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lem_vis" RUN_TARGET_NAME="lem_vis">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92fed756-f9ce-4d53-893f-daf5b61fb538" name="Default Changelist" comment="" />
+      <created>1605254443147</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605254443147</updated>
+      <workItem from="1605254444298" duration="49000" />
+      <workItem from="1605254560833" duration="15753000" />
+      <workItem from="1605276199770" duration="683000" />
+      <workItem from="1605279278556" duration="19563000" />
+      <workItem from="1605299224069" duration="72000" />
+      <workItem from="1605340332687" duration="1180000" />
+      <workItem from="1605341687075" duration="10417000" />
+      <workItem from="1605352549923" duration="3062000" />
+      <workItem from="1605356432295" duration="2157000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="Makefile" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1526" height="381" key="GridCell.Tab.0.bottom" timestamp="1605358605929">
+      <screen x="0" y="23" width="2880" height="1517" />
+    </state>
+    <state width="1526" height="381" key="GridCell.Tab.0.bottom/0.23.2880.1517@0.23.2880.1517" timestamp="1605358605929" />
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.23.3200.1697@0.23.3200.1697" timestamp="1605276148185" />
+    <state width="1526" height="381" key="GridCell.Tab.0.center" timestamp="1605358605928">
+      <screen x="0" y="23" width="2880" height="1517" />
+    </state>
+    <state width="1526" height="381" key="GridCell.Tab.0.center/0.23.2880.1517@0.23.2880.1517" timestamp="1605358605928" />
+    <state width="1877" height="208" key="GridCell.Tab.0.center/0.23.3200.1697@0.23.3200.1697" timestamp="1605276148184" />
+    <state width="1526" height="381" key="GridCell.Tab.0.left" timestamp="1605358605927">
+      <screen x="0" y="23" width="2880" height="1517" />
+    </state>
+    <state width="1526" height="381" key="GridCell.Tab.0.left/0.23.2880.1517@0.23.2880.1517" timestamp="1605358605927" />
+    <state width="1877" height="208" key="GridCell.Tab.0.left/0.23.3200.1697@0.23.3200.1697" timestamp="1605276148184" />
+    <state width="1526" height="381" key="GridCell.Tab.0.right" timestamp="1605358605928">
+      <screen x="0" y="23" width="2880" height="1517" />
+    </state>
+    <state width="1526" height="381" key="GridCell.Tab.0.right/0.23.2880.1517@0.23.2880.1517" timestamp="1605358605928" />
+    <state width="1877" height="208" key="GridCell.Tab.0.right/0.23.3200.1697@0.23.3200.1697" timestamp="1605276148185" />
+    <state width="1877" height="488" key="GridCell.Tab.1.bottom" timestamp="1605352137564">
+      <screen x="0" y="23" width="2880" height="1517" />
+    </state>
+    <state width="1877" height="488" key="GridCell.Tab.1.bottom/0.23.2880.1517@0.23.2880.1517" timestamp="1605352137564" />
+    <state width="1877" height="568" key="GridCell.Tab.1.bottom/0.23.3200.1697@0.23.3200.1697" timestamp="1605276148180" />
+    <state width="1877" height="488" key="GridCell.Tab.1.center" timestamp="1605352137564">
+      <screen x="0" y="23" width="2880" height="1517" />
+    </state>
+    <state width="1877" height="488" key="GridCell.Tab.1.center/0.23.2880.1517@0.23.2880.1517" timestamp="1605352137564" />
+    <state width="1877" height="568" key="GridCell.Tab.1.center/0.23.3200.1697@0.23.3200.1697" timestamp="1605276148180" />
+    <state width="1877" height="488" key="GridCell.Tab.1.left" timestamp="1605352137564">
+      <screen x="0" y="23" width="2880" height="1517" />
+    </state>
+    <state width="1877" height="488" key="GridCell.Tab.1.left/0.23.2880.1517@0.23.2880.1517" timestamp="1605352137564" />
+    <state width="1877" height="568" key="GridCell.Tab.1.left/0.23.3200.1697@0.23.3200.1697" timestamp="1605276148180" />
+    <state width="1877" height="488" key="GridCell.Tab.1.right" timestamp="1605352137564">
+      <screen x="0" y="23" width="2880" height="1517" />
+    </state>
+    <state width="1877" height="488" key="GridCell.Tab.1.right/0.23.2880.1517@0.23.2880.1517" timestamp="1605352137564" />
+    <state width="1877" height="568" key="GridCell.Tab.1.right/0.23.3200.1697@0.23.3200.1697" timestamp="1605276148180" />
+    <state x="717" y="387" key="run.anything.popup" timestamp="1605344908106">
+      <screen x="0" y="23" width="2880" height="1517" />
+    </state>
+    <state x="717" y="387" key="run.anything.popup/0.23.2880.1517@0.23.2880.1517" timestamp="1605344908106" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="step" />
+        <watch expression="step-&gt;vpoint[i]" />
+        <watch expression="str[i]" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

@@ -127,7 +127,7 @@ t_path		**ft_alg(t_data *map)
 		i++;
 	}
 	if (check < 0 && !*best_paths)
-		put_err("ERROR.There is no path between START and END");
+		put_err("ERROR.There is no path between START_POINT and END_POINT");
 	ft_free_all_in_alg(paths, map->slines);
 	return (best_paths);
 }

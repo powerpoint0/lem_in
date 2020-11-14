@@ -10,17 +10,19 @@ SRCS = srcs/lem_in.c \
 			srcs/alg.c \
 			srcs/bellman_ford.c \
 			srcs/init.c \
-			srcs/moving_ants.c \
-			srcs/read.c \
 			srcs/debug.c \
 			srcs/alg_copy_n_free_paths.c \
+			srcs/read.c \
 			srcs/check_and_read.c \
 			srcs/read_points.c \
 			srcs/read_reline.c \
 			srcs/read_lines.c \
+			srcs/moving_ants.c \
+			srcs/moving_ants2.c \
 			srcs/util_slines.c \
 			srcs/util_lines.c \
-			srcs/util_ants.c
+			srcs/util_ants.c \
+			srcs/ants_location.c
 
 OBJS = $(notdir $(patsubst %.c,%.o,$(SRCS)))
 

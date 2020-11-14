@@ -6,7 +6,7 @@
 /*   By: dfigg <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/12 08:21:43 by dfigg             #+#    #+#             */
-/*   Updated: 2020/05/12 08:21:50 by dfigg            ###   ########.fr       */
+/*   Updated: 2020/06/28 16:45:25 by cjoaquin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,13 @@ void			set_str_values(char *str, char *values, int size);
 
 int				find_type(const char *format, t_prn *prn);
 int				set_flag(const char *format, t_prn *prn, int end);
-int				set_width(const char *format, int i, t_prn *prn);
+int				set_width(const char *format, int i, t_prn *prn, int st);
 int				set_precision(const char *format, int i, t_prn *prn);
 int				set_mod(const char *format, int i, t_prn *prn);
 int				ft_find_count(const char *s, int c);
 
 long double		get_nbr(t_prn *prn);
-int				print_format(t_prn *prn, char *str);
+void			print_format(t_prn *prn, char *str);
 int				ft_islower(int ch);
 int				get_degree(long double *nbr);
 void			cut_str(char *str, t_prn *prn);
@@ -98,9 +98,10 @@ void			add_exp(char *str, int degree, t_prn *prn);
 int				ft_isnan(long double nbr);
 int				ft_isinf(long double nbr);
 int				nan_inf(long double nbr, t_prn *prn, char *str);
-void			add_point(char *str, t_prn *prn, int degree);
+void			add_dot(char *str, t_prn *prn, int degree);
 int				correct_str(char *str, t_prn *prn, int degree);
 int				ft_round9(char *str, int count, int degree);
 void			move_under_one(char *str, int degree);
+void			write_sign(t_prn *prn);
 
 #endif

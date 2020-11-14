@@ -64,10 +64,8 @@ int		set_flag(const char *format, t_prn *prn, int end)
 	return (i);
 }
 
-int		set_width(const char *format, int i, t_prn *prn)
+int		set_width(const char *format, int i, t_prn *prn, int st)
 {
-	int		st;
-
 	while ((format[i] == '*' || ft_isdigit(format[i])))
 	{
 		if (format[i] == '*')
@@ -76,7 +74,8 @@ int		set_width(const char *format, int i, t_prn *prn)
 			{
 				prn->fl_minus = 1;
 				prn->width *= -1;
-				prn->fl_zero =(prn->fl_minus == 1 && prn->fl_zero == 1) ? 0 : prn->fl_zero;
+				prn->fl_zero = (prn->fl_minus == 1 &&
+						prn->fl_zero == 1) ? 0 : prn->fl_zero;
 			}
 			i++;
 		}

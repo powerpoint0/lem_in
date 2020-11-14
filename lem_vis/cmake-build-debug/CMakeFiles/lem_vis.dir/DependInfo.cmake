@@ -1,0 +1,96 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "C"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_atoi.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_atoi.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_binar_chr.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_binar_chr.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_bzero.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_bzero.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_count_words.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_count_words.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_isalnum.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_isalnum.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_isalpha.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_isalpha.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_isascii.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_isascii.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_isdigit.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_isdigit.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_isprint.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_isprint.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_itoa.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_itoa.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_lstadd.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_lstadd.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_lstdel.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_lstdel.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_lstdelone.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_lstdelone.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_lstiter.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_lstiter.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_lstmap.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_lstmap.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_lstnew.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_lstnew.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_memalloc.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_memalloc.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_memccpy.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_memccpy.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_memchr.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_memchr.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_memcmp.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_memcmp.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_memcpy.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_memcpy.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_memdel.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_memdel.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_memmove.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_memmove.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_memset.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_memset.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_print_params.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_print_params.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_putchar.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_putchar.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_putchar_fd.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_putchar_fd.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_putendl.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_putendl.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_putendl_fd.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_putendl_fd.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_putnbr.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_putnbr.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_putnbr_fd.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_putnbr_fd.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_putstr.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_putstr.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_putstr_fd.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_putstr_fd.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_sort_params.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_sort_params.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_sqrt.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_sqrt.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strcat.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strcat.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strchr.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strchr.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strclr.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strclr.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strcmp.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strcmp.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strcpy.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strcpy.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strdel.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strdel.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strdup.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strdup.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strequ.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strequ.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_striter.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_striter.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_striteri.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_striteri.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strjoin.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strjoin.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strlcat.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strlcat.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strlen.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strlen.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strmap.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strmap.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strmapi.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strmapi.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strncat.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strncat.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strncmp.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strncmp.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strncpy.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strncpy.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strnequ.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strnequ.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strnew.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strnew.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strnstr.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strnstr.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strrchr.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strrchr.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strsplit.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strsplit.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strstr.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strstr.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strsub.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strsub.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_strtrim.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_strtrim.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_tolower.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_tolower.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/ft_toupper.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/ft_toupper.c.o"
+  "/Users/dfigg/Desktop/lem_vis/libft/get_next_line.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/libft/get_next_line.c.o"
+  "/Users/dfigg/Desktop/lem_vis/src/ants_path.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/src/ants_path.c.o"
+  "/Users/dfigg/Desktop/lem_vis/src/controls.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/src/controls.c.o"
+  "/Users/dfigg/Desktop/lem_vis/src/drawing.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/src/drawing.c.o"
+  "/Users/dfigg/Desktop/lem_vis/src/drawing_utils.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/src/drawing_utils.c.o"
+  "/Users/dfigg/Desktop/lem_vis/src/drawing_utils2.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/src/drawing_utils2.c.o"
+  "/Users/dfigg/Desktop/lem_vis/src/init.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/src/init.c.o"
+  "/Users/dfigg/Desktop/lem_vis/src/read_utils.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/src/read_utils.c.o"
+  "/Users/dfigg/Desktop/lem_vis/src/read_vs.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/src/read_vs.c.o"
+  "/Users/dfigg/Desktop/lem_vis/src/vis.c" "/Users/dfigg/Desktop/lem_vis/cmake-build-debug/CMakeFiles/lem_vis.dir/src/vis.c.o"
+  )
+set(CMAKE_C_COMPILER_ID "AppleClang")
+
+# The include file search paths:
+set(CMAKE_C_TARGET_INCLUDE_PATH
+  ".."
+  ".././includes"
+  "../libft/includes"
+  "../../minilibx"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

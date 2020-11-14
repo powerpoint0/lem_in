@@ -36,7 +36,7 @@ void		free_all(t_data *map, t_path **best_paths)
 
 int			put_err(char *str)
 {
-	ft_putendl_fd(str, 2);
+	ft_putendl_fd(str, 1);
 	exit(1);
 }
 
@@ -55,15 +55,13 @@ int			put_err(char *str)
 ** time in program
 ** #include <time.h>
 ** clock_t go_1 = clock();
-** ft_letGoAnts(best_paths, map);
+** ft_let_go_ants(best_paths, map);
 ** clock_t go_2 = clock();
 ** double go_diff = (double) (go_2 - go_1)/CLOCKS_PER_SEC;
 ** ft_printf("Go time = %f\n", go_diff);
 */
 
-//int 	main()
-
-int			main(int argc, char **argv)
+int			main(void)
 {
 	int		fd;
 	t_data	*map;
@@ -71,16 +69,10 @@ int			main(int argc, char **argv)
 
 	map = NULL;
 	best_paths = NULL;
-	if (argc < 2)
-		put_err("ERROR.No file for reading");
-	fd = (ft_strequ(argv[1], "<")) ? open(argv[2], O_RDONLY)
-			: open(argv[1], O_RDONLY);
-	if (fd < 0)
-		put_err("ERROR.File did not open");
-//	fd = 0;
+	fd = 0;
 	map = read_map(fd);
 	best_paths = ft_alg(map);
-	ft_letGoAnts(best_paths, map);
+	ft_let_go_ants(best_paths, map);
 	free_all(map, best_paths);
 	return (0);
 }

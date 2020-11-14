@@ -162,6 +162,33 @@
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_print_params.c">
 			<Option target="lem-in"/>
 		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/additional_func.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/ft_printf.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_cs.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_d.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_efg.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_f_func.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/print_oux_p.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/set_flags_n_mods.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_printf/utils.c">
+			<Option target="lem-in"/>
+		</Unit>
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/ft_putchar.c">
 			<Option target="lem-in"/>
 		</Unit>
@@ -277,6 +304,9 @@
 			<Option target="lem-in"/>
 		</Unit>
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/get_next_line.c">
+			<Option target="lem-in"/>
+		</Unit>
+		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/includes/ft_printf.h">
 			<Option target="lem-in"/>
 		</Unit>
 		<Unit filename="/Users/cjoaquin/CLionProjects/lem_in14/libft/includes/get_next_line.h">

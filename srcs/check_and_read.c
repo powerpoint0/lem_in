@@ -30,16 +30,19 @@ int			ft_atoi_check(const char *str)
 		rez = rez * 10 + (str[i] - '0');
 		i++;
 	}
-	if (i == 0 || rez > INT32_MAX || ft_strlen(str) > 14)
+	if (str[i])
+		put_err("ERROR.Invalid line: extra symbols in the line");
+	if (i == 0 || rez * sig > INT32_MAX
+			|| rez * sig < INT32_MIN || ft_strlen(str) > 14)
 		put_err("ERROR.Not valid int");
 	return (sig * (int)rez);
 }
 
 void		check_st_end(t_data *map, int mod_command)
 {
-	if (mod_command == START && map->start)
+	if (mod_command == START_POINT && map->start)
 		put_err("ERROR.2-nd start");
-	else if (mod_command == END && map->end)
+	else if (mod_command == END_POINT && map->end)
 		put_err("ERROR.2-nd end");
 }
 

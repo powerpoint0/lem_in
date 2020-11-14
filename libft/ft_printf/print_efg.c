@@ -84,7 +84,7 @@ int			correct_str(char *str, t_prn *prn, int degree)
 			str[size - 1] = str[size - 1] + 1;
 	}
 	str[size] = '\0';
-	add_point(str, prn, degree);
+	add_dot(str, prn, degree);
 	return (degree);
 }
 

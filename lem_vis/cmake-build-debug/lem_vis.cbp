@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lem_vis"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/dfigg/Desktop/lem_vis/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/dfigg/Desktop/lem_vis/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/dfigg/Desktop/lem_vis/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lem_vis">
+				<Option output="/Users/dfigg/Desktop/lem_vis/cmake-build-debug/lem_vis" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dfigg/Desktop/lem_vis/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/dfigg/Desktop/lem_vis/."/>
+					<Add directory="/Users/dfigg/Desktop/lem_vis/./includes"/>
+					<Add directory="/Users/dfigg/Desktop/lem_vis/libft/includes"/>
+					<Add directory="/Users/dfigg/Desktop/lem_vis/../minilibx"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 lem_vis"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lem_vis/fast">
+				<Option output="/Users/dfigg/Desktop/lem_vis/cmake-build-debug/lem_vis" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dfigg/Desktop/lem_vis/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/dfigg/Desktop/lem_vis/."/>
+					<Add directory="/Users/dfigg/Desktop/lem_vis/./includes"/>
+					<Add directory="/Users/dfigg/Desktop/lem_vis/libft/includes"/>
+					<Add directory="/Users/dfigg/Desktop/lem_vis/../minilibx"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 lem_vis/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dfigg/Desktop/lem_vis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/includes/vis.h">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_atoi.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_binar_chr.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_bzero.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_count_words.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_isalnum.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_isalpha.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_isascii.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_isdigit.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_isprint.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_itoa.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_lstadd.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_lstdel.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_lstdelone.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_lstiter.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_lstmap.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_lstnew.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_memalloc.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_memccpy.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_memchr.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_memcmp.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_memcpy.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_memdel.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_memmove.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_memset.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_print_params.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_putchar.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_putchar_fd.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_putendl.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_putendl_fd.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_putnbr.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_putnbr_fd.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_putstr.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_putstr_fd.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_sort_params.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_sqrt.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strcat.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strchr.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strclr.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strcmp.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strcpy.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strdel.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strdup.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strequ.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_striter.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_striteri.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strjoin.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strlcat.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strlen.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strmap.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strmapi.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strncat.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strncmp.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strncpy.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strnequ.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strnew.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strnstr.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strrchr.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strsplit.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strstr.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strsub.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_strtrim.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_tolower.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/ft_toupper.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/get_next_line.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/includes/get_next_line.h">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/libft/includes/libft.h">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/src/ants_path.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/src/controls.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/src/drawing.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/src/drawing_utils.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/src/drawing_utils2.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/src/init.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/src/read_utils.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/src/read_vs.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/src/vis.c">
+			<Option target="lem_vis"/>
+		</Unit>
+		<Unit filename="/Users/dfigg/Desktop/lem_vis/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
